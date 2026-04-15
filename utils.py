@@ -5,41 +5,41 @@ def limpar():
     os.system('cls')
 
 def menuinicial():
-    print("Escolha a opção que deseja:\n1-Cadastro\n2-Login\n0-Sair\n" )
+    print("\n\033[36mBem-vindo(a) ao AvaliAí!\033[m""\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
-aluno = {'nome': '','email': '','senha': ''}
-alunos = []
 
 def validanome(nome):
     nometrip = nome.strip()
    
     if not nometrip:
         limpar()
-        print("O nome não pode ser vazio.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO nome não pode ser vazio.\n\033[m")
         return False
     if sum(caracter.isalpha() for caracter in nometrip) < 3:
         limpar()
-        print("O nome deve conter no mínimo 3 letras.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO nome deve conter no mínimo 3 letras.\n\033[m")
         return False
     if not 6 <=len(nometrip) <= 20:
         limpar()
-        print("O nome deve conter entre 6 e 20 caracteres.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO nome deve conter entre 6 e 20 caracteres.\n\033[m")
         return False
     if ' ' in nometrip:
         limpar()
-        print("O nome não pode conter espaços.\n")
-        return False
-    if nometrip.isdigit():
-        limpar()
-        print("O nome não pode conter apenas números.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO nome não pode conter espaços.\n\033[m")
         return False
     if nometrip[0].isdigit():
         limpar()
-        print("O nome não pode começar com um número.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO nome não pode começar com um número.\n\033[m")
         return False
     if not all(caracter.isalnum() or caracter in "_.-" for caracter in nometrip):
         limpar()
-        print("O nome não deve ter caracteres especiais além de '-', '_' e '.'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO nome não deve ter caracteres especiais além de '-', '_' e '.'.\n\033[m")
         return False
     
     
@@ -50,55 +50,71 @@ def validaemail(email):
    
     if not emailtrip:
         limpar()
-        print("O email não pode ser vazio.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email não pode ser vazio.\n\033[m")
         return False
     if emailtrip.count('@') != 1:
         limpar()
-        print("O email deve conter domínio '@gmail.com' ou '@ufrpe.br'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email deve conter domínio '@ufrpe.br'.\n\033[m")
         return False
    
     nome, dominio = emailtrip.split('@')
+   
     
-    if not dominio in ['gmail.com', 'ufrpe.br\n']:
+    if not dominio == 'ufrpe.br':
         limpar()
-        print("O email deve conter dominio '@gmail.com' ou '@ufrpe.br'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email deve conter dominio '@ufrpe.br'.\n\033[m")
         return False
     if not nome:
         limpar()
-        print("O email deve conter algo antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email deve conter algo antes do '@'.\n\033[m")
         return False
     if nome.isdigit():
         limpar()
-        print("O email não pode conter apenas números antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email não pode conter apenas números antes do '@'.\n\033[m")
         return False
     if " " in nome:
         limpar()
-        print("O email não pode conter espaços vazios.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email não pode conter espaços vazios.\n\033[m")
         return False
-    if not all(caracter.isalnum() or caracter in '_-.' for caracter in nome):
+    if not all(caracter.isalnum() or caracter == '.' for caracter in nome):
         limpar()
-        print("O email só deve conter caracteres alfanuméricos ou os caracteres especiais '_', '-' ou '.' antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email só deve conter caracteres alfanuméricos ou o caracterer '.' antes do '@'.\n\033[m")
         return False
-    if nome[0] in '._-' or nome[-1] in '._-':
+    if nome[0] == '.' or nome[-1] == '.':
         limpar()
-        print("O email não pode começar com '_', '-' ou '.' antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email não pode começar ou terminar com '.' antes do '@'.\n\033[m")
         return False
-    if '..' in nome or '__' in nome or '--' in nome:
+    if nome.count('.') > 1:
         limpar()
-        print("O email não pode conter sequências de caracteres especiais('_', '-' ou '.') antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email não pode conter mais que um '.' antes do '@'.\n\033[m")
         return False
-    if not 6 <= len(nome) <= 20:
+    if nome.count('.') < 1:
         limpar()
-        print("O email deve conter entre 6 e 20 caracteres antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email deve conter '.' entre nome e sobrenome.\n\033[m")
         return False
-    if not sum(caracter.isalpha() for caracter in nome) >= 1:
+    
+    nomeparte1, nomeparte2 = nome.split('.')
+
+    if not sum(caracter.isalpha() for caracter in nomeparte1) >= 2 or not sum(caracter.isalpha() for caracter in nomeparte2) >= 2:
         limpar()
-        print("O email deve conter no mínimo 1 letra antes do '@'.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mO email deve conter no mínimo 2 letras antes e depois do '.'.\n\033[m")
         return False
     for usuario in usuarios.usuarioslist:
-        if usuario['email'] == email:
+        if usuario['email'].lower() == email.lower():
             limpar()
-            print("Email já existe. Por favor, escolha outro email.\n")
+            print(usuarios.titulocadastro.center(50, '='),'\n')
+            print("\033[31mEmail já existe. Por favor, escolha outro email.\n\033[m")
             return False
 
    
@@ -109,31 +125,38 @@ def validasenha(senha):
    
     if not senhatrip:
         limpar()
-        print("A senha não pode ser vazia.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha não pode ser vazia.\n\033[m")
         return False
     if len(senhatrip) < 8:
         limpar()
-        print("A senha deve conter no mínimo 8 caracteres.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha deve conter no mínimo 8 caracteres.\n\033[m")
         return False
     if len(senhatrip) > 12:
         limpar()
-        print("A senha deve conter no máximo 12 caracteres.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha deve conter no máximo 12 caracteres.\n\033[m")
         return False
     if not any(caracter.isupper() for caracter in senhatrip):
         limpar()
-        print("A senha deve conter pelo menos uma letra maiúscula.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha deve conter pelo menos uma letra maiúscula.\n\033[m")
         return False
     if not any(caracter.islower() for caracter in senhatrip):
         limpar()
-        print("A senha deve conter pelo menos uma letra minúscula.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha deve conter pelo menos uma letra minúscula.\n\033[m")
         return False
     if  all(caracter.isalnum() for caracter in senhatrip):
         limpar()
-        print("A senha deve conter pelo menos um caracter especial.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha deve conter pelo menos um caracter especial.\n\033[m")
         return False
     if not any(caracter.isdigit() for caracter in senhatrip):
         limpar()
-        print("A senha deve conter pelo menos um número.\n")
+        print(usuarios.titulocadastro.center(50, '='),'\n')
+        print("\033[31mA senha deve conter pelo menos um número.\n\033[m")
         return False
     
    

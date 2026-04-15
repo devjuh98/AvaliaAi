@@ -11,7 +11,7 @@ while True:
             utils.menuinicial()
             opcao = int(input(""))
         if opcao == 1:utils.limpar();usuarios.cadastrar_usuario()
-        if opcao == 2:usuarios.usuario_login()
+        if opcao == 2:usuariologado=usuarios.usuario_login()
         if opcao == 0:utils.limpar();print('Programa encerrado');break
     except ValueError:
         utils.limpar()

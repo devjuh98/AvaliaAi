@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Robertocarlos",
+        "email": "roberto.carlos@ufrpe.br",
+        "senha": "Megawatt123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "Gu1123Valoa",
+        "email": "guilherme.vasconcellos@ufrpe.br",
+        "senha": "Pudim123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "Franciscou123",
+        "email": "francisco.biasoli@ufrpe.br",
+        "senha": "Bolo123$",
+        "status": "ativo"
+    }
+]

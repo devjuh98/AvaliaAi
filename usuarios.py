@@ -6,39 +6,29 @@ usuarioslist = []
 
 
 def usuario_login():
-    try:
-        with open('usuarios.json', 'r', encoding = 'utf-8') as arq:
-            usuarioslist = json.load(arq)
-
+   
+    utils.limpar()
+    utils.titulologin()
+    while True:
+        email = input('Digite o email do usuário para login ou 0 para cancelar\n')
+        if email.strip() == '0':
+            utils.limpar()
+            utils.menuinicial()
+            return
+        senha = getpass.getpass('Digite a senha para login ou 0 para cancelar\n')
+        if senha.strip() == '0':
+            utils.limpar()
+            utils.menuinicial()
+            return
+        for usuario in usuarioslist:
+            if usuario['email'] == email.lower().strip() and usuario['senha'] == senha.strip():
+                utils.limpar()
+                print('\033[32mLogin efetuado com sucesso!\n\033[m')
+                return email
         utils.limpar()
         utils.titulologin()
-        while True:
-            email = input('Digite o email do usuário para login ou 0 para cancelar\n')
-            if email.strip() == '0':
-                utils.limpar()
-                utils.tituloinicial()
-                utils.menuinicial()
-                return
-            senha = getpass.getpass('Digite a senha para login ou 0 para cancelar\n')
-            if senha.strip() == '0':
-                utils.limpar()
-                utils.tituloinicial()
-                utils.menuinicial()
-                return
-            for usuario in usuarioslist:
-                if usuario['email'] == email.lower() and usuario['senha'] == senha:
-                    utils.limpar()
-                    print('\033[32mLogin efetuado com sucesso!\n\033[m')
-                    return email
-            utils.limpar()
-            utils.titulologin()
-            print('\033[31mEmail ou senha incorretos. Tente novamente.\n\033[m')
-    except(FileNotFoundError, json.JSONDecodeError):
-        utils.limpar()
-        print("Não há usuários cadastrados!\nVoltando para tela inicial...\n")
-        utils.tituloinicial()
-        utils.menuinicial()
-        return
+        print('\033[31mEmail ou senha incorretos. Tente novamente.\n\033[m')
+    
 
 def cadastrar_usuario():
     utils.limpar()
@@ -48,7 +38,6 @@ def cadastrar_usuario():
         nome = input('Digite o nome do usuário ou 0 para cancelar cadastro:\n')
         if nome.strip() == '0':
             utils.limpar()
-            utils.tituloinicial()
             utils.menuinicial()
             return
         if utils.validanome(nome):
@@ -63,7 +52,6 @@ def cadastrar_usuario():
         utils.limpar() 
         if email.strip() == '0':
             utils.limpar()
-            utils.tituloinicial()
             utils.menuinicial()
             return
         if utils.validaemail(email):
@@ -79,20 +67,19 @@ def cadastrar_usuario():
         utils.limpar() 
         if senha.strip() == '0':
             utils.limpar()
-            utils.tituloinicial()
             utils.menuinicial()
             return
         if utils.validasenha(senha):
             utils.limpar()
             utils.titulocadastro()
             print("\033[32mSenha Cadastrada!\n\nCadastro concluído com sucesso!\n\033[m")
-            input("\033[32mPressione Enter para ir ao login\033[m")
+            input("\033[32mPressione Enter para ir ao login\033\n[m")
             break
         
     usuarioslist.append({
-        'nome': nome,
-        'email': email,
-        'senha': senha,
+        'nome': nome.strip(),
+        'email': email.strip().lower(),
+        'senha': senha.strip(),
         'status': 'ativo'
     })
     with open('usuarios.json', 'w', encoding='utf-8') as arq:

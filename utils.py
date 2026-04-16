@@ -5,11 +5,10 @@ def limpar():
     os.system('cls')
 
 def menuinicial():
+    tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'
+    print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
-def tituloinicial():
-    tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'
-    print(tituloinicial.center(50,'='),'\n\n')
 
 def titulocadastro():
     titulocadastro = '\033[36mCADASTRO DE USUÁRIO\033[m'
@@ -69,7 +68,7 @@ def validaemail(email):
     if emailtrip.count('@') != 1:
         limpar()
         titulocadastro()
-        print("\033[31mO email deve conter domínio '@ufrpe.br'.\n\033[m")
+        print("\033[31mO email deve conter apenas um '@'.\n\033[m")
         return False
    
     nome, dominio = emailtrip.split('@')

@@ -5,7 +5,7 @@ def limpar():
     os.system('cls')
 
 def menuinicial():
-    print("\n\033[36mBem-vindo(a) ao AvaliAí!\033[m""\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
+    print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
 
 def validanome(nome):

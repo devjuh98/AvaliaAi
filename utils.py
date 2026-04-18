@@ -9,6 +9,33 @@ def menuinicial():
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
+def menudeescolha():
+    print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
+    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
+    while True:
+        try:
+            opcao = int(input(''))
+            while opcao<0 and opcao>5:
+                limpar()
+                menudeescolha()
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+                opcao = int(input(""))
+            if opcao == 1:
+                    print('')
+            if opcao == 2:
+                    print('')
+            if opcao == 3:
+                    print('')
+            if opcao == 4:
+                    print('')
+            if opcao == 5:
+                    print('')    
+            if opcao == 0:limpar();menuinicial();break
+            
+        except ValueError:
+            print('\033[31mOPÇÃO INVÁLIDA!\n\nDIGITE UM NÙMERO DO MENU:')
+
+
 
 def titulocadastro():
     titulocadastro = '\033[36mCADASTRO DE USUÁRIO\033[m'

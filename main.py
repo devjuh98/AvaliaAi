@@ -7,6 +7,8 @@ try:
         usuarios.usuarioslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []
+
+usuariologado = None
    
 utils.limpar()
 
@@ -21,8 +23,15 @@ while True:
             utils.menuinicial()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
             opcao = int(input(""))
-        if opcao == 1:usuarios.cadastrar_usuario()
-        if opcao == 2:usuariologado=usuarios.usuario_login()
+        if opcao == 1:
+            cadastrou = usuarios.cadastrar_usuario()
+            if cadastrou:
+                opcao = 2
+        if opcao == 2:
+            usuariologado=usuarios.usuario_login()
+            if usuariologado is not None:
+                utils.menudeescolha()
+        
         if opcao == 0:utils.limpar();print('Programa encerrado');break
     except ValueError:
         utils.limpar()

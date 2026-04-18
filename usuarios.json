@@ -36,21 +36,39 @@
         "status": "ativo"
     },
     {
-        "nome": "asfsga",
-        "email": "joao.almeida@ufrpe.br",
-        "senha": "Bola123@",
+        "nome": "gutavobilar",
+        "email": "gustavo.bilar@ufrpe.br",
+        "senha": "Messi123@",
         "status": "ativo"
     },
     {
-        "nome": "jgasjklgs",
-        "email": "boi.lama@ufrpe.br",
-        "senha": "Boi@hoje12",
+        "nome": "gudson",
+        "email": "guliver.rocha@ufrpe.br",
+        "senha": "Brabo123@",
         "status": "ativo"
     },
     {
-        "nome": "guilermo",
-        "email": "gu.lo@ufrpe.br",
-        "senha": "Banana123@",
+        "nome": "ÉvioRocha",
+        "email": "evio.rocha@ufrpe.br",
+        "senha": "Evio123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "MadaraUchiha",
+        "email": "paulo.miguel@ufrpe.br",
+        "senha": "G@lo1234",
+        "status": "ativo"
+    },
+    {
+        "nome": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br",
+        "senha": "Invencivel@1",
+        "status": "ativo"
+    },
+    {
+        "nome": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br",
+        "senha": "Brigadeiro1@",
         "status": "ativo"
     }
 ]

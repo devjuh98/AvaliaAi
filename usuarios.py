@@ -4,7 +4,6 @@ import json
 
 usuarioslist = []
 
-
 def usuario_login():
    
     utils.limpar()
@@ -88,25 +87,22 @@ def cadastrar_usuario():
             while confirmasenha != senha:
                 utils.limpar()
                 utils.titulocadastro()
-                confirmasenha = getpass.getpass('\n033[31mSenhas não coincidem.\033[m\n\nTente novamente ou digite 0 para cancelar cadastro:\n\n')
+                confirmasenha = getpass.getpass('\n\033[31mSenhas não coincidem.\033[m\n\nTente novamente ou digite 0 para cancelar cadastro:\n\n')
                 if confirmasenha == '0':
                     utils.limpar()
                     utils.menuinicial()
                     return
+            usuarioslist.append({
+            'nome': nome.strip(),
+            'email': email.strip().lower(),
+            'senha': senha.strip(),
+            'status': 'ativo'
+            })
+            with open('usuarios.json', 'w', encoding='utf-8') as arq:
+                json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
             utils.limpar()
             utils.titulologin()
             print("\033[32mSenha Cadastrada!\n\nCadastro concluído com sucesso!\n\033[m")
             input("\033[32mPressione Enter para ir ao login\033\n\n[m")
-            break       
-        
-        
-    usuarioslist.append({
-        'nome': nome.strip(),
-        'email': email.strip().lower(),
-        'senha': senha.strip(),
-        'status': 'ativo'
-    })
-    with open('usuarios.json', 'w', encoding='utf-8') as arq:
-        json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
-    usuario_login()
+            return True
 

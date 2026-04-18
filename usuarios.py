@@ -10,18 +10,27 @@ def usuario_login():
     utils.limpar()
     utils.titulologin()
     while True:
-        email = input('Digite o email do usuário para login ou 0 para cancelar\n')
-        if email.strip() == '0':
+        email = input('Digite o e-mail do usuário para login ou 0 para cancelar:\n\n').strip()
+        while not email:
+            utils.limpar()
+            utils.titulologin()
+            email = input('\033[31mE-mail não pode ser vazio.\n\033[m\nDigite o e-mail do usuário ou 0 para cancelar:\n\n').strip()
+        if email == '0':
             utils.limpar()
             utils.menuinicial()
             return
-        senha = getpass.getpass('Digite a senha para login ou 0 para cancelar\n')
-        if senha.strip() == '0':
+        senha = getpass.getpass('\nDigite a senha para login ou 0 para cancelar:\n\n').strip()
+        while not senha:
+            utils.limpar()
+            utils.titulologin()
+            print('\033[31mSenha não pode ser vazia.\033[m\n\nE-mail digitado: ', email)
+            senha = getpass.getpass('\nDigite a senha do usuário ou 0 para cancelar:\n\n').strip()
+        if senha == '0':
             utils.limpar()
             utils.menuinicial()
             return
         for usuario in usuarioslist:
-            if usuario['email'] == email.lower().strip() and usuario['senha'] == senha.strip():
+            if usuario['email'] == email.lower() and usuario['senha'] == senha:
                 utils.limpar()
                 print('\033[32mLogin efetuado com sucesso!\n\033[m')
                 return email
@@ -35,7 +44,7 @@ def cadastrar_usuario():
     utils.titulocadastro()
     while True:
         
-        nome = input('Digite o nome do usuário ou 0 para cancelar cadastro:\n')
+        nome = input('Digite o nome do usuário ou 0 para cancelar cadastro:\n\n')
         if nome.strip() == '0':
             utils.limpar()
             utils.menuinicial()
@@ -48,7 +57,7 @@ def cadastrar_usuario():
         
     while True:
       
-        email = input('Digite o email do usuário ou 0 para cancelar cadastro:\n').lower()
+        email = input('Digite o email do usuário ou 0 para cancelar cadastro:\n\n').lower()
         utils.limpar() 
         if email.strip() == '0':
             utils.limpar()
@@ -62,8 +71,7 @@ def cadastrar_usuario():
        
     while True:
 
-       
-        senha = getpass.getpass('Digite a senha do usuário ou 0 para cancelar cadastro:\n')
+        senha = getpass.getpass('Digite a senha do usuário ou 0 para cancelar cadastro:\n\n')
         utils.limpar() 
         if senha.strip() == '0':
             utils.limpar()
@@ -72,9 +80,25 @@ def cadastrar_usuario():
         if utils.validasenha(senha):
             utils.limpar()
             utils.titulocadastro()
+            confirmasenha = getpass.getpass('Confirme a senha ou digite 0 para cancelar cadastro:\n\n')
+            if confirmasenha == '0':
+                utils.limpar()
+                utils.menuinicial()
+                return
+            while confirmasenha != senha:
+                utils.limpar()
+                utils.titulocadastro()
+                confirmasenha = getpass.getpass('\n033[31mSenhas não coincidem.\033[m\n\nTente novamente ou digite 0 para cancelar cadastro:\n\n')
+                if confirmasenha == '0':
+                    utils.limpar()
+                    utils.menuinicial()
+                    return
+            utils.limpar()
+            utils.titulologin()
             print("\033[32mSenha Cadastrada!\n\nCadastro concluído com sucesso!\n\033[m")
-            input("\033[32mPressione Enter para ir ao login\033\n[m")
-            break
+            input("\033[32mPressione Enter para ir ao login\033\n\n[m")
+            break       
+        
         
     usuarioslist.append({
         'nome': nome.strip(),

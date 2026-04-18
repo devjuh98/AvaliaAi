@@ -16,5 +16,41 @@
         "email": "francisco.biasoli@ufrpe.br",
         "senha": "Bolo123$",
         "status": "ativo"
+    },
+    {
+        "nome": "TechJacket09",
+        "email": "bruno.silva@ufrpe.br",
+        "senha": "Joji34@gh",
+        "status": "ativo"
+    },
+    {
+        "nome": "GudsonNights7698",
+        "email": "gideao.almeida@ufrpe.br",
+        "senha": "Gigi$@123",
+        "status": "ativo"
+    },
+    {
+        "nome": "SteveHarryton",
+        "email": "fabrício.carvalho@ufrpe.br",
+        "senha": "Senh@123",
+        "status": "ativo"
+    },
+    {
+        "nome": "asfsga",
+        "email": "joao.almeida@ufrpe.br",
+        "senha": "Bola123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "jgasjklgs",
+        "email": "boi.lama@ufrpe.br",
+        "senha": "Boi@hoje12",
+        "status": "ativo"
+    },
+    {
+        "nome": "guilermo",
+        "email": "gu.lo@ufrpe.br",
+        "senha": "Banana123@",
+        "status": "ativo"
     }
 ]

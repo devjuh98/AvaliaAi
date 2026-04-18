@@ -8,7 +8,7 @@ try:
 except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []
    
-
+utils.limpar()
 
 utils.menuinicial()
 

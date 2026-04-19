@@ -1,4 +1,4 @@
-import usuarios
+import avaliaai.usuarios as usuarios
 import os
 
 def limpar():
@@ -9,15 +9,15 @@ def menuinicial():
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
-def menudeescolha():
+def menudeescolha(usuariologado):
     print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
     "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
     while True:
         try:
-            opcao = int(input(''))
+            opcao = int(input('Digite a opção desejada: '))
             while opcao<0 and opcao>5:
                 limpar()
-                menudeescolha()
+                menudeescolha(usuariologado)
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
                 opcao = int(input(""))
             if opcao == 1:
@@ -25,13 +25,13 @@ def menudeescolha():
             if opcao == 2:
                     print('')
             if opcao == 3:
-                    print('')
+                    menueditar(usuariologado)
             if opcao == 4:
                     print('')
             if opcao == 5:
                     print('')    
-            if opcao == 0:limpar();menuinicial();break
-            
+            if opcao == 0:
+                return
         except ValueError:
             print('\033[31mOPÇÃO INVÁLIDA!\n\nDIGITE UM NÙMERO DO MENU:')
 
@@ -204,4 +204,85 @@ def validasenha(senha):
         return False
     
    
+    return True
+
+# Função para exibir o menu de edição de dados do usuário
+def menueditar(usuariologado):
+    limpar()
+    tituloeditar = '\033[36mEDITAR DADOS\033[m'
+    print(tituloeditar.center(50, '='),'\n\n')
+    print("Selecione uma opção:\n\n[1]-Editar Nome\n[2]-Editar Email\n[3]-Editar Senha\n[0]-Voltar")
+    opcao = int(input('Digite a opção desejada: '))
+    while opcao!= 0 and opcao!= 1 and opcao!= 2 and opcao!= 3:
+        limpar()
+        menueditar(usuariologado)
+        print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+        opcao = int(input(""))
+    if opcao == 1:
+        novo_nome = input('Digite o novo nome ou 0 para cancelar:\n\n')
+        if novo_nome.strip() == '0':
+            limpar()
+            menueditar(usuariologado)
+        if validanome_editar(novo_nome):
+            usuarios.editar_nome(usuariologado, novo_nome)
+        else:
+            print("\033[31mNOME INVÁLIDO! Tente novamente.\n\033[m")
+    elif opcao == 2:
+        novo_email = input('Digite o novo email ou 0 para cancelar:\n\n')
+        usuarios.editar_email(usuariologado, novo_email)
+        if novo_email.strip() == '0':
+            limpar()
+            menueditar(usuariologado)
+    elif opcao == 3:
+        nova_senha = input('Digite a nova senha ou 0 para cancelar:\n\n')
+        usuarios.editar_senha(usuariologado, nova_senha)
+        if nova_senha.strip() == '0':
+            limpar()
+            menueditar(usuariologado)
+    elif opcao == 0:
+            limpar()
+            menudeescolha(usuariologado)
+
+# Função para validar o novo nome do usuário durante a edição
+def validanome_editar(novo_nome):
+    nometrip = novo_nome.strip()
+   
+    if not nometrip:
+        limpar()
+        tituloeditar = '\033[36mEDITAR NOME\033[m'
+        print(tituloeditar.center(50, '='),'\n\n')
+        print("\033[31mNOME NÃO PODE SER VAZIO.\n\033[m")
+        return False
+    if sum(caracter.isalpha() for caracter in nometrip) < 3:
+        limpar()
+        tituloeditar = '\033[36mEDITAR NOME\033[m'
+        print(tituloeditar.center(50, '='),'\n\n')
+        print("\033[31mNOME DEVE CONTER NO MÍNIMO 3 LETRAS.\n\033[m")
+        return False
+    if not 6 <=len(nometrip) <= 20:
+        limpar()
+        tituloeditar = '\033[36mEDITAR NOME\033[m'
+        print(tituloeditar.center(50, '='),'\n\n')
+        print("\033[31mNOME DEVE CONTER ENTRE 6 E 20 CARACTERES.\n\033[m")
+        return False
+    if ' ' in nometrip:
+        limpar()
+        tituloeditar = '\033[36mEDITAR NOME\033[m'
+        print(tituloeditar.center(50, '='),'\n\n')
+        print("\033[31mNOME NÃO DEVE CONTER ESPAÇOS.\n\033[m")
+        return False
+    if nometrip[0].isdigit():
+        limpar()
+        tituloeditar = '\033[36mEDITAR NOME\033[m'
+        print(tituloeditar.center(50, '='),'\n\n')
+        print("\033[31mNOME NÃO DEVE COMEÇAR COM NÚMERO.\n\033[m")
+        return False
+    if not all(caracter.isalnum() or caracter in "_.-" for caracter in nometrip):
+        limpar()
+        tituloeditar = '\033[36mEDITAR NOME\033[m'
+        print(tituloeditar.center(50, '='),'\n\n')
+        print("\033[31mNOME NÃO DEVE TER CARACTERES ESPECIAIS ALÉM DE '-', '_' E '.'.\n\033[m")
+        return False
+    
+    
     return True

@@ -34,7 +34,7 @@ def usuario_login():
             if usuario['email'] == email.lower() and usuario['senha'] == senha:
                 utils.limpar()
                 print('\033[32mLogin efetuado com sucesso!\n\033[m')
-                return email
+                return usuario
         utils.limpar()
         utils.titulologin()
         print('\033[31mEmail ou senha incorretos. Tente novamente.\n\033[m')
@@ -109,5 +109,33 @@ def cadastrar_usuario():
             input("\033[32mPressione Enter para ir ao login\033\n\n[m")
             return True
 
-def editar_usuario():
-    print('')
+# Função para salvar os dados dos usuários no arquivo JSON
+def salvar():
+    with open(ARQUIVO, 'w', encoding='utf-8') as arq:
+        json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
+
+# Funções para editar informações do usuário
+def editar_nome(usuariologado, novo_nome):
+    for usuario in usuarioslist:
+        if usuario["email"] == usuariologado["email"]:
+            usuario["nome"] = novo_nome.strip()
+            salvar()
+            print("\033[32mNome atualizado com sucesso!\n\033[m")
+            return True
+    return False
+def editar_email(usuariologado, novo_email):
+    for usuario in usuarioslist:
+        if usuario["email"] == usuariologado["email"]:
+            usuario["email"] = novo_email.strip().lower()
+            salvar()
+            print("\033[32mEmail atualizado com sucesso!\n\033[m")
+            return True
+    return False
+def editar_senha(usuariologado, nova_senha):
+    for usuario in usuarioslist:
+        if usuario["email"] == usuariologado["email"]:
+            usuario["senha"] = nova_senha.strip()
+            salvar()
+            print("\033[32mSenha atualizada com sucesso!\n\033[m")
+            return True
+    return False

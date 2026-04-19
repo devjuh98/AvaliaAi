@@ -11,13 +11,12 @@ except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []
 
 usuariologado = None
-   
-utils.limpar()
-
-utils.menuinicial()
 
 while True:
-   
+
+    utils.limpar()
+    utils.menuinicial()
+
     try:
         opcao = int(input(""))
         while opcao!= 1 and opcao!= 2 and opcao!= 0:
@@ -32,9 +31,12 @@ while True:
         if opcao == 2:
             usuariologado=usuarios.usuario_login()
             if usuariologado is not None:
-                utils.menudeescolha()
+                utils.menudeescolha(usuariologado)
         
-        if opcao == 0:utils.limpar();print('Programa encerrado');break
+        if opcao == 0:
+            utils.limpar()
+            print('Programa encerrado')
+            break
     except ValueError:
         utils.limpar()
         utils.menuinicial()

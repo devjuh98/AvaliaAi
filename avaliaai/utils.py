@@ -1,4 +1,4 @@
-import usuarios
+import avaliaai.usuarios as usuarios
 import os
 
 def limpar():
@@ -15,7 +15,7 @@ def menudeescolha():
     while True:
         try:
             opcao = int(input(''))
-            while opcao<0 and opcao>5:
+            while opcao<0 or opcao>5:
                 limpar()
                 menudeescolha()
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")

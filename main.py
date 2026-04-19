@@ -1,9 +1,11 @@
-import utils
-import usuarios
-import json
+import avaliaai.utils as utils
+import avaliaai.usuarios as usuarios
+import os, json
+
+ARQUIVO = os.path.join(os.path.dirname(__file__), 'usuarios.json')
 
 try:
-    with open('usuarios.json', 'r', encoding = 'utf-8') as arq:
+    with open(ARQUIVO, 'r', encoding = 'utf-8') as arq:
         usuarios.usuarioslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []

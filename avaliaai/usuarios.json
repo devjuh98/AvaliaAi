@@ -70,5 +70,11 @@
         "email": "james.leandro@ufrpe.br",
         "senha": "Brigadeiro1@",
         "status": "ativo"
+    },
+    {
+        "nome": "juliagcarvalho",
+        "email": "julia.gcarvalho@ufrpe.br",
+        "senha": "#Testandoju9",
+        "status": "ativo"
     }
 ]

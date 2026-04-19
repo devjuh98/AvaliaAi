@@ -1,7 +1,9 @@
-import utils
+import avaliaai.utils as utils
 import getpass
 import json
+import os
 
+ARQUIVO = os.path.join(os.path.dirname(__file__), 'usuarios.json')
 usuarioslist = []
 
 def usuario_login():
@@ -98,7 +100,7 @@ def cadastrar_usuario():
             'senha': senha.strip(),
             'status': 'ativo'
             })
-            with open('usuarios.json', 'w', encoding='utf-8') as arq:
+            with open(ARQUIVO, 'w', encoding='utf-8') as arq:
                 json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
             utils.limpar()
             utils.titulologin()
@@ -106,3 +108,5 @@ def cadastrar_usuario():
             input("\033[32mPressione Enter para ir ao login\033\n\n[m")
             return True
 
+def editar_usuario():
+    print('')

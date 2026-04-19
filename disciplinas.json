@@ -1,0 +1,152 @@
+[
+    {
+        "nome": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "codigos": ["pisi1", "pisi 1", "pisi i"],
+        "descricao": "Disciplina prática focada no desenvolvimento de projetos interdisciplinares."
+    },
+    {
+        "nome": "Projeto Interdisciplinar para Sistemas de Informação 2",
+        "codigos": ["pisi2", "pisi 2", "pisi ii"],
+        "descricao": "Continuação dos projetos interdisciplinares com maior complexidade."
+    },
+    {
+        "nome": "Projeto Interdisciplinar para Sistemas de Informação 3",
+        "codigos": ["pisi3", "pisi 3", "pisi iii"],
+        "descricao": "Projetos mais avançados com integração de conhecimentos."
+    },
+    {
+        "nome": "Projeto Interdisciplinar para Sistemas de Informação 4",
+        "codigos": ["pisi4", "pisi 4", "pisi iv"],
+        "descricao": "Projeto final integrador do curso."
+    },
+    {
+        "nome": "Projeto de Desenvolvimento Tecnológico para o Mundo 1",
+        "codigos": ["pdtm1"],
+        "descricao": "Desenvolvimento de soluções tecnológicas com impacto social."
+    },
+    {
+        "nome": "Projeto de Desenvolvimento Tecnológico para o Mundo 2",
+        "codigos": ["pdtm2"],
+        "descricao": "Continuação de projetos tecnológicos aplicados ao mundo real."
+    },
+    {
+        "nome": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "codigos": ["fmsi1"],
+        "descricao": "Base matemática para computação e sistemas de informação."
+    },
+    {
+        "nome": "Fundamentos Matemáticos para Sistemas de Informação 2",
+        "codigos": ["fmsi2"],
+        "descricao": "Aprofundamento em conceitos matemáticos aplicados."
+    },
+    {
+        "nome": "Desenvolvimento de Sistemas de Informação",
+        "codigos": ["dsi"],
+        "descricao": "Construção e implementação de sistemas."
+    },
+    {
+        "nome": "Princípios de Software Básico",
+        "codigos": ["psb"],
+        "descricao": "Conceitos fundamentais de software de base."
+    },
+    {
+        "nome": "Segurança e Auditoria de Sistemas",
+        "codigos": ["sas"],
+        "descricao": "Práticas de segurança e auditoria em sistemas."
+    },
+    {
+        "nome": "Cálculo N1",
+        "codigos": ["calculo1"],
+        "descricao": "Introdução ao cálculo diferencial."
+    },
+    {
+        "nome": "Princípios da Teoria da Computação",
+        "codigos": ["ptc"],
+        "descricao": "Fundamentos teóricos da computação."
+    },
+    {
+        "nome": "Gestão do Conhecimento",
+        "codigos": ["gc"],
+        "descricao": "Gestão e uso estratégico do conhecimento."
+    },
+    {
+        "nome": "Princípios de Programação",
+        "codigos": ["pp"],
+        "descricao": "Introdução à lógica de programação."
+    },
+    {
+        "nome": "Fundamentos de Problemas Computacionais 1",
+        "codigos": ["fpc1"],
+        "descricao": "Resolução de problemas computacionais básicos."
+    },
+    {
+        "nome": "Fundamentos de Problemas Computacionais 2",
+        "codigos": ["fpc2"],
+        "descricao": "Problemas computacionais mais avançados."
+    },
+    {
+        "nome": "Engenharia para Sistemas de Informação 1",
+        "codigos": ["esi1"],
+        "descricao": "Fundamentos de engenharia aplicados a sistemas."
+    },
+    {
+        "nome": "Engenharia para Sistemas de Informação 2",
+        "codigos": ["esi2"],
+        "descricao": "Continuação dos conceitos de engenharia."
+    },
+    {
+        "nome": "Engenharia para Sistemas de Informação 3",
+        "codigos": ["esi3"],
+        "descricao": "Aprofundamento em engenharia de sistemas."
+    },
+    {
+        "nome": "Estatística Aplicada à Análise de Dados",
+        "codigos": ["estatistica"],
+        "descricao": "Uso de estatística na análise de dados."
+    },
+    {
+        "nome": "Fundamentos de Estratégia Competitiva",
+        "codigos": ["fec"],
+        "descricao": "Estratégias empresariais e competitivas."
+    },
+    {
+        "nome": "Sustentabilidade em Sistemas de Informação",
+        "codigos": ["ssi"],
+        "descricao": "Sustentabilidade aplicada à tecnologia."
+    },
+    {
+        "nome": "Elementos de Sistemas Computacionais",
+        "codigos": ["esc"],
+        "descricao": "Componentes básicos de sistemas computacionais."
+    },
+    {
+        "nome": "Introdução ao Armazenamento e Análise de Dados",
+        "codigos": ["iad"],
+        "descricao": "Fundamentos de armazenamento e análise de dados."
+    },
+    {
+        "nome": "Sistemas de Informação na Internet",
+        "codigos": ["sii"],
+        "descricao": "Aplicações de sistemas na web."
+    },
+    {
+        "nome": "Empreendedorismo e Inovação",
+        "codigos": ["ei"],
+        "descricao": "Criação de negócios e inovação."
+    },
+    {
+        "nome": "Modelagem de Dados",
+        "codigos": ["md"],
+        "descricao": "Estruturação e modelagem de dados."
+    },
+    {
+        "nome": "Introdução à Administração",
+        "codigos": ["adm"],
+        "descricao": "Fundamentos da administração."
+    },
+    {
+        "nome": "Fundamentos de Sistemas de Informação",
+        "codigos": ["fsi"],
+        "descricao": "Introdução aos sistemas de informação."
+    }
+]

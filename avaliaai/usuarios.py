@@ -41,7 +41,6 @@ def usuario_login():
     
 
 def cadastrar_usuario():
-
     utils.limpar()
     utils.titulocadastro()
     while True:

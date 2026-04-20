@@ -29,7 +29,7 @@ def menudeescolha(usuariologado):
         elif opcao == 3:
             menueditar(usuariologado)
         elif opcao == 4:
-            print('')
+            usuarios.ver_dados(usuariologado)
         elif opcao == 5:
             menudeletar(usuariologado)   
         elif opcao == 0:

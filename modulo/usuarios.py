@@ -148,3 +148,19 @@ def deletar_conta(usuariologado):
             return True
     print("\033[31mConta não encontrada.\n\033[m")
     return False
+
+def ver_dados(usuariologado):
+    print("\033[34mINFORMAÇÕES DO USUÁRIO:\n\033[m")
+    print(f"Nome: {usuariologado['nome']}")
+    print(f"Email: {usuariologado['email']}") 
+    print(f"Senha: {usuariologado['senha']}")
+    print(f"Status: {usuariologado['status']}")
+    print("\n\033[32mDigite 0 para voltar ao menu.\n\033[m")
+    while True:
+        opcao = input()
+        if opcao.strip() == '0':
+            utils.limpar()
+            utils.menudeescolha(usuariologado)
+            return
+        else:
+            print("\033[31mOpção inválida. Digite 0 para voltar ao menu.\n\033[m")

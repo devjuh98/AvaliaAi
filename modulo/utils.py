@@ -408,6 +408,7 @@ def validaemail_editar(novo_email):
         
     return True
 
+# Função para validar a nova senha do usuário durante a edição
 def validasenha_editar(nova_senha):
     senhatrip = nova_senha.strip()
    

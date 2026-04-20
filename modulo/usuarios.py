@@ -139,6 +139,7 @@ def editar_senha(usuariologado, nova_senha):
             return True
     return False
 
+# Função para deletar a conta do usuário
 def deletar_conta(usuariologado):
     for usuario in usuarioslist:
         if usuario["email"] == usuariologado["email"]:
@@ -149,6 +150,7 @@ def deletar_conta(usuariologado):
     print("\033[31mConta não encontrada.\n\033[m")
     return False
 
+# Função para visualizar os dados do usuário
 def ver_dados(usuariologado):
     print("\033[34mINFORMAÇÕES DO USUÁRIO:\n\033[m")
     print(f"Nome: {usuariologado['nome']}")

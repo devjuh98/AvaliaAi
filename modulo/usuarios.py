@@ -138,3 +138,13 @@ def editar_senha(usuariologado, nova_senha):
             print("\033[32mSenha atualizada com sucesso!\n\033[m")
             return True
     return False
+
+def deletar_conta(usuariologado):
+    for usuario in usuarioslist:
+        if usuario["email"] == usuariologado["email"]:
+            usuarioslist.remove(usuario)
+            salvar()
+            print("\033[32mCONTA DELETADA COM SUCESSO!\n\033[m")
+            return True
+    print("\033[31mConta não encontrada.\n\033[m")
+    return False

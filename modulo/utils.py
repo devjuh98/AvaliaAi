@@ -1,5 +1,6 @@
 import getpass
-import modulo.usuarios as usuarios
+import usuarios as usuarios
+import avaliacoes
 import os
 
 def limpar():
@@ -9,6 +10,33 @@ def menuinicial():
     tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
+
+def menuavaliar():
+    
+    while True:
+        
+        try:
+            limpar()
+            tituloavaliar()
+            print('Faça uma avaliação:\n\n[1]-Disciplina\n[2]-Professor\n[0]-Voltar\n')
+            opcao = int(input(''))
+            while opcao not in [0,1,2]:
+                limpar()
+                tituloavaliar()
+                print('Faça uma avaliação:\n\n[1]-Disciplina\n[2]-Professor\n[0]-Voltar')
+                opcao = int(input(''))
+            if opcao == 1:
+                avaliacoes.avaliadisciplina()
+            if opcao == 2:
+                print('')
+            if opcao == 0:
+                return
+
+        except ValueError:
+            limpar()           
+            tituloavaliar()
+            print('Faça uma avaliação:\n\n[1]-Disciplina\n[2]-Professor\n[0]-Voltar\n')
+    
 
 def menudeescolha(usuariologado):
     
@@ -25,7 +53,7 @@ def menudeescolha(usuariologado):
         if opcao == 1:
             print('')
         elif opcao == 2:
-            print('')
+            menuavaliar()
         elif opcao == 3:
             menueditar(usuariologado)
         elif opcao == 4:
@@ -48,7 +76,13 @@ def titulologin():
     titulologin = '\033[36mLOGIN DE USUÁRIO\033[m'
     print(titulologin.center(50, '='),'\n\n')  
 
+def tituloavaliar():
+    tituloavaliar = '\033[36mFAZER AVALIAÇÃO\033[m'
+    print(tituloavaliar.center(50, '='),'\n\n')
 
+def tituloavaldisc():
+    tituloavaldisc = '\033[36mAVALIAR DISCIPLINA\033[m'
+    print(tituloavaldisc.center(50, '='),'\n\n')
 
 def validanome(nome):
     nometrip = nome.strip()

@@ -1,11 +1,11 @@
-import modulo.utils as utils
-import modulo.usuarios as usuarios
+import utils as utils
+import usuarios as usuarios
 import os, json
 
-ARQUIVO = os.path.join(os.path.dirname(__file__), 'usuarios.json')
+ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')
 
 try:
-    with open(ARQUIVO, 'r', encoding = 'utf-8') as arq:
+    with open(ARQUIVOUSUARIOS, 'r', encoding = 'utf-8') as arq:
         usuarios.usuarioslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []
@@ -19,7 +19,7 @@ while True:
 
     try:
         opcao = int(input(""))
-        while opcao!= 1 and opcao!= 2 and opcao!= 0:
+        while opcao not in [0,1,2]:
             utils.limpar()
             utils.menuinicial()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")

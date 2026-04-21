@@ -1,9 +1,9 @@
-import modulo.utils as utils
+import utils as utils
 import getpass
 import json
 import os
 
-ARQUIVO = os.path.join(os.path.dirname(__file__), 'usuarios.json')
+ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')
 usuarioslist = []
 
 def usuario_login():
@@ -100,10 +100,10 @@ def cadastrar_usuario():
             'senha': senha.strip(),
             'status': 'ativo'
             })
-            with open(ARQUIVO, 'w', encoding='utf-8') as arq:
+            with open(ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
                 json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
             utils.limpar()
-            utils.titulologin()
+            utils.titulocadastro()
             print("\033[32mSenha Cadastrada!\n\nCadastro concluído com sucesso!\n\033[m")
             input("\033[32mPressione Enter para ir ao login\033\n\n[m")
             return True

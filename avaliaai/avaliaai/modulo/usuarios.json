@@ -82,5 +82,11 @@
         "email": "lilian.silva@ufrpe.br",
         "senha": "Bomdi@lily1",
         "status": "ativo"
+    },
+    {
+        "nome": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br",
+        "senha": "Bolo123@",
+        "status": "ativo"
     }
 ]

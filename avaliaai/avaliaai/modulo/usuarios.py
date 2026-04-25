@@ -1,4 +1,5 @@
 import utils as utils
+import menus as menus
 import getpass
 import json
 import os
@@ -18,7 +19,7 @@ def usuario_login():
             email = input('\033[31mE-mail não pode ser vazio.\n\033[m\nDigite o e-mail do usuário ou 0 para cancelar:\n\n').strip()
         if email == '0':
             utils.limpar()
-            utils.menuinicial()
+            menus.menuinicial()
             return
         senha = getpass.getpass('\nDigite a senha para login ou 0 para cancelar:\n\n').strip()
         while not senha:
@@ -28,7 +29,7 @@ def usuario_login():
             senha = getpass.getpass('\nDigite a senha do usuário ou 0 para cancelar:\n\n').strip()
         if senha == '0':
             utils.limpar()
-            utils.menuinicial()
+            menus.menuinicial()
             return
         for usuario in usuarioslist:
             if usuario['email'] == email.lower() and usuario['senha'] == senha:
@@ -48,7 +49,7 @@ def cadastrar_usuario():
         nome = input('Digite o nome do usuário ou 0 para cancelar cadastro:\n\n')
         if nome.strip() == '0':
             utils.limpar()
-            utils.menuinicial()
+            menus.menuinicial()
             return
         if utils.validanome(nome):
             utils.limpar()
@@ -62,7 +63,7 @@ def cadastrar_usuario():
         utils.limpar() 
         if email.strip() == '0':
             utils.limpar()
-            utils.menuinicial()
+            menus.menuinicial()
             return
         if utils.validaemail(email):
             utils.limpar()
@@ -76,7 +77,7 @@ def cadastrar_usuario():
         utils.limpar() 
         if senha.strip() == '0':
             utils.limpar()
-            utils.menuinicial()
+            menus.menuinicial()
             return
         if utils.validasenha(senha):
             utils.limpar()
@@ -84,7 +85,7 @@ def cadastrar_usuario():
             confirmasenha = getpass.getpass('Confirme a senha ou digite 0 para cancelar cadastro:\n\n')
             if confirmasenha == '0':
                 utils.limpar()
-                utils.menuinicial()
+                menus.menuinicial()
                 return
             while confirmasenha != senha:
                 utils.limpar()
@@ -92,7 +93,7 @@ def cadastrar_usuario():
                 confirmasenha = getpass.getpass('\n\033[31mSenhas não coincidem.\033[m\n\nTente novamente ou digite 0 para cancelar cadastro:\n\n')
                 if confirmasenha == '0':
                     utils.limpar()
-                    utils.menuinicial()
+                    menus.menuinicial()
                     return
             usuarioslist.append({
             'nome': nome.strip(),
@@ -162,7 +163,7 @@ def ver_dados(usuariologado):
         opcao = input()
         if opcao.strip() == '0':
             utils.limpar()
-            utils.menudeescolha(usuariologado)
+            menus.menudeescolha(usuariologado)
             return
         else:
             print("\033[31mOpção inválida. Digite 0 para voltar ao menu.\n\033[m")

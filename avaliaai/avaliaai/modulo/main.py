@@ -1,5 +1,6 @@
-import avaliaai.modulo.utils as utils
-import avaliaai.modulo.usuarios as usuarios
+import utils as utils
+import usuarios as usuarios
+import menus as menus
 import os, json
 
 ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')
@@ -15,13 +16,13 @@ usuariologado = None
 while True:
 
     utils.limpar()
-    utils.menuinicial()
+    menus.menuinicial()
 
     try:
         opcao = int(input(""))
         while opcao not in [0,1,2]:
             utils.limpar()
-            utils.menuinicial()
+            menus.menuinicial()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
             opcao = int(input(""))
         if opcao == 1:
@@ -31,7 +32,7 @@ while True:
         if opcao == 2:
             usuariologado=usuarios.usuario_login()
             if usuariologado is not None:
-                utils.menudeescolha(usuariologado)
+                menus.menudeescolha(usuariologado)
         
         if opcao == 0:
             utils.limpar()
@@ -39,5 +40,5 @@ while True:
             break
     except ValueError:
         utils.limpar()
-        utils.menuinicial()
+        menus.menuinicial()
         print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")

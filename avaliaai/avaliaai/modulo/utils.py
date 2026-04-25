@@ -2,6 +2,7 @@ import getpass
 import usuarios as usuarios
 import avaliacoes as avaliacoes
 import os
+import msvcrt
 
 def limpar():
     os.system('cls')
@@ -371,3 +372,32 @@ def validasenha_editar(nova_senha):
     
     return True
 
+def senha_com_asterisco():
+    senha = ""
+    print("", end="", flush=True)
+
+    while True:
+        tecla = msvcrt.getch()
+
+        if tecla == b'\r':  # Enter
+            print()
+            break
+
+        elif tecla == b'\x08':  # Backspace
+            if senha:
+                senha = senha[:-1]
+                print("\b \b", end="", flush=True)
+
+        elif tecla in (b'\x00', b'\xe0'):  
+            msvcrt.getch()  # ignora teclas especiais (setas, etc.)
+
+        else:
+            try:
+                char = tecla.decode("utf-8")
+            except:
+                continue  # ignora caracteres inválidos
+
+            senha += char
+            print("*", end="", flush=True)
+
+    return senha

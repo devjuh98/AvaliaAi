@@ -58,7 +58,9 @@ def menudeescolha(usuariologado):
         elif opcao == 4:
             usuarios.ver_dados(usuariologado)
         elif opcao == 5:
-            menudeletar(usuariologado)   
+            menudeletar(usuariologado)
+            if usuariologado not in usuarios.usuarioslist:
+                return   
         elif opcao == 0:
             return
         else:
@@ -104,18 +106,22 @@ def menueditar(usuariologado):
             else:
                 print("\033[31mE-MAIL INVÁLIDO! Tente novamente.\n\033[m")
         elif opcao == 3:
-            senha_atual = input('Digite a senha atual ou 0 para cancelar:\n\n')
-            if senha_atual.strip() == '0':
+            
+            print('Digite a senha atual ou 0 para cancelar:\n')
+            senha_atual = utils.senha_com_asterisco().strip()
+            if senha_atual == '0':
                 utils.limpar()
                 return
             if senha_atual != usuariologado["senha"]:
                 print("\033[31mSENHA ATUAL INCORRETA! Tente novamente.\n\033[m")
                 continue
-            nova_senha = input('Digite a nova senha ou 0 para cancelar:\n\n')
-            if nova_senha.strip() == '0':
+            print('Digite a nova senha ou 0 para cancelar:\n')
+            nova_senha = utils.senha_com_asterisco().strip() 
+            if nova_senha == '0':
                 utils.limpar()
                 return
-            confirmar_senha = input('Confirme a nova senha:\n\n')
+            print('Confirme a nova senha:\n\n')
+            confirmar_senha = utils.senha_com_asterisco().strip()  
             if confirmar_senha != nova_senha:
                 print("\033[31mAS SENHAS NÃO COINCIDEM! Tente novamente.\n\033[m")
                 continue
@@ -145,8 +151,10 @@ def menudeletar(usuariologado):
 
         # Opção válida
         if opcao == 1:
-            senha_atual = input('Digite a senha atual para confirmar ou 0 para cancelar:\n\n')
-            if senha_atual.strip() == '0':
+            print('Digite a senha atual para confirmar ou 0 para cancelar:\n')
+            senha_atual = utils.senha_com_asterisco().strip()
+           
+            if senha_atual == '0':
                 utils.limpar()
                 return
             if senha_atual != usuariologado["senha"]:

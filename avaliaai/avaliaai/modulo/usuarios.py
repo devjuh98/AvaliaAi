@@ -21,12 +21,15 @@ def usuario_login():
             utils.limpar()
             menus.menuinicial()
             return
-        senha = getpass.getpass('\nDigite a senha para login ou 0 para cancelar:\n\n').strip()
+        print('\nDigite a senha para login ou 0 para cancelar:\n')
+        senha = utils.senha_com_asterisco().strip()
+        
         while not senha:
             utils.limpar()
             utils.titulologin()
             print('\033[31mSenha não pode ser vazia.\033[m\n\nE-mail digitado: ', email)
-            senha = getpass.getpass('\nDigite a senha do usuário ou 0 para cancelar:\n\n').strip()
+            senha = utils.senha_com_asterisco().strip()
+            print('\nDigite a senha do usuário ou 0 para cancelar:\n\n').strip()
         if senha == '0':
             utils.limpar()
             menus.menuinicial()
@@ -73,7 +76,8 @@ def cadastrar_usuario():
        
     while True:
 
-        senha = getpass.getpass('Digite a senha do usuário ou 0 para cancelar cadastro:\n\n')
+        print('Digite a senha do usuário ou 0 para cancelar cadastro:\n')
+        senha = utils.senha_com_asterisco().strip()
         utils.limpar() 
         if senha.strip() == '0':
             utils.limpar()
@@ -82,7 +86,8 @@ def cadastrar_usuario():
         if utils.validasenha(senha):
             utils.limpar()
             utils.titulocadastro()
-            confirmasenha = getpass.getpass('Confirme a senha ou digite 0 para cancelar cadastro:\n\n')
+            print('Confirme a senha ou digite 0 para cancelar cadastro:\n')
+            confirmasenha = utils.senha_com_asterisco().strip()
             if confirmasenha == '0':
                 utils.limpar()
                 menus.menuinicial()
@@ -90,7 +95,8 @@ def cadastrar_usuario():
             while confirmasenha != senha:
                 utils.limpar()
                 utils.titulocadastro()
-                confirmasenha = getpass.getpass('\n\033[31mSenhas não coincidem.\033[m\n\nTente novamente ou digite 0 para cancelar cadastro:\n\n')
+                print('\n\033[31mSenhas não coincidem.\033[m\n\nTente novamente ou digite 0 para cancelar cadastro:\n')
+                confirmasenha = utils.senha_com_asterisco().strip()
                 if confirmasenha == '0':
                     utils.limpar()
                     menus.menuinicial()
@@ -101,8 +107,7 @@ def cadastrar_usuario():
             'senha': senha.strip(),
             'status': 'ativo'
             })
-            with open(ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-                json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
+            salvar()
             utils.limpar()
             utils.titulocadastro()
             print("\033[32mSenha Cadastrada!\n\nCadastro concluído com sucesso!\n\033[m")

@@ -1,26 +1,18 @@
 [
     {
-        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
-        "dificuldade": 1,
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "Didática": 4,
+        "Organização": 4,
+        "usuario": "Robertocarlos",
+        "email": "roberto.carlos@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 3,
         "carga": 3,
         "utilidade": 5,
-        "usuario": "Robertocarlos",
-        "email": "roberto.carlos@ufrpe.br"
-    },
-    {
-        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 2",
-        "dificuldade": 3,
-        "carga": 4,
-        "utilidade": 5,
-        "usuario": "Robertocarlos",
-        "email": "roberto.carlos@ufrpe.br"
-    },
-    {
-        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 3",
-        "dificuldade": 5,
-        "carga": 5,
-        "utilidade": 5,
-        "usuario": "Robertocarlos",
-        "email": "roberto.carlos@ufrpe.br"
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
     }
 ]

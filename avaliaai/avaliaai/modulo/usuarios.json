@@ -6,12 +6,6 @@
         "status": "ativo"
     },
     {
-        "nome": "Gu1123Valoa",
-        "email": "guilherme.vasconcellos@ufrpe.br",
-        "senha": "Pudim123@",
-        "status": "ativo"
-    },
-    {
         "nome": "Franciscou123",
         "email": "francisco.biasoli@ufrpe.br",
         "senha": "Bolo123$",
@@ -54,9 +48,9 @@
         "status": "ativo"
     },
     {
-        "nome": "MadaraUchiha",
-        "email": "paulo.miguel@ufrpe.br",
-        "senha": "G@lo1234",
+        "nome": "Paulomaximo",
+        "email": "paulo.carvalho@ufrpe.br",
+        "senha": "G@to1234",
         "status": "ativo"
     },
     {
@@ -87,6 +81,12 @@
         "nome": "LucasRoberto8902",
         "email": "lucas.roberto@ufrpe.br",
         "senha": "Bolo123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br",
+        "senha": "S@lamence12",
         "status": "ativo"
     }
 ]

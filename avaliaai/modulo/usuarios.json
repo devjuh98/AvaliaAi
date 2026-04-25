@@ -76,5 +76,11 @@
         "email": "julia.gcarvalho@ufrpe.br",
         "senha": "#Testandoju9",
         "status": "ativo"
+    },
+    {
+        "nome": "Always.lily",
+        "email": "lilian.silva@ufrpe.br",
+        "senha": "Bomdi@lily1",
+        "status": "ativo"
     }
 ]

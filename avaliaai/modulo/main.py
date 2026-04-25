@@ -1,5 +1,5 @@
-import modulo.utils as utils
-import modulo.usuarios as usuarios
+import utils as utils
+import usuarios as usuarios
 import os, json
 
 ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')

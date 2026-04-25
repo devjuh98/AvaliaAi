@@ -1,6 +1,6 @@
 import getpass
-import modulo.usuarios as usuarios
-import modulo.avaliacoes
+import usuarios as usuarios
+import avaliacoes
 import os
 
 def limpar():
@@ -11,7 +11,7 @@ def menuinicial():
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
-def menuavaliar():
+def menuavaliar(usuariologado):
     
     while True:
         
@@ -26,10 +26,11 @@ def menuavaliar():
                 print('Faça uma avaliação:\n\n[1]-Disciplina\n[2]-Professor\n[0]-Voltar')
                 opcao = int(input(''))
             if opcao == 1:
-                modulo.avaliacoes.avaliadisciplina()
+                avaliacoes.avaliadisciplina(usuariologado)
             if opcao == 2:
                 print('')
             if opcao == 0:
+                limpar()
                 return
 
         except ValueError:
@@ -53,7 +54,7 @@ def menudeescolha(usuariologado):
         if opcao == 1:
             print('')
         elif opcao == 2:
-            menuavaliar()
+            menuavaliar(usuariologado)
         elif opcao == 3:
             menueditar(usuariologado)
         elif opcao == 4:
@@ -80,7 +81,7 @@ def tituloavaliar():
     tituloavaliar = '\033[36mFAZER AVALIAÇÃO\033[m'
     print(tituloavaliar.center(50, '='),'\n\n')
 
-def tituloavaldisc():
+def tituloavaliardisciplina():
     tituloavaldisc = '\033[36mAVALIAR DISCIPLINA\033[m'
     print(tituloavaldisc.center(50, '='),'\n\n')
 

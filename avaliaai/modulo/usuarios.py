@@ -1,4 +1,4 @@
-import modulo.utils as utils
+import utils as utils
 import getpass
 import json
 import os

@@ -1,6 +1,6 @@
 import getpass
-import modulo.usuarios as usuarios
-import modulo.avaliacoes
+import avaliaai.modulo.usuarios as usuarios
+import avaliaai.modulo.avaliacoes as avaliacoes
 import os
 
 def limpar():
@@ -26,7 +26,7 @@ def menuavaliar():
                 print('Faça uma avaliação:\n\n[1]-Disciplina\n[2]-Professor\n[0]-Voltar')
                 opcao = int(input(''))
             if opcao == 1:
-                modulo.avaliacoes.avaliadisciplina()
+                avaliacoes.avaliadisciplina()
             if opcao == 2:
                 print('')
             if opcao == 0:
@@ -547,7 +547,7 @@ def menuchecaravaliacao():
         
         # Opção válida
         if opcao == 1:
-            modulo.avaliacoes.checardisciplina()
+            avaliacoes.checardisciplina()
         if opcao == 2:
             print('')
         if opcao == 0:

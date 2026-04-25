@@ -1,6 +1,6 @@
 import json,os
-import modulo.usuarios as usuarios
-import modulo.utils as utils
+import avaliaai.modulo.usuarios as usuarios
+import avaliaai.modulo.utils as utils
 
 disciplinaslist = []
 
@@ -122,7 +122,7 @@ def checardisciplina():
             print("\033[31mDISCIPLINA INEXISTENTE![m\n")
             continue
 
-        avaliacaoencontrada = [av for av in avaliacaolist if av == ["disciplina"] == disciplinaencontrada["nome"]]
+        avaliacaoencontrada = [av for av in avaliacaolist if av["disciplina"] == disciplinaencontrada["nome"]]
         if not avaliacaoencontrada:
             utils.limpar()
             print(f"\033[31mA disciplina {disciplinaencontrada["nome"]} não possui nenhuma avaliação ainda!\033[m")

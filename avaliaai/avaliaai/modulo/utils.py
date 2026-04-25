@@ -1,6 +1,6 @@
 import getpass
-import usuarios as usuarios
-import avaliacoes
+import avaliaai.modulo.usuarios as usuarios
+import avaliaai.modulo.avaliacoes as avaliacoes
 import os
 
 def limpar():
@@ -52,7 +52,7 @@ def menudeescolha(usuariologado):
             continue
 
         if opcao == 1:
-            print('')
+            menuchecaravaliacao()
         elif opcao == 2:
             menuavaliar(usuariologado)
         elif opcao == 3:
@@ -251,7 +251,7 @@ def menueditar(usuariologado):
         print(tituloeditar.center(50, '='),'\n\n')
         print("Selecione uma opção:\n\n[1]-Editar Nome\n[2]-Editar Email\n[3]-Editar Senha\n[0]-Voltar")
         try:
-             opcao = int(input('Digite a opção desejada: '))
+            opcao = int(input('Digite a opção desejada: '))
         except ValueError:
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
             opcao = int(input('Digite a opção desejada: '))
@@ -524,4 +524,32 @@ def menudeletar(usuariologado):
             return
         elif opcao == 2:
             limpar()
+            return
+
+# Função para exibir o menu de checar avaliações de disiciplinas e professores
+def menuchecaravaliacao():
+    while True:
+        titulochecar = '\033[36mCHECAR AVALIAÇÕES\033[m'
+        print(titulochecar.center(50, '='),'\n\n')
+        print("Selecine uma opção:\n\n[1]-Checar Avaliações de Disciplinas\n[2]-Checar Avaliações de Professores\n[0]-Voltar")
+        try:
+            opcao = int(input('Digite a opção desejada: '))
+        except ValueError:
+            limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\n\nDIGITE UM NÙMERO DO MENU:\n\033[m")
+            opcao = int(input("Digite a opção desejada:"))
+            continue
+        if opcao not in [0, 1, 2]:
+            limpar()
+            menuchecaravaliacao()
+            print("\033[31mOPÇÃO INVÁLIDA!\n\033[m")
+            opcao = int(input("Digite a opção desejada:"))
+            continue
+        
+        # Opção válida
+        if opcao == 1:
+            avaliacoes.checardisciplina()
+        if opcao == 2:
+            print('')
+        if opcao == 0:
             return

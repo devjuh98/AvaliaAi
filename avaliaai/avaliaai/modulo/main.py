@@ -1,5 +1,5 @@
-import utils as utils
-import usuarios as usuarios
+import avaliaai.modulo.utils as utils
+import avaliaai.modulo.usuarios as usuarios
 import os, json
 
 ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')

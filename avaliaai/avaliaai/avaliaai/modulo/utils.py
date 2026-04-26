@@ -1,6 +1,5 @@
-import getpass
-import usuarios as usuarios
-import avaliacoes as avaliacoes
+import modulo.usuarios as usuarios
+import modulo.avaliacoes as avaliacoes
 import os
 import msvcrt
 
@@ -101,7 +100,8 @@ def validaemail(email):
         titulocadastro()
         print("\033[31mE-MAIL NÃO DEVE CONTER ESPAÇOS VAZIOS.\n\033[m")
         return False
-    if any(caracter in ['áéíóúãõâêîôûàèìòùäëïöü'] for caracter in emailtrip):
+    acentos = set('áéíóúãõâêîôûàèìòùäëïöü')
+    if any(caracter in acentos for caracter in emailtrip):
         limpar()
         titulocadastro()
         print("\033[31mE-MAIL NÃO DEVE CONTER ACENTO.\n\033[m")
@@ -124,7 +124,7 @@ def validaemail(email):
     if nome.count('.') < 1:
         limpar()
         titulocadastro()
-        print("\033[31mE-MAIL DEVE CONTER APENAS '.' ENTRE NOME E SOBRENOME.\n\033[m")
+        print("\033[31mE-MAIL DEVE CONTER '.' ENTRE NOME E SOBRENOME.\n\033[m")
         return False
     
     nomeparte1, nomeparte2 = nome.split('.')
@@ -274,7 +274,8 @@ def validaemail_editar(novo_email):
         print(tituloeditar.center(50, '='),'\n\n')
         print("\033[31mE-MAIL NÃO DEVE CONTER ESPAÇOS VAZIOS.\n\033[m")
         return False
-    if any(caracter in ['áéíóúãõâêîôûàèìòùäëïöü'] for caracter in emailtrip):
+    acentos = set('áéíóúãõâêîôûàèìòùäëïöü')
+    if any(caracter in acentos for caracter in emailtrip):
         limpar()
         tituloeditar = '\033[36mEDITAR EMAIL\033[m'
         print(tituloeditar.center(50, '='),'\n\n')
@@ -302,7 +303,7 @@ def validaemail_editar(novo_email):
         limpar()
         tituloeditar = '\033[36mEDITAR EMAIL\033[m'
         print(tituloeditar.center(50, '='),'\n\n')
-        print("\033[31mE-MAIL DEVE CONTER APENAS '.' ENTRE NOME E SOBRENOME.\n\033[m")
+        print("\033[31mE-MAIL DEVE CONTER '.' ENTRE NOME E SOBRENOME.\n\033[m")
         return False
     
     nomeparte1, nomeparte2 = nome.split('.')

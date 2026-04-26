@@ -8,11 +8,11 @@
         "email": "roberto.carlos@ufrpe.br"
     },
     {
-        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
-        "dificuldade": 3,
-        "carga": 3,
-        "utilidade": 5,
-        "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 3,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br"
     }
 ]

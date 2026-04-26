@@ -1,6 +1,5 @@
-import utils as utils
-import menus as menus
-import getpass
+import modulo.utils as utils
+import modulo.menus as menus
 import json
 import os
 

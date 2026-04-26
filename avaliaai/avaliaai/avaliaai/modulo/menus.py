@@ -1,9 +1,6 @@
-import utils as utils
-import usuarios as usuarios
-import avaliacoes as avaliacoes
-
-
-
+import modulo.utils as utils
+import modulo.usuarios as usuarios
+import modulo.avaliacoes as avaliacoes
 
 def menuinicial():
     tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'

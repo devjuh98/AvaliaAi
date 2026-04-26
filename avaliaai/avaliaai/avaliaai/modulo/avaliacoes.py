@@ -1,6 +1,6 @@
 import json,os
-import usuarios as usuarios
-import utils as utils
+import modulo.usuarios as usuarios
+import modulo.utils as utils
 
 professoreslist = []
 disciplinaslist = []
@@ -31,9 +31,9 @@ except(FileNotFoundError, json.JSONDecodeError):
 ARQUIVOAVALIAPROF = os.path.join(os.path.dirname(__file__), 'avaliacoes_professores.json')
 try:
     with open(ARQUIVOAVALIAPROF, 'r', encoding = 'utf-8') as arq:
-        avaliacoes_disciplinas = json.load(arq)
+        avaliacoes_professores = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
-    avaliacoes_disciplinas = []
+    avaliacoes_professores = []
 
 
 
@@ -159,10 +159,10 @@ def checardisciplina():
                 break
         if not disciplinaencontrada:
             utils.limpar()
-            print("\033[31mDISCIPLINA INEXISTENTE![m\n")
+            print("\033[31mDISCIPLINA INEXISTENTE!\n")
             continue
 
-        avaliacaoencontrada = [av for av in avaliacaolist if av["disciplina"] == disciplinaencontrada["nome"]]
+        avaliacaoencontrada = [av for av in avaliacoes_disciplinas if av.get("disciplina") == disciplinaencontrada["nome"]]
         if not avaliacaoencontrada:
             utils.limpar()
             print(f"\033[31mA disciplina {disciplinaencontrada["nome"]} não possui nenhuma avaliação ainda!\033[m")
@@ -170,6 +170,7 @@ def checardisciplina():
             utils.limpar()
             print(f"\nAvaliações da disciplina {disciplinaencontrada["nome"]}:")
             for av in avaliacaoencontrada:
+                print(f"Usuário: {av.get('usuario')}")
                 print(f"Dificuldade: {av["dificuldade"]}")
                 print(f"Carga de trabalho: {av["carga"]}")
                 print(f"Utilidade do conteúdo: {av["utilidade"]}\n")
@@ -292,47 +293,4 @@ def avaliaprofessor(usuariologado):
         if professorachado == False: print('\033[31mProfessor não encontrada\033[m')
         if professoravaliado == True: print('\033[31mVocê já avaliou esse professor! Escolha outro!\033[m\n')
 
-# Função para checar avaliações de disciplinas
-def checardisciplina():
-    while True:
-        titulochecardisciplina = '\033[36mAVALIAÇÕES DE DISCIPLINAS\033[m'
-        print(titulochecardisciplina.center(50,'='), '\n\n')
-        procurardisciplina = input("Digite o nome da disciplina que deseja checar ou digite 0 para voltar:\n")
 
-        if procurardisciplina == "0":
-            return
-            
-        disciplinaencontrada = None
-        for disciplina in disciplinaslist:
-            if procurardisciplina.lower() == disciplina["nome"].lower() or procurardisciplina.lower() in [c.lower() for c in disciplina["codigos"]]:
-                disciplinaencontrada = disciplina
-                break
-        if not disciplinaencontrada:
-            utils.limpar()
-            print("\033[31mDISCIPLINA INEXISTENTE![m\n")
-            continue
-
-        avaliacaoencontrada = [av for av in avaliacaolist if av["disciplina"] == disciplinaencontrada["nome"]]
-        if not avaliacaoencontrada:
-            utils.limpar()
-            print(f"\033[31mA disciplina {disciplinaencontrada["nome"]} não possui nenhuma avaliação ainda!\033[m")
-        else:
-            utils.limpar()
-            print(f"\nAvaliações da disciplina {disciplinaencontrada["nome"]}:")
-            for av in avaliacaoencontrada:
-                print(f"Dificuldade: {av["dificuldade"]}")
-                print(f"Carga de trabalho: {av["carga"]}")
-                print(f"Utilidade do conteúdo: {av["utilidade"]}\n")
-
-        while True:
-            try:
-                escolha = int(input("Deseja checar outra disciplina?\n1-Sim\n2-Não\n"))
-                if escolha == 1:
-                    utils.limpar()
-                    break
-                if escolha == 2:
-                    return
-                else:
-                    print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
-            except ValueError:
-                print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")

@@ -27,6 +27,8 @@ def tituloavaliarprofessor():
     print(tituloavalprof.center(50, '='),'\n\n')
 
 def validanome(nome):
+    '''Valida o nome do usuário de acordo com os critérios estabelecidos. 
+    Recebe o parâmetro nome a e retorna True(válido) ou False (Inválido).'''
     nometrip = nome.strip()
    
     if not nometrip:
@@ -64,6 +66,8 @@ def validanome(nome):
     return True
 
 def validaemail(email):
+    '''Valida o email do usuário de acordo com os critérios estabelecidos. 
+    Recebe o parâmetro nome a e retorna True(válido) ou False (Inválido).'''
     emailtrip = email.strip().lower()
    
     if not emailtrip:
@@ -145,6 +149,8 @@ def validaemail(email):
     return True
        
 def validasenha(senha):
+    '''Valida a senha do usuário de acordo com os critérios estabelecidos. 
+    Recebe o parâmetro nome a e retorna True(válido) ou False (Inválido).'''
     senhatrip = senha.strip()
    
     if not senhatrip:
@@ -374,6 +380,8 @@ def validasenha_editar(nova_senha):
     return True
 
 def senha_com_asterisco():
+    '''Função que mostra asteríscos ao digitar a senha, 
+    não tem parâmetros de entrada e retorna a senha.'''
     senha = ""
     print("", end="", flush=True)
 

@@ -38,6 +38,8 @@ except(FileNotFoundError, json.JSONDecodeError):
 
 
 def avaliadisciplina(usuariologado):
+    '''Função para realizar a avaliação de uma disciplina,
+    recebe o usuário logado como parâmetro de entrada e sem retorno.'''
     utils.limpar()
     utils.tituloavaliardisciplina()
     while True:
@@ -143,6 +145,8 @@ def avaliadisciplina(usuariologado):
         if disciplinavaliada == True: print('\033[31mVocê já avaliou essa disciplina! Escolha outra!\033[m\n')#if fora do for
 
 def avaliaprofessor(usuariologado):
+    '''Função para realizar a avaliação de um professor,
+    recebe o usuário logado como parâmetro de entrada e sem retorno.'''
     utils.limpar()
     utils.tituloavaliarprofessor()
     while True:

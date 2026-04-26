@@ -3,12 +3,15 @@ import modulo.usuarios as usuarios
 import modulo.avaliacoes as avaliacoes
 
 def menuinicial():
+    '''Função para exibir o menu inicial do programa, 
+    sem parâmetros de entrada e sem retorno.'''
     tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
 
 def menuavaliar(usuariologado):
-    
+    '''Função para exibir o menu de avaliação de disciplinas e professores,
+    recebe o usuário logado como parâmetro de entrada e sem retorno.'''
     while True:
         
         try:
@@ -35,7 +38,8 @@ def menuavaliar(usuariologado):
             print('Faça uma avaliação:\n\n[1]-Disciplina\n[2]-Professor\n[0]-Voltar\n')
 
 def menudeescolha(usuariologado):
-    
+    '''Função para exibir o menu de escolha de ações do usuário logado,
+    recebe o usuário logado como parâmetro de entrada e sem retorno.'''
     while True:
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
         "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")

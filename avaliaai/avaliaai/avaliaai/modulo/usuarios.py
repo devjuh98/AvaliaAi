@@ -7,6 +7,8 @@ ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')
 usuarioslist = []
 
 def usuario_login():
+    '''Função para realizar o login do usuário,
+    não possui parâmetros de entrada e retorna o usuário logado ou None.'''
    
     utils.limpar()
     utils.titulologin()
@@ -44,6 +46,10 @@ def usuario_login():
     
 
 def cadastrar_usuario():
+    '''Função para realizar o cadastro do usuário,
+    armazenando os dados em um json e em uma lista
+    sem parâmetros de entrada e sem retorno.'''
+    
     utils.limpar()
     utils.titulocadastro()
     while True:

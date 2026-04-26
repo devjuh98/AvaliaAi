@@ -189,6 +189,6 @@ def menuchecaravaliacao():
         if opcao == 1:
             avaliacoes.checardisciplina()
         if opcao == 2:
-            print('')
+            avaliacoes.checarprofessor()
         if opcao == 0:
             return

@@ -67,6 +67,7 @@ def menudeescolha(usuariologado):
 # Função para exibir o menu de edição de dados do usuário
 def menueditar(usuariologado):
     while True:
+        utils.limpar()
         tituloeditar = '\033[36mEDITAR DADOS\033[m'
         print(tituloeditar.center(50, '='),'\n\n')
         print("Selecione uma opção:\n\n[1]-Editar Nome\n[2]-Editar Email\n[3]-Editar Senha\n[0]-Voltar")
@@ -74,61 +75,72 @@ def menueditar(usuariologado):
             opcao = int(input('Digite a opção desejada: '))
         except ValueError:
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
-            opcao = int(input('Digite a opção desejada: '))
-            continue
-        if opcao not in [0, 1, 2, 3]:
-            utils.limpar()
-            menueditar(usuariologado)
-            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
-            opcao = int(input('Digite a opção desejada: '))
+            input("Pressione Enter para continuar...")
             continue
 
         # Opção válida
         if opcao == 1:
-            novo_nome = input('Digite o novo nome ou 0 para cancelar:\n\n')
-            if novo_nome.strip() == '0':
+            while True:
                 utils.limpar()
-                return
-            if utils.validanome_editar(novo_nome):
-                usuarios.editar_nome(usuariologado, novo_nome)
-            else:
-                print("\033[31mNOME INVÁLIDO! Tente novamente.\n\033[m")
+                novo_nome = input('Digite o novo nome ou 0 para cancelar:\n\n')
+                if novo_nome.strip() == '0':
+                    break
+                if utils.validanome_editar(novo_nome):
+                    usuarios.editar_nome(usuariologado, novo_nome)
+                    break
+                else:
+                    print("\033[31mNOME INVÁLIDO! Tente novamente.\n\033[m")
+                    input("Pressione Enter para continuar...")
+                    continue
         elif opcao == 2:
-            novo_email = input('Digite o novo email ou 0 para cancelar:\n\n')
-            if novo_email.strip() == '0':
+            while True:
                 utils.limpar()
-                return
-            if utils.validaemail_editar(novo_email):
-                usuarios.editar_email(usuariologado, novo_email)
-            else:
-                print("\033[31mE-MAIL INVÁLIDO! Tente novamente.\n\033[m")
+                novo_email = input('Digite o novo email ou 0 para cancelar:\n\n')
+                if novo_email.strip() == '0':
+                    break
+                if utils.validaemail_editar(novo_email):
+                    usuarios.editar_email(usuariologado, novo_email)
+                    break
+                else:
+                    print("\033[31mE-MAIL INVÁLIDO! Tente novamente.\n\033[m")
+                    input("Pressione Enter para continuar...")
+                    continue
         elif opcao == 3:
-            
-            print('Digite a senha atual ou 0 para cancelar:\n')
-            senha_atual = utils.senha_com_asterisco().strip()
-            if senha_atual == '0':
+            while True:
                 utils.limpar()
-                return
-            if senha_atual != usuariologado["senha"]:
-                print("\033[31mSENHA ATUAL INCORRETA! Tente novamente.\n\033[m")
-                continue
-            print('Digite a nova senha ou 0 para cancelar:\n')
-            nova_senha = utils.senha_com_asterisco().strip() 
-            if nova_senha == '0':
-                utils.limpar()
-                return
-            print('Confirme a nova senha:\n\n')
-            confirmar_senha = utils.senha_com_asterisco().strip()  
-            if confirmar_senha != nova_senha:
-                print("\033[31mAS SENHAS NÃO COINCIDEM! Tente novamente.\n\033[m")
-                continue
-            if utils.validasenha_editar(nova_senha):
-                usuarios.editar_senha(usuariologado, nova_senha)
-            else:
-                print("\033[31mSENHA INVÁLIDA! Tente novamente.\n\033[m")
+                print('Digite a senha atual ou 0 para cancelar:\n\n')
+                senha_atual = utils.senha_com_asterisco().strip()
+                if senha_atual.strip() == '0':
+                    break
+                if senha_atual != usuariologado["senha"]:
+                    print("\033[31mSENHA ATUAL INCORRETA! Tente novamente.\n\033[m")
+                    input("Pressione Enter para continuar...")
+                    continue
+                print('Digite a nova senha ou 0 para cancelar:\n\n')
+                nova_senha = utils.senha_com_asterisco().strip() 
+                if nova_senha.strip() == '0':
+                    break
+                print('Confirme a nova senha:\n\n')
+                confirmar_senha = utils.senha_com_asterisco().strip()  
+                if confirmar_senha != nova_senha:
+                    print("\033[31mAS SENHAS NÃO COINCIDEM! Tente novamente.\n\033[m")
+                    input("Pressione Enter para continuar...")
+                    continue
+                if utils.validasenha_editar(nova_senha):
+                    usuarios.editar_senha(usuariologado, nova_senha)
+                    break
+                else:
+                    print("\033[31mSENHA INVÁLIDA! Tente novamente.\n\033[m")
+                    input("Pressione Enter para continuar...")
+                    continue
         elif opcao == 0:
             utils.limpar()
             return
+        else:
+            print("\033[31mOPÇÃO INVÁLIDA! Escolha entre 0, 1, 2 ou 3.\033[m\n")
+            input("Pressione Enter para continuar...")
+            continue
+
 # Função para exibir o menu de confirmação de exclusão de conta
 def menudeletar(usuariologado):
     while True:
@@ -136,7 +148,7 @@ def menudeletar(usuariologado):
         print(titulodeletar.center(50, '='),'\n\n')
         print("Tem certeza que deseja deletar sua conta?\n\n[1]-Sim\n[2]-Não")
         try:
-             opcao = int(input('Digite a opção desejada: '))
+            opcao = int(input('Digite a opção desejada: '))
         except ValueError:
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
             opcao = int(input('Digite a opção desejada: '))

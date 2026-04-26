@@ -125,6 +125,7 @@ def editar_nome(usuariologado, novo_nome):
             usuario["nome"] = novo_nome.strip()
             salvar()
             print("\033[32mNome atualizado com sucesso!\n\033[m")
+            input("Pressione Enter para voltar ao menu...")
             return True
     return False
 def editar_email(usuariologado, novo_email):
@@ -133,6 +134,7 @@ def editar_email(usuariologado, novo_email):
             usuario["email"] = novo_email.strip().lower()
             salvar()
             print("\033[32mEmail atualizado com sucesso!\n\033[m")
+            input("Pressione Enter para voltar ao menu...")
             return True
     return False
 def editar_senha(usuariologado, nova_senha):
@@ -141,6 +143,7 @@ def editar_senha(usuariologado, nova_senha):
             usuario["senha"] = nova_senha.strip()
             salvar()
             print("\033[32mSenha atualizada com sucesso!\n\033[m")
+            input("Pressione Enter para voltar ao menu...")
             return True
     return False
 

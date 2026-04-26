@@ -31,9 +31,9 @@ except(FileNotFoundError, json.JSONDecodeError):
 ARQUIVOAVALIAPROF = os.path.join(os.path.dirname(__file__), 'avaliacoes_professores.json')
 try:
     with open(ARQUIVOAVALIAPROF, 'r', encoding = 'utf-8') as arq:
-        avaliacoes_disciplinas = json.load(arq)
+        avaliacoes_professores = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
-    avaliacoes_disciplinas = []
+    avaliacoes_professores = []
 
 
 

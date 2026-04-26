@@ -24,8 +24,8 @@ def tituloavaliardisciplina():
     print(tituloavaldisc.center(50, '='),'\n\n')
 
 def tituloavaliarprofessor():
-    tituloavaldisc = '\033[36mAVALIAR PROFESSOR\033[m'
-    print(tituloavaldisc.center(50, '='),'\n\n')
+    tituloavalprof = '\033[36mAVALIAR PROFESSOR\033[m'
+    print(tituloavalprof.center(50, '='),'\n\n')
 
 def validanome(nome):
     nometrip = nome.strip()

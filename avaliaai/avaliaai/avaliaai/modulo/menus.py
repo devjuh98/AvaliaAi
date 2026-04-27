@@ -1,10 +1,10 @@
-import modulo.utils as utils
-import modulo.usuarios as usuarios
-import modulo.avaliacoes as avaliacoes
+import utils as utils
+import usuarios as usuarios
+import avaliacoes as avaliacoes
 
 def menuinicial():
     '''Função para exibir o menu inicial do programa, 
-    sem parâmetros de entrada e sem retorno.'''
+    sem parâmetros de entrada eem retorno.'''
     tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )
@@ -66,7 +66,7 @@ def menudeescolha(usuariologado):
             return
         else:
             utils.limpar()
-            print('\033[31mOPÇÃO INVÁLIDA!\n\nDIGITE UM NÙMERO DO MENU:')
+            print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
 
 # Função para exibir o menu de edição de dados do usuário
 def menueditar(usuariologado):

@@ -8,11 +8,147 @@
         "email": "francisco.biasoli@ufrpe.br"
     },
     {
-        "disciplina": "Fundamentos de Sistemas de Informação",
-        "dificuldade": 2,
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 2",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 3,
+        "usuario": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 1,
         "carga": 3,
         "utilidade": 5,
-        "usuario": "juliagcarvalho",
-        "email": "julia.gcarvalho@ufrpe.br"
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 1,
+        "utilidade": 5,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 3,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 3,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 4,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 3,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
     }
 ]

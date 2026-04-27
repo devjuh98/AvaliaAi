@@ -17,10 +17,154 @@
     },
     {
         "professor": "Marina Barros",
+        "dificuldade da avaliação": 5,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "jao7654",
+        "email": "joao.gomes@ufrpe.br"
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 5,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br"
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 4,
+        "Didática": 3,
+        "Organização": 5,
+        "usuario": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br"
+    },
+    {
+        "professor": "Silvana Bocanegra",
         "dificuldade da avaliação": 4,
         "Didática": 5,
         "Organização": 5,
-        "usuario": "juliagcarvalho",
-        "email": "julia.gcarvalho@ufrpe.br"
+        "usuario": "LucasRoberto8902",
+        "email": "lucas.roberto@ufrpe.br"
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 1,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 2,
+        "Didática": 4,
+        "Organização": 4,
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 3,
+        "Didática": 3,
+        "Organização": 3,
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 1,
+        "Didática": 4,
+        "Organização": 5,
+        "usuario": "GuilhermeValois",
+        "email": "guilherme.valois@ufrpe.br"
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 1,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "Didática": 3,
+        "Organização": 5,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 3,
+        "Didática": 2,
+        "Organização": 3,
+        "usuario": "Always.lily",
+        "email": "lilian.silva@ufrpe.br"
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 2,
+        "Didática": 4,
+        "Organização": 5,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "Didática": 4,
+        "Organização": 3,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 3,
+        "Didática": 3,
+        "Organização": 3,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 2,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "JamesBaxter",
+        "email": "james.leandro@ufrpe.br"
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 1,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "Didática": 5,
+        "Organização": 3,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 1,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 1,
+        "Didática": 1,
+        "Organização": 1,
+        "usuario": "MarkGrayson",
+        "email": "markus.sebastian@ufrpe.br"
     }
 ]

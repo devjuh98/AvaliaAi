@@ -1,5 +1,5 @@
-import modulo.utils as utils
-import modulo.menus as menus
+import utils as utils
+import menus as menus
 import json
 import os
 

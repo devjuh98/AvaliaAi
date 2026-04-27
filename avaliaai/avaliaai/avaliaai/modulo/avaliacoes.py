@@ -1,6 +1,6 @@
 import json,os
-import modulo.usuarios as usuarios
-import modulo.utils as utils
+import usuarios as usuarios
+import utils as utils
 
 professoreslist = []
 disciplinaslist = []
@@ -57,88 +57,88 @@ def avaliadisciplina(usuariologado):
                         disciplinavaliada = True
                         break
 
-        if disciplinavaliada == False and disciplinachada == True:      
-            utils.limpar()
-            utils.tituloavaliardisciplina()
-            print('Disciplina Encontrada!\n')
-            while True:
-                try:
-                    dificuldade = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
-                    if dificuldade == 0:break
-                    if dificuldade not in [1,2,3,4,5]:
-                        utils.limpar()
-                        utils.tituloavaliardisciplina()
-                        print('\033[31mVALOR INVÁLIDO\033[m\n') 
-                    else:
-                        utils.limpar()
-                        utils.tituloavaliardisciplina()
-                        while True:
-                            try:
-                                carga = int(input('Digite um valor de 1 a 5 para avaliar nível de carga de trabalho ou 0 para voltar:\nOBS:5-Muita carga e 1-Pouquíssima carga\n'))
-                                if carga == 0:break
-                                if carga not in [1,2,3,4,5]:
-                                    utils.limpar()
-                                    utils.tituloavaliardisciplina()
-                                    print('\033[31mVALOR INVÁLIDO\033[m\n') 
-                                else:
-                                    utils.limpar()
-                                    utils.tituloavaliardisciplina()    
-                                    while True:
-                                        try:
-                                            utilidade = int(input('Digite um valor de 1 a 5 para avaliar nível de utilidade do conteúdo ou 0 para voltar:\nOBS:5-Muito útil e 1-Pouquíssimo útil\n'))
-                                            if utilidade == 0:break
-                                            if utilidade not in [1,2,3,4,5]:
-                                                utils.limpar()
-                                                utils.tituloavaliardisciplina()
-                                                print('\033[31mVALOR INVÁLIDO\033[m\n') 
-                                            else:
-                                                utils.limpar()
-                                                utils.tituloavaliardisciplina()
-                                                avaliacoes_disciplinas.append({
-                                                    'disciplina': disciplina['nome'],
-                                                    'dificuldade': dificuldade,
-                                                    'carga': carga,
-                                                    'utilidade': utilidade,
-                                                    'usuario': usuariologado['nome'],
-                                                    'email': usuariologado['email']
-                                                })
-                                                with(open(ARQUIVOAVALIADISC, 'w', encoding = 'utf-8')) as arq:
-                                                    json.dump(avaliacoes_disciplinas, arq, indent = 4, ensure_ascii=False)
+            if disciplinavaliada == False and disciplinachada == True:      
+                utils.limpar()
+                utils.tituloavaliardisciplina()
+                print('Disciplina Encontrada!\n')
+                while True:
+                    try:
+                        dificuldade = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
+                        if dificuldade == 0:break
+                        if dificuldade not in [1,2,3,4,5]:
+                            utils.limpar()
+                            utils.tituloavaliardisciplina()
+                            print('\033[31mVALOR INVÁLIDO\033[m\n') 
+                        else:
+                            utils.limpar()
+                            utils.tituloavaliardisciplina()
+                            while True:
+                                try:
+                                    carga = int(input('Digite um valor de 1 a 5 para avaliar nível de carga de trabalho ou 0 para voltar:\nOBS:5-Muita carga e 1-Pouquíssima carga\n'))
+                                    if carga == 0:break
+                                    if carga not in [1,2,3,4,5]:
+                                        utils.limpar()
+                                        utils.tituloavaliardisciplina()
+                                        print('\033[31mVALOR INVÁLIDO\033[m\n') 
+                                    else:
+                                        utils.limpar()
+                                        utils.tituloavaliardisciplina()    
+                                        while True:
+                                            try:
+                                                utilidade = int(input('Digite um valor de 1 a 5 para avaliar nível de utilidade do conteúdo ou 0 para voltar:\nOBS:5-Muito útil e 1-Pouquíssimo útil\n'))
+                                                if utilidade == 0:break
+                                                if utilidade not in [1,2,3,4,5]:
+                                                    utils.limpar()
+                                                    utils.tituloavaliardisciplina()
+                                                    print('\033[31mVALOR INVÁLIDO\033[m\n') 
+                                                else:
+                                                    utils.limpar()
+                                                    utils.tituloavaliardisciplina()
+                                                    avaliacoes_disciplinas.append({
+                                                        'disciplina': disciplina['nome'],
+                                                        'dificuldade': dificuldade,
+                                                        'carga': carga,
+                                                        'utilidade': utilidade,
+                                                        'usuario': usuariologado['nome'],
+                                                        'email': usuariologado['email']
+                                                    })
+                                                    with(open(ARQUIVOAVALIADISC, 'w', encoding = 'utf-8')) as arq:
+                                                        json.dump(avaliacoes_disciplinas, arq, indent = 4, ensure_ascii=False)
 
-                                                while True:
-                                                    try:
+                                                    while True:
+                                                        try:
                         
-                                                        reavaliar = int(input('\033[32mAvaliação concluída!\n\033[m Deseja avaliar outra disciplina?\n\n[1]-Sim\n[2]-Não\n'))
-                                                        if reavaliar == 1:
-                                                            utils.limpar()
-                                                            utils.tituloavaliardisciplina()
-                                                            break
-                                                        if reavaliar == 2:
-                                                            return
-                                                        else:
+                                                            reavaliar = int(input('\033[32mAvaliação concluída!\n\033[mDeseja avaliar outra disciplina?\n\n[1]-Sim\n[2]-Não\n'))
+                                                            if reavaliar == 1:
+                                                                utils.limpar()
+                                                                utils.tituloavaliardisciplina()
+                                                                break
+                                                            if reavaliar == 2:
+                                                                return
+                                                            else:
+                                                                utils.limpar()
+                                                                utils.tituloavaliardisciplina()
+                                                                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                                                        except(ValueError):
                                                             utils.limpar()
                                                             utils.tituloavaliardisciplina()
                                                             print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                                                    except(ValueError):
-                                                        utils.limpar()
-                                                        utils.tituloavaliardisciplina()
-                                                        print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                                                break              
-                                        except(ValueError):
-                                            utils.limpar()
-                                            utils.tituloavaliardisciplina()
-                                            print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                                    break
-                            except(ValueError):
-                                utils.limpar()
-                                utils.tituloavaliardisciplina()
-                                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                        break
-                except(ValueError):
-                    utils.limpar()
-                    utils.tituloavaliardisciplina()
-                    print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-            break               
+                                                    break              
+                                            except(ValueError):
+                                                utils.limpar()
+                                                utils.tituloavaliardisciplina()
+                                                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                                        break
+                                except(ValueError):
+                                    utils.limpar()
+                                    utils.tituloavaliardisciplina()
+                                    print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                            break
+                    except(ValueError):
+                        utils.limpar()
+                        utils.tituloavaliardisciplina()
+                        print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                break               
         utils.limpar()
         utils.tituloavaliardisciplina()
         if disciplinachada == False: print('\033[31mDisciplina não encontrada\033[m')#if fora do for
@@ -164,88 +164,88 @@ def avaliaprofessor(usuariologado):
                         professoravaliado = True
                         break
 
-        if professoravaliado == False and professorachado == True:        
-            utils.limpar()
-            utils.tituloavaliarprofessor()
-            print('Professor Encontrado!\n')
-            while True:
-                try:
-                    dificuldadedaprova = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade da avaliação ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
-                    if dificuldadedaprova == 0:break
-                    if dificuldadedaprova not in [1,2,3,4,5]:
-                        utils.limpar()
-                        utils.tituloavaliarprofessor()
-                        print('\033[31mVALOR INVÁLIDO\033[m\n') 
-                    else:
-                        utils.limpar()
-                        utils.tituloavaliarprofessor()
-                        while True:
-                            try:
-                                didatica = int(input('Digite um valor de 1 a 5 para avaliar nível de didática ou 0 para voltar:\nOBS:5-Didática Excelente e 1-Péssima Didática\n'))
-                                if didatica == 0:break
-                                if didatica not in [1,2,3,4,5]:
-                                    utils.limpar()
-                                    utils.tituloavaliarprofessor()
-                                    print('\033[31mVALOR INVÁLIDO\033[m\n') 
-                                else:
-                                    utils.limpar()
-                                    utils.tituloavaliarprofessor()    
-                                    while True:
-                                        try:
-                                            organizacao = int(input('Digite um valor de 1 a 5 para avaliar nível de organização do conteúdo ou 0 para voltar:\nOBS:5-Muito organizado e 1-Pouquíssimo organizado\n'))
-                                            if organizacao == 0:break
-                                            if organizacao not in [1,2,3,4,5]:
-                                                utils.limpar()
-                                                utils.tituloavaliarprofessor()
-                                                print('\033[31mVALOR INVÁLIDO\033[m\n') 
-                                            else:
-                                                utils.limpar()
-                                                utils.tituloavaliarprofessor()
-                                                avaliacoes_professores.append({
-                                                    'professor': professor['nome'],
-                                                    'dificuldade da avaliação': dificuldadedaprova,
-                                                    'Didática': didatica,
-                                                    'Organização': organizacao,
-                                                    'usuario': usuariologado['nome'],
-                                                    'email': usuariologado['email']
-                                                })
-                                                with(open(ARQUIVOAVALIAPROF, 'w', encoding = 'utf-8')) as arq:
-                                                    json.dump(avaliacoes_professores, arq, indent = 4, ensure_ascii=False)
+            if professoravaliado == False and professorachado == True:        
+                utils.limpar()
+                utils.tituloavaliarprofessor()
+                print('Professor Encontrado!\n')
+                while True:
+                    try:
+                        dificuldadedaprova = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade da avaliação ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
+                        if dificuldadedaprova == 0:break
+                        if dificuldadedaprova not in [1,2,3,4,5]:
+                            utils.limpar()
+                            utils.tituloavaliarprofessor()
+                            print('\033[31mVALOR INVÁLIDO\033[m\n') 
+                        else:
+                            utils.limpar()
+                            utils.tituloavaliarprofessor()
+                            while True:
+                                try:
+                                    didatica = int(input('Digite um valor de 1 a 5 para avaliar nível de didática ou 0 para voltar:\nOBS:5-Didática Excelente e 1-Péssima Didática\n'))
+                                    if didatica == 0:break
+                                    if didatica not in [1,2,3,4,5]:
+                                        utils.limpar()
+                                        utils.tituloavaliarprofessor()
+                                        print('\033[31mVALOR INVÁLIDO\033[m\n') 
+                                    else:
+                                        utils.limpar()
+                                        utils.tituloavaliarprofessor()    
+                                        while True:
+                                            try:
+                                                organizacao = int(input('Digite um valor de 1 a 5 para avaliar nível de organização do conteúdo ou 0 para voltar:\nOBS:5-Muito organizado e 1-Pouquíssimo organizado\n'))
+                                                if organizacao == 0:break
+                                                if organizacao not in [1,2,3,4,5]:
+                                                    utils.limpar()
+                                                    utils.tituloavaliarprofessor()
+                                                    print('\033[31mVALOR INVÁLIDO\033[m\n') 
+                                                else:
+                                                    utils.limpar()
+                                                    utils.tituloavaliarprofessor()
+                                                    avaliacoes_professores.append({
+                                                        'professor': professor['nome'],
+                                                        'dificuldade da avaliação': dificuldadedaprova,
+                                                        'Didática': didatica,
+                                                        'Organização': organizacao,
+                                                        'usuario': usuariologado['nome'],
+                                                        'email': usuariologado['email']
+                                                    })
+                                                    with(open(ARQUIVOAVALIAPROF, 'w', encoding = 'utf-8')) as arq:
+                                                        json.dump(avaliacoes_professores, arq, indent = 4, ensure_ascii=False)
 
-                                                while True:
-                                                    try:
+                                                    while True:
+                                                        try:
                         
-                                                        reavaliar = int(input('\033[32mAvaliação concluída!\n\033[m Deseja avaliar outro professor?\n\n[1]-Sim\n[2]-Não\n'))
-                                                        if reavaliar == 1:
-                                                            utils.limpar()
-                                                            utils.tituloavaliarprofessor()
-                                                            break
-                                                        if reavaliar == 2:
-                                                            return
-                                                        else:
+                                                            reavaliar = int(input('\033[32mAvaliação concluída!\n\033[mDeseja avaliar outro professor?\n\n[1]-Sim\n[2]-Não\n'))
+                                                            if reavaliar == 1:
+                                                                utils.limpar()
+                                                                utils.tituloavaliarprofessor()
+                                                                break
+                                                            if reavaliar == 2:
+                                                                return
+                                                            else:
+                                                                utils.limpar()
+                                                                utils.tituloavaliarprofessor()
+                                                                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                                                        except(ValueError):
                                                             utils.limpar()
                                                             utils.tituloavaliarprofessor()
                                                             print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                                                    except(ValueError):
-                                                        utils.limpar()
-                                                        utils.tituloavaliarprofessor()
-                                                        print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                                                break              
-                                        except(ValueError):
-                                            utils.limpar()
-                                            utils.tituloavaliarprofessor()
-                                            print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                                    break
-                            except(ValueError):
-                                utils.limpar()
-                                utils.tituloavaliarprofessor()
-                                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-                        break
-                except(ValueError):
-                    utils.limpar()
-                    utils.tituloavaliarprofessor()
-                    print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
-            break               
+                                                    break              
+                                            except(ValueError):
+                                                utils.limpar()
+                                                utils.tituloavaliarprofessor()
+                                                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                                        break
+                                except(ValueError):
+                                    utils.limpar()
+                                    utils.tituloavaliarprofessor()
+                                    print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                            break
+                    except(ValueError):
+                        utils.limpar()
+                        utils.tituloavaliarprofessor()
+                        print('\033[31mOPÇÃO INVÁLIDA!\033[m\n')
+                break               
         utils.limpar()
         utils.tituloavaliarprofessor()
         if professorachado == False: print('\033[31mProfessor não encontrada\033[m')

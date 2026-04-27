@@ -254,6 +254,7 @@ def avaliaprofessor(usuariologado):
 # Função para checar avaliações de disciplinas
 def checardisciplina():
     while True:
+        utils.limpar()
         titulochecardisciplina = '\033[36mAVALIAÇÕES DE DISCIPLINAS\033[m'
         print(titulochecardisciplina.center(50,'='), '\n\n')
         procurardisciplina = input("Digite o nome da disciplina que deseja checar ou digite 0 para voltar:\n")
@@ -267,8 +268,8 @@ def checardisciplina():
                 disciplinaencontrada = disciplina
                 break
         if not disciplinaencontrada:
-            utils.limpar()
             print("\033[31mDISCIPLINA INEXISTENTE!\033[m\n")
+            input("Pressione Enter para continuar...")
             continue
 
         avaliacaoencontrada = [av for av in avaliacoes_disciplinas if av.get("disciplina") == disciplinaencontrada["nome"]]
@@ -290,7 +291,7 @@ def checardisciplina():
                 if escolha == 1:
                     utils.limpar()
                     break
-                if escolha == 2:
+                elif escolha == 2:
                     return
                 else:
                     print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
@@ -300,6 +301,7 @@ def checardisciplina():
 # Função para checar avaliações de professores
 def checarprofessor():
     while True:
+        utils.limpar()
         titulochecarprofessor = '\033[36mAVALIAÇÕES DE PROFESSORES\033[m'
         print(titulochecarprofessor.center(50,'='), '\n\n')
         procurarprofessor = input("Digite o nome do professor que deseja checar ou digite 0 para voltar:\n")
@@ -313,22 +315,22 @@ def checarprofessor():
                 professorencontrado = professor
                 break
         if not professorencontrado:
-            utils.limpar()
             print("\033[31mPROFESSOR INEXISTENTE!\n")
+            input("Pressione Enter para continuar...")
             continue
 
         avaliacaoencontrada = [av for av in avaliacoes_professores if av.get("professor") == professorencontrado["nome"]]
         if not avaliacaoencontrada:
             utils.limpar()
-            print(f"\033[31mO professor {professorencontrado["nome"]} não possui nenhuma avaliação ainda!\033[m")
+            print(f"\033[31mO professor {professorencontrado['nome']} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
             print(f"\nAvaliações do professor {professorencontrado['nome']}:")
             for av in avaliacaoencontrada:
                 print(f"Usuário: {av.get('usuario')}")
-                print(f"Dificuldade da avaliação: {av.get("dificuldade da avaliação")}")
-                print(f"Didática: {av.get("Didática")}")
-                print(f"Organização: {av.get("Organização")}\n")
+                print(f"Dificuldade da avaliação: {av.get('dificuldade da avaliação')}")
+                print(f"Didática: {av.get('Didática')}")
+                print(f"Organização: {av.get('Organização')}\n")
 
         while True:
             try:
@@ -336,7 +338,7 @@ def checarprofessor():
                 if escolha == 1:
                     utils.limpar()
                     break
-                if escolha == 2:
+                elif escolha == 2:
                     return
                 else:
                     print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")

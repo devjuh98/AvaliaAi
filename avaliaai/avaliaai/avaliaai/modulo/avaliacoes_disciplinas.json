@@ -6,5 +6,13 @@
         "utilidade": 5,
         "usuario": "Franciscou123",
         "email": "francisco.biasoli@ufrpe.br"
+    },
+    {
+        "disciplina": "Fundamentos de Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "juliagcarvalho",
+        "email": "julia.gcarvalho@ufrpe.br"
     }
 ]

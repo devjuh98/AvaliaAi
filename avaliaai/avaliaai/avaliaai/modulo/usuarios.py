@@ -161,7 +161,6 @@ def deletar_conta(usuariologado):
             salvar()
             print("\033[32mCONTA DELETADA COM SUCESSO!\n\033[m")
             return True
-    print("\033[31mConta não encontrada.\n\033[m")
     return False
 
 # Função para visualizar os dados do usuário
@@ -169,7 +168,7 @@ def ver_dados(usuariologado):
     print("\033[34mINFORMAÇÕES DO USUÁRIO:\n\033[m")
     print(f"Nome: {usuariologado['nome']}")
     print(f"Email: {usuariologado['email']}") 
-    print(f"Senha: {usuariologado['senha']}")
+    print(f"Senha: {utils.ver_senha_com_asterisco(usuariologado['senha'])}")
     print(f"Status: {usuariologado['status']}")
     print("\n\033[32mDigite 0 para voltar ao menu.\n\033[m")
     while True:

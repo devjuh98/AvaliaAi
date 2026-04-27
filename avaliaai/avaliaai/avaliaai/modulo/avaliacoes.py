@@ -1,6 +1,6 @@
 import json,os
-import modulo.usuarios as usuarios
-import modulo.utils as utils
+import usuarios as usuarios
+import utils as utils
 
 professoreslist = []
 disciplinaslist = []
@@ -108,7 +108,7 @@ def avaliadisciplina(usuariologado):
                                                     while True:
                                                         try:
                         
-                                                            reavaliar = int(input('\033[32mAvaliação concluída!\n\033[m Deseja avaliar outra disciplina?\n\n[1]-Sim\n[2]-Não\n'))
+                                                            reavaliar = int(input('\033[32mAvaliação concluída!\n\033[mDeseja avaliar outra disciplina?\n\n[1]-Sim\n[2]-Não\n'))
                                                             if reavaliar == 1:
                                                                 utils.limpar()
                                                                 utils.tituloavaliardisciplina()
@@ -215,7 +215,7 @@ def avaliaprofessor(usuariologado):
                                                     while True:
                                                         try:
                         
-                                                            reavaliar = int(input('\033[32mAvaliação concluída!\n\033[m Deseja avaliar outro professor?\n\n[1]-Sim\n[2]-Não\n'))
+                                                            reavaliar = int(input('\033[32mAvaliação concluída!\n\033[mDeseja avaliar outro professor?\n\n[1]-Sim\n[2]-Não\n'))
                                                             if reavaliar == 1:
                                                                 utils.limpar()
                                                                 utils.tituloavaliarprofessor()

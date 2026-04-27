@@ -1,5 +1,5 @@
-import modulo.usuarios as usuarios
-import modulo.avaliacoes as avaliacoes
+import usuarios as usuarios
+import avaliacoes as avaliacoes
 import os
 import msvcrt
 

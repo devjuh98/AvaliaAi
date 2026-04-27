@@ -410,3 +410,6 @@ def senha_com_asterisco():
             print("*", end="", flush=True)
 
     return senha
+
+def ver_senha_com_asterisco(senha):
+    return "*" * len(senha)

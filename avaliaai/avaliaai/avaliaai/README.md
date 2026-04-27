@@ -1,93 +1,134 @@
-# AvaliaAi
+# 📚 AvaliAí
 
+## 📖 Descrição
 
+O **AvaliAí** é uma comunidade acadêmica desenvolvida com foco nos estudantes da UFRPE, especialmente do curso de **Bacharelado em Sistemas de Informação (BSI)**.
 
-## Getting started
+A plataforma permite que estudantes avaliem e consultem avaliações de **professores e disciplinas**, ajudando a compartilhar experiências acadêmicas e auxiliar outros alunos na escolha de disciplinas e docentes.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+---
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## ⚙️ Funcionalidades
 
-## Add your files
+### 🔐 Autenticação
+- Cadastro de usuário
+- Login
+- E-mail institucional obrigatório (@ufrpe.br)
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+---
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/devjuh98/avaliaai.git
-git branch -M main
-git push -uf origin main
-```
+### 🧑‍💻 Gestão de conta
+- Visualizar dados da conta
+- Editar nome de usuário, senha e e-mail
+- Deletar conta
 
-## Integrate with your tools
+> ⚠️ O nome de usuário não precisa ser o nome real, ele serve como identidade pública na plataforma.
 
-* [Set up project integrations](https://gitlab.com/devjuh98/avaliaai/-/settings/integrations)
+---
 
-## Collaborate with your team
+### ⭐ Avaliações
+- Avaliar professores
+- Avaliar disciplinas
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+#### 👨‍🏫 Avaliação de professores:
+O usuário atribui notas de **1 a 5** para:
+- Dificuldade de avaliação
+- Didática
+- Organização
 
-## Test and Deploy
+Após a avaliação, é possível continuar avaliando outro professor.
 
-Use the built-in continuous integration in GitLab.
+---
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+#### 📘 Avaliação de disciplinas:
+O usuário atribui notas de **1 a 5** para:
+- Nível de dificuldade
+- Carga de trabalho
+- Utilidade do conteúdo
 
-***
+Após a avaliação, é possível continuar avaliando outra disciplina.
 
-# Editing this README
+---
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### 🔎 Consulta de avaliações
+- Buscar avaliações de professores ou disciplinas
+- Exibição das avaliações existentes
+- Cálculo da média das notas atribuídas pelos estudantes
 
-## Suggestions for a good README
+---
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 🧭 Fluxo do sistema
 
-## Name
-Choose a self-explaining name for your project.
+1. Cadastro ou login
+2. Menu principal:
+   - Fazer avaliação
+   - Checar avaliações
+   - Editar dados
+   - Ver dados
+   - Deletar conta
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+---
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## 🎯 Objetivo
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+O AvaliAí tem como objetivo facilitar a troca de experiências entre estudantes, permitindo decisões mais informadas sobre professores e disciplinas dentro da universidade.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## 🛠️ Tecnologias
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+O projeto foi desenvolvido em **Python puro**, sem uso de bibliotecas externas.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Bibliotecas padrão utilizadas:
+- json → utilizado como banco de dados (usuários, professores, disciplinas e avaliações)
+- os → utilizado para limpar o terminal
+- msvcrt → utilizado para ocultar a senha digitada (exibindo asteriscos)
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+---
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## 📁 Estrutura do projeto
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+O sistema foi organizado em múltiplos arquivos para melhor organização e separação de responsabilidades:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- main.py  
+  Responsável por iniciar o programa e exibir o menu principal
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- usuarios.py  
+  Funções relacionadas ao usuário:
+  - cadastro
+  - login
+  - edição de dados
+  - visualização de dados
+  - deleção da conta
 
-## License
-For open source projects, say how it is licensed.
+- avaliacoes.py  
+  Funções para:
+  - fazer avaliações de professores e disciplinas
+  - consultar avaliações existentes
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- menus.py  
+  Contém os menus e interfaces de interação com o usuário
+
+- utils.py  
+  Funções auxiliares como:
+  - exibição de títulos
+  - validações (senha, nome de usuário e e-mail)
+
+- arquivos JSON  
+  Funcionam como banco de dados do sistema:
+  - usuários
+  - professores
+  - disciplinas
+  - avaliações
+
+  ## 👤 Autores
+
+- Nome: Guilherme Vasconcellos e Julia Galindo
+- Curso: Bacharelado em Sistemas de Informação (BSI)
+- Instituição: UFRPE
+
+---
+
+## 📌 Observações
+
+- Nome de usuário é apenas identificador público
+- E-mail deve ser institucional (@ufrpe.br)
+- Projeto voltado para uso acadêmico

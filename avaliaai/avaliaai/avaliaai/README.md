@@ -31,7 +31,7 @@ A plataforma permite que estudantes avaliem e consultem avaliações de **profes
 - Avaliar disciplinas
 
 #### 👨‍🏫 Avaliação de professores:
-O usuário atribui notas de **1 a 5** para:
+O usuário digita o professor e atribui notas de **1 a 5** para:
 - Dificuldade de avaliação
 - Didática
 - Organização
@@ -41,7 +41,7 @@ Após a avaliação, é possível continuar avaliando outro professor.
 ---
 
 #### 📘 Avaliação de disciplinas:
-O usuário atribui notas de **1 a 5** para:
+O usuário digita a disciplina e atribui notas de **1 a 5** para:
 - Nível de dificuldade
 - Carga de trabalho
 - Utilidade do conteúdo
@@ -59,13 +59,36 @@ Após a avaliação, é possível continuar avaliando outra disciplina.
 
 ## 🧭 Fluxo do sistema
 
-1. Cadastro ou login
+1. Cadastro, login ou sair
 2. Menu principal:
    - Fazer avaliação
    - Checar avaliações
    - Editar dados
    - Ver dados
    - Deletar conta
+   - Voltar
+
+### Fazer avaliação:
+- Escolher entre:
+  - Professor
+  - Disciplina
+
+### Checar avaliações:
+- Escolher entre:
+  - Professor
+  - Disciplina
+
+### Editar dados:
+- Alterar:
+  - Nome de usuário
+  - Senha
+  - Email
+
+### Ver dados:
+- Exibir informações da conta
+
+### Deletar conta:
+- Remover conta do sistema
 
 ---
 

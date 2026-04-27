@@ -88,5 +88,11 @@
         "email": "guilherme.valois@ufrpe.br",
         "senha": "S@lamence12",
         "status": "ativo"
+    },
+    {
+        "nome": "jao7654",
+        "email": "joao.gomes@ufrpe.br",
+        "senha": "Joao123@",
+        "status": "ativo"
     }
 ]

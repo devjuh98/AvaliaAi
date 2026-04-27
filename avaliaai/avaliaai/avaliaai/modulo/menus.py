@@ -1,10 +1,10 @@
 import modulo.utils as utils
 import modulo.usuarios as usuarios
-import modulo.avaliacoes as avaliacoes
+import avaliacoes as avaliacoes
 
 def menuinicial():
     '''Função para exibir o menu inicial do programa, 
-    sem parâmetros de entrada e sem retorno.'''
+    sem parâmetros de entrada eem retorno.'''
     tituloinicial = '\033[36mBEM-VINDO(A) AO AVALIAÍ!\033[m'
     print(tituloinicial.center(50,'='),'\n')
     print("\nSelecione uma opção:\n\n[1]-Cadastro\n[2]-Login\n[0]-Sair\n" )

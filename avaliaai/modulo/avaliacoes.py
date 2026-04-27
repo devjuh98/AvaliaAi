@@ -278,6 +278,14 @@ def checardisciplina():
             print(f"\033[31mA disciplina {disciplinaencontrada["nome"]} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
+            dificuldade_media = sum(int(av["dificuldade"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            carga_media = sum(int(av["carga"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            utilidade_media = sum(int(av["utilidade"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            print(f"\nMédia de avaliações da disciplina {disciplinaencontrada['nome']}:\n")
+            print(f"Média de dificuldade: {dificuldade_media:.2f}")
+            print(f"Média de carga de trabalho: {carga_media:.2f}")
+            print(f"Média de utilidade do conteúdo: {utilidade_media:.2f}\n")
+
             print(f"\nAvaliações da disciplina {disciplinaencontrada["nome"]}:")
             for av in avaliacaoencontrada:
                 print(f"Usuário: {av.get('usuario')}")
@@ -325,6 +333,14 @@ def checarprofessor():
             print(f"\033[31mO professor {professorencontrado['nome']} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
+            dificuldadeav_media = sum(int(av["dificuldade da avaliação"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            didatica_media = sum(int(av["Didática"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            organizacao_media = sum(int(av["Organização"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            print(f"\nMédia de avaliações do professor {professorencontrado['nome']}:\n")
+            print(f"Média de dificuldade da avaliação: {dificuldadeav_media:.2f}")
+            print(f"Média de didática: {didatica_media:.2f}")
+            print(f"Média de organização: {organizacao_media:.2f}")
+            
             print(f"\nAvaliações do professor {professorencontrado['nome']}:")
             for av in avaliacaoencontrada:
                 print(f"Usuário: {av.get('usuario')}")

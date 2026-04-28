@@ -50,7 +50,7 @@ def avaliadisciplina(usuariologado):
         if disciplinaprocurada == '0':
             return
         for disciplina in disciplinaslist:
-            if disciplinaprocurada == "".join(disciplina["nome"].lower().strip().split()) or disciplinaprocurada in disciplina["codigos"]:
+            if disciplinaprocurada == "".join(disciplina["nome"].lower().split()) or disciplinaprocurada in disciplina["codigos"]:
                 disciplinachada = True
                 for avaliacao in avaliacoes_disciplinas:
                     if avaliacao['email'] == usuariologado['email'] and avaliacao['disciplina'] == disciplina['nome']:
@@ -60,9 +60,10 @@ def avaliadisciplina(usuariologado):
             if disciplinavaliada == False and disciplinachada == True:      
                 utils.limpar()
                 utils.tituloavaliardisciplina()
-                print('Disciplina Encontrada!\n')
+                print('DISCIPLINA ENCONTRADA!\n')
                 while True:
                     try:
+                        print(f'Avaliando disciplina {disciplina["nome"]}:\n')
                         dificuldade = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
                         if dificuldade == 0:break
                         if dificuldade not in [1,2,3,4,5]:
@@ -74,6 +75,7 @@ def avaliadisciplina(usuariologado):
                             utils.tituloavaliardisciplina()
                             while True:
                                 try:
+                                    print(f'Avaliando disciplina {disciplina["nome"]}:\n')
                                     carga = int(input('Digite um valor de 1 a 5 para avaliar nível de carga de trabalho ou 0 para voltar:\nOBS:5-Muita carga e 1-Pouquíssima carga\n'))
                                     if carga == 0:break
                                     if carga not in [1,2,3,4,5]:
@@ -85,6 +87,7 @@ def avaliadisciplina(usuariologado):
                                         utils.tituloavaliardisciplina()    
                                         while True:
                                             try:
+                                                print(f'Avaliando disciplina {disciplina["nome"]}:\n')
                                                 utilidade = int(input('Digite um valor de 1 a 5 para avaliar nível de utilidade do conteúdo ou 0 para voltar:\nOBS:5-Muito útil e 1-Pouquíssimo útil\n'))
                                                 if utilidade == 0:break
                                                 if utilidade not in [1,2,3,4,5]:
@@ -157,7 +160,7 @@ def avaliaprofessor(usuariologado):
         if professorprocurado == '0':
             return
         for professor in professoreslist:
-            if professorprocurado == "".join(professor["nome"].lower().strip().split()) or professorprocurado in professor["codigos"]:
+            if professorprocurado == "".join(professor["nome"].lower().split()) or professorprocurado in professor["codigos"]:
                 professorachado = True
                 for avaliacao in avaliacoes_professores:
                     if avaliacao['email'] == usuariologado['email'] and avaliacao['professor'] == professor['nome']:
@@ -167,9 +170,10 @@ def avaliaprofessor(usuariologado):
             if professoravaliado == False and professorachado == True:        
                 utils.limpar()
                 utils.tituloavaliarprofessor()
-                print('Professor Encontrado!\n')
+                print('PROFESSOR ENCONTRADO!\n')
                 while True:
                     try:
+                        print(f'Avaliando disciplina {professor["nome"]}:\n')
                         dificuldadedaprova = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade da avaliação ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
                         if dificuldadedaprova == 0:break
                         if dificuldadedaprova not in [1,2,3,4,5]:
@@ -181,6 +185,7 @@ def avaliaprofessor(usuariologado):
                             utils.tituloavaliarprofessor()
                             while True:
                                 try:
+                                    print(f'Avaliando disciplina {professor["nome"]}:\n')
                                     didatica = int(input('Digite um valor de 1 a 5 para avaliar nível de didática ou 0 para voltar:\nOBS:5-Didática Excelente e 1-Péssima Didática\n'))
                                     if didatica == 0:break
                                     if didatica not in [1,2,3,4,5]:
@@ -192,6 +197,7 @@ def avaliaprofessor(usuariologado):
                                         utils.tituloavaliarprofessor()    
                                         while True:
                                             try:
+                                                print(f'AVA disciplina {professor["nome"]}:\n')
                                                 organizacao = int(input('Digite um valor de 1 a 5 para avaliar nível de organização do conteúdo ou 0 para voltar:\nOBS:5-Muito organizado e 1-Pouquíssimo organizado\n'))
                                                 if organizacao == 0:break
                                                 if organizacao not in [1,2,3,4,5]:
@@ -258,14 +264,14 @@ def checardisciplina():
         utils.limpar()
         titulochecardisciplina = '\033[36mAVALIAÇÕES DE DISCIPLINAS\033[m'
         print(titulochecardisciplina.center(50,'='), '\n\n')
-        procurardisciplina = input("Digite o nome da disciplina que deseja checar ou digite 0 para voltar:\n")
+        procurardisciplina = "".join(input("Digite o nome da disciplina que deseja checar ou digite 0 para voltar:\n").lower().strip().split())
 
         if procurardisciplina == "0":
             return
             
         disciplinaencontrada = None
         for disciplina in disciplinaslist:
-            if procurardisciplina.lower() == disciplina["nome"].lower() or procurardisciplina.lower() in [c.lower() for c in disciplina["codigos"]]:
+            if procurardisciplina == "".join(disciplina["nome"].lower().split()) or procurardisciplina in [c for c in disciplina["codigos"]]:
                 disciplinaencontrada = disciplina
                 break
         if not disciplinaencontrada:
@@ -287,7 +293,7 @@ def checardisciplina():
             print(f"Média de carga de trabalho: {carga_media:.2f}")
             print(f"Média de utilidade do conteúdo: {utilidade_media:.2f}\n")
 
-            print(f"\nAvaliações da disciplina {disciplinaencontrada["nome"]}:")
+            print(f"\nAvaliações da disciplina {disciplinaencontrada["nome"]}:\n")
             for av in avaliacaoencontrada:
                 print(f"Usuário: {av.get('usuario')}")
                 print(f"Dificuldade: {av["dificuldade"]}")
@@ -314,18 +320,18 @@ def checarprofessor():
         utils.limpar()
         titulochecarprofessor = '\033[36mAVALIAÇÕES DE PROFESSORES\033[m'
         print(titulochecarprofessor.center(50,'='), '\n\n')
-        procurarprofessor = input("Digite o nome do professor que deseja checar ou digite 0 para voltar:\n")
+        procurarprofessor = "".join(input("Digite o nome do professor que deseja checar ou digite 0 para voltar:\n").lower().strip().split())
 
         if procurarprofessor == "0":
             return
             
         professorencontrado = None
         for professor in professoreslist:
-            if procurarprofessor.lower() == professor["nome"].lower() or procurarprofessor.lower() in [c.lower() for c in professor["codigos"]]:
+            if procurarprofessor == "".join(professor["nome"].lower().split()) or procurarprofessor in [c for c in professor["codigos"]]:
                 professorencontrado = professor
                 break
         if not professorencontrado:
-            print("\033[31mPROFESSOR INEXISTENTE!\n")
+            print("\033[31mPROFESSOR INEXISTENTE![m\n")
             input("Pressione Enter para continuar...")
             continue
 
@@ -343,7 +349,7 @@ def checarprofessor():
             print(f"Média de didática: {didatica_media:.2f}")
             print(f"Média de organização: {organizacao_media:.2f}")
             
-            print(f"\nAvaliações do professor {professorencontrado['nome']}:")
+            print(f"\nAvaliações do professor {professorencontrado['nome']}:\n")
             for av in avaliacaoencontrada:
                 print(f"Usuário: {av.get('usuario')}")
                 print(f"Dificuldade da avaliação: {av.get('dificuldade da avaliação')}")

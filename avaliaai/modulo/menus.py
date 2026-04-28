@@ -51,9 +51,19 @@ def menudeescolha(usuariologado):
                 if opcao in [0,1,2,3,4,5]:
                     break
                 else:
+                    utils.limpar()
+                    tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
+                    print(tituloescolha.center(50, '='),'\n\n')
                     print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
+                    print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
+                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
             except ValueError:
-                print('\033[31mOPÇÃO INVÁLIDA!\n\nDIGITE UM NÙMERO DO MENU:')
+                utils.limpar()
+                tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
+                print(tituloescolha.center(50, '='),'\n\n')
+                print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
+                print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
+                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
 
         if opcao == 1:
             menuchecaravaliacao()
@@ -217,6 +227,7 @@ def menuchecaravaliacao():
         elif opcao == 2:
             avaliacoes.checarprofessor()
         elif opcao == 0:
+            utils.limpar()
             return
         else:
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")

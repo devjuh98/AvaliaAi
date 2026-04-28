@@ -78,6 +78,8 @@ def menudeescolha(usuariologado):
             if usuariologado not in usuarios.usuarioslist:
                 return   
         elif opcao == 0:
+            utils.limpar()
+            menuinicial()
             return
         else:
             utils.limpar()

@@ -76,5 +76,11 @@
         "email": "joao.gomes@ufrpe.br",
         "senha": "Joao123@",
         "status": "ativo"
+    },
+    {
+        "nome": "fernando1234",
+        "email": "fernando.silva@ufrpe.br",
+        "senha": "Bola123@",
+        "status": "ativo"
     }
 ]

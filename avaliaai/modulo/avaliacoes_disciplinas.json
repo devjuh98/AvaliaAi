@@ -166,5 +166,13 @@
         "utilidade": 5,
         "usuario": "SabrinaCarpenter",
         "email": "sabrina.carpenter@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 1,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "fernando1234",
+        "email": "fernando.silva@ufrpe.br"
     }
 ]

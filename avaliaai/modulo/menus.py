@@ -47,7 +47,7 @@ def menudeescolha(usuariologado):
             opcao = int(input('Digite a opção desejada: '))
         except ValueError:
             utils.limpar()
-            print('\033[31mOPÇÃO INVÁLIDA!\n\nDIGITE UM NÙMERO DO MENU:')
+            print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
             continue
 
         if opcao == 1:

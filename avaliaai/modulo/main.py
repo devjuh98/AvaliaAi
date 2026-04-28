@@ -12,13 +12,12 @@ except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []
 
 usuariologado = None
-
+utils.limpar()
+menus.menuinicial()
 while True:
 
-    utils.limpar()
-    menus.menuinicial()
-
     try:
+        
         opcao = int(input(""))
         while opcao not in [0,1,2]:
             utils.limpar()

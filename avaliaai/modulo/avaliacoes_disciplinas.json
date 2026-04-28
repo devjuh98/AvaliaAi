@@ -174,5 +174,13 @@
         "utilidade": 5,
         "usuario": "fernando1234",
         "email": "fernando.silva@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 2",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "guilherme123",
+        "email": "guilherme.vasconcellos@ufrpe.br"
     }
 ]

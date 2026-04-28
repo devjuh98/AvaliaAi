@@ -82,5 +82,11 @@
         "email": "fernando.silva@ufrpe.br",
         "senha": "Bola123@",
         "status": "ativo"
+    },
+    {
+        "nome": "gustavo123",
+        "email": "gustavo.silva@ufrpe.br",
+        "senha": "Boia123@",
+        "status": "ativo"
     }
 ]

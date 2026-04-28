@@ -76,6 +76,8 @@ def menudeescolha(usuariologado):
         elif opcao == 5:
             menudeletar(usuariologado)
             if usuariologado not in usuarios.usuarioslist:
+                utils.limpar()
+                menuinicial()
                 return   
         elif opcao == 0:
             utils.limpar()

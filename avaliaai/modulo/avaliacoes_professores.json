@@ -166,5 +166,13 @@
         "Organização": 1,
         "usuario": "MarkGrayson",
         "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 3,
+        "Didática": 5,
+        "Organização": 5,
+        "usuario": "gustavo123",
+        "email": "gustavo.silva@ufrpe.br"
     }
 ]

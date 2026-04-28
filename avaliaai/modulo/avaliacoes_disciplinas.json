@@ -150,5 +150,21 @@
         "utilidade": 5,
         "usuario": "MarkGrayson",
         "email": "markus.sebastian@ufrpe.br"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 1,
+        "utilidade": 5,
+        "usuario": "SabrinaCarpenter",
+        "email": "sabrina.carpenter@ufrpe.br"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "SabrinaCarpenter",
+        "email": "sabrina.carpenter@ufrpe.br"
     }
 ]

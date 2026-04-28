@@ -251,8 +251,9 @@ def avaliaprofessor(usuariologado):
         if professorachado == False: print('\033[31mProfessor não encontrada\033[m')
         if professoravaliado == True: print('\033[31mVocê já avaliou esse professor! Escolha outro!\033[m\n')
 
-# Função para checar avaliações de disciplinas
 def checardisciplina():
+    '''Função para checar avaliações de disciplinas,
+    sem parâmetros de entrada e sem retorno.'''
     while True:
         utils.limpar()
         titulochecardisciplina = '\033[36mAVALIAÇÕES DE DISCIPLINAS\033[m'
@@ -306,8 +307,9 @@ def checardisciplina():
             except ValueError:
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
 
-# Função para checar avaliações de professores
 def checarprofessor():
+    '''Função para checar avaliações de professores,
+    sem parâmetros de entrada e sem retorno.'''
     while True:
         utils.limpar()
         titulochecarprofessor = '\033[36mAVALIAÇÕES DE PROFESSORES\033[m'

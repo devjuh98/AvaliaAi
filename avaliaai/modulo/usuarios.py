@@ -30,7 +30,7 @@ def usuario_login():
             utils.titulologin()
             print('\033[31mSenha não pode ser vazia.\033[m\n\nE-mail digitado: ', email)
             senha = utils.senha_com_asterisco().strip()
-            print('\nDigite a senha do usuário ou 0 para cancelar:\n\n').strip()
+            print('\nDigite a senha do usuário ou 0 para cancelar:\n\n')
         if senha == '0':
             utils.limpar()
             menus.menuinicial()
@@ -119,13 +119,15 @@ def cadastrar_usuario():
             input("\033[32mPressione Enter para ir ao login\033\n\n[m")
             return True
 
-# Função para salvar os dados dos usuários no arquivo JSON
 def salvar():
+    '''Função para salvar os dados dos usuários no arquivo JSON,
+    sem parâmetros de entrada e sem retorno.'''
     with open(ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
         json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
 
-# Funções para editar informações do usuário
 def editar_nome(usuariologado, novo_nome):
+    '''Função para editar o nome do usuário,
+    recebe o usuário logado e o novo nome como parâmetros de entrada e retorna True (Atualizado) ou False (Não atualizado).'''
     for usuario in usuarioslist:
         if usuario["email"] == usuariologado["email"]:
             usuario["nome"] = novo_nome.strip()
@@ -134,7 +136,10 @@ def editar_nome(usuariologado, novo_nome):
             input("Pressione Enter para voltar ao menu...")
             return True
     return False
+
 def editar_email(usuariologado, novo_email):
+    '''Função para editar o email do usuário,
+    recebe o usuário logado e o novo email como parâmetros de entrada e retorna True (Atualizado) ou False (Não atualizado).'''
     for usuario in usuarioslist:
         if usuario["email"] == usuariologado["email"]:
             usuario["email"] = novo_email.strip().lower()
@@ -143,7 +148,10 @@ def editar_email(usuariologado, novo_email):
             input("Pressione Enter para voltar ao menu...")
             return True
     return False
+
 def editar_senha(usuariologado, nova_senha):
+    '''Função para editar a senha do usuário,
+    recebe o usuário logado e a nova senha como parâmetros de entrada e retorna True (Atualizada) ou False (Não atualizada).'''
     for usuario in usuarioslist:
         if usuario["email"] == usuariologado["email"]:
             usuario["senha"] = nova_senha.strip()
@@ -153,8 +161,9 @@ def editar_senha(usuariologado, nova_senha):
             return True
     return False
 
-# Função para deletar a conta do usuário
 def deletar_conta(usuariologado):
+    '''Função para deletar a conta do usuário,
+    recebe o usuário logado como parâmetro de entrada e retorna True (Deletada) ou False (Não deletada).'''
     for usuario in usuarioslist:
         if usuario["email"] == usuariologado["email"]:
             usuarioslist.remove(usuario)
@@ -163,8 +172,10 @@ def deletar_conta(usuariologado):
             return True
     return False
 
-# Função para visualizar os dados do usuário
 def ver_dados(usuariologado):
+    '''Função para exibir os dados do usuário logado,
+    recebe o usuário logado como parâmetro de entrada e sem retorno.'''
+    utils.limpar()
     print("\033[34mINFORMAÇÕES DO USUÁRIO:\n\033[m")
     print(f"Nome: {usuariologado['nome']}")
     print(f"Email: {usuariologado['email']}") 
@@ -175,7 +186,6 @@ def ver_dados(usuariologado):
         opcao = input()
         if opcao.strip() == '0':
             utils.limpar()
-            menus.menudeescolha(usuariologado)
             return
         else:
             print("\033[31mOpção inválida. Digite 0 para voltar ao menu.\n\033[m")

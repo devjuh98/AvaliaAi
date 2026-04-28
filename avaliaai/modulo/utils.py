@@ -123,7 +123,7 @@ def validaemail(email):
     if nome.count('.') > 1:
         limpar()
         titulocadastro()
-        print("\033[31mE-MAIL DEVE CONTER APENAS  '.' ANTES DO '@'.\n\033[m")
+        print("\033[31mE-MAIL DEVE CONTER APENAS UM '.' ANTES DO '@'.\n\033[m")
         return False
     if nome.count('.') < 1:
         limpar()
@@ -192,8 +192,9 @@ def validasenha(senha):
    
     return True
 
-# Função para validar o novo nome do usuário durante a edição
 def validanome_editar(novo_nome):
+    '''Função para validar o novo nome do usuário durante a edição,
+    recebe o novo nome como parâmetro de entrada e retorna True(válido) ou False (Inválido).'''
     nometrip = novo_nome.strip()
    
     if not nometrip:
@@ -236,8 +237,9 @@ def validanome_editar(novo_nome):
     
     return True
 
-# Função para validar o novo email do usuário durante a edição
 def validaemail_editar(novo_email):
+    '''Função para validar o novo email do usuário durante a edição,
+    recebe o novo email como parâmetro de entrada e retorna True(válido) ou False'''
     emailtrip = novo_email.strip().lower()
    
     if not emailtrip:
@@ -303,7 +305,7 @@ def validaemail_editar(novo_email):
         limpar()
         tituloeditar = '\033[36mEDITAR EMAIL\033[m'
         print(tituloeditar.center(50, '='),'\n\n')
-        print("\033[31mE-MAIL DEVE CONTER APENAS  '.' ANTES DO '@'.\n\033[m")
+        print("\033[31mE-MAIL DEVE CONTER APENAS UM '.' ANTES DO '@'.\n\033[m")
         return False
     if nome.count('.') < 1:
         limpar()
@@ -330,8 +332,9 @@ def validaemail_editar(novo_email):
         
     return True
 
-# Função para validar a nova senha do usuário durante a edição
 def validasenha_editar(nova_senha):
+    '''Função para validar a nova senha do usuário durante a edição,
+    recebe a nova senha como parâmetro de entrada e retorna True(válido) ou False(Inválido).'''
     senhatrip = nova_senha.strip()
    
     if not senhatrip:
@@ -412,4 +415,6 @@ def senha_com_asterisco():
     return senha
 
 def ver_senha_com_asterisco(senha):
+    '''Função para exibir a senha do usuário com asteriscos,
+    recebe a senha como parâmetro de entrada e retorna a senha com asteriscos.'''
     return "*" * len(senha)

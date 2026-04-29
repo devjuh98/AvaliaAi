@@ -158,6 +158,10 @@ O sistema foi organizado em múltiplos arquivos para melhor organização e sepa
 - E-mail deve ser institucional (@ufrpe.br)
 - Projeto voltado para uso acadêmico
 
+### 💻 Fluxograma
+
+https://drive.google.com/drive/folders/1vs4vysRpAu1jHy6zEYa825FsklT6P2o7?usp=sharing
+
 ## 🚀 Futuras Releases
 
 ### 🔄 Release 2

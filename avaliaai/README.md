@@ -216,7 +216,7 @@ https://drive.google.com/drive/folders/1vs4vysRpAu1jHy6zEYa825FsklT6P2o7?usp=sha
   [Assistir vídeo](https://youtu.be/-62mFNtz07E)
 
 - 🎬 Vídeo geral do projeto (Julia Galindo de Carvalho Cardoso):
-  [Assistir vídeo](COLOQUE_O_LINK_AQUI)
+  [Assistir vídeo](https://youtu.be/Cv8_vHOg6wU?si=IhqB3ZmCY3UzSWX_)
 
 ---
 

@@ -113,6 +113,24 @@ Bibliotecas padrão utilizadas:
 
 O sistema foi organizado em múltiplos arquivos para melhor organização e separação de responsabilidades:
 
+avaliaai/
+│
+├── modulo/
+│ ├── main.py # Inicialização do programa
+│ ├── usuarios.py # Cadastro, login e gestão de conta
+│ ├── avaliacoes.py # Avaliações de professores e disciplinas
+│ ├── menus.py # Menus e interface do sistema
+│ ├── utils.py # Funções auxiliares e validações
+│ │
+│ ├── usuarios.json
+│ ├── professores.json
+│ ├── disciplinas.json
+│ ├── avaliacoes_professores.json
+│ └── avaliacoes_disciplinas.json
+│
+├── README.md
+└── .gitignore
+
 - main.py  
   Responsável por iniciar o programa e exibir o menu principal
 
@@ -144,11 +162,37 @@ O sistema foi organizado em múltiplos arquivos para melhor organização e sepa
   - disciplinas
   - avaliações
 
-  ## 👤 Autores
+---
+
+## ▶️ Como executar o projeto
+
+1. Clone o repositório:
+git clone https://github.com/devjuh98/AvaliaAi.git
+
+2. Acesse a pasta do projeto:
+cd avaliaai/modulo
+
+3. Execute o programa:
+python main.py
+
+---
+
+## 👤 Autores
 
 - Nome: Guilherme Vasconcellos e Julia Galindo
 - Curso: Bacharelado em Sistemas de Informação (BSI)
 - Instituição: UFRPE
+
+---
+
+## ⚠️ Compatibilidade
+
+Este projeto foi desenvolvido para ambiente **Windows**, pois utiliza:
+
+- `msvcrt` → para ocultar a senha digitada
+- `os.system("cls")` → para limpeza do terminal
+
+Em outros sistemas operacionais (Linux/Mac), pode ser necessário adaptar essas funcionalidades.
 
 ---
 
@@ -158,9 +202,21 @@ O sistema foi organizado em múltiplos arquivos para melhor organização e sepa
 - E-mail deve ser institucional (@ufrpe.br)
 - Projeto voltado para uso acadêmico
 
-### 💻 Fluxograma
+## 📂 Documentação e materiais:
+
+### Fluxograma e tabela de releases:
 
 https://drive.google.com/drive/folders/1vs4vysRpAu1jHy6zEYa825FsklT6P2o7?usp=sharing
+
+### 🎥 Vídeos explicativos
+
+- 🎬 Vídeo geral do projeto (Guilherme Vasconcellos Valois):
+  [Assistir vídeo](https://youtu.be/-62mFNtz07E)
+
+- 🎬 Vídeo geral do projeto (Julia Galindo de Carvalho Cardoso):
+  [Assistir vídeo](COLOQUE_O_LINK_AQUI)
+
+---
 
 ## 🚀 Futuras Releases
 
@@ -186,22 +242,4 @@ Novas funcionalidades planejadas para expandir o sistema:
 
 ### 🌟 Release 3
 
-Funcionalidades voltadas para maior interação e análise avançada:
-
-#### 💬 Interação entre usuários
-- Sistema de comentários em avaliações
-
-#### 🏆 Rankings
-- Professor mais difícil
-- Professor mais organizado
-- Outras classificações baseadas nas avaliações
-
-#### 🔎 Filtros avançados
-- Filtrar por:
-  - Nível de dificuldade
-  - Índice de reprovação
-  - Carga de trabalho
-  - Outros critérios
-
-#### 📈 Histórico do usuário
-- Visualizar histórico de avaliações feitas pelo usuário
+A definir

@@ -113,6 +113,7 @@ Bibliotecas padrão utilizadas:
 
 O sistema foi organizado em múltiplos arquivos para melhor organização e separação de responsabilidades:
 
+```
 avaliaai/
 │
 ├── modulo/
@@ -130,6 +131,7 @@ avaliaai/
 │
 ├── README.md
 └── .gitignore
+```
 
 - main.py  
   Responsável por iniciar o programa e exibir o menu principal

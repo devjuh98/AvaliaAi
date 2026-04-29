@@ -8,6 +8,8 @@ A plataforma permite que estudantes avaliem e consultem avaliações de **profes
 
 ---
 
+## ✨ Release 1
+
 ## ⚙️ Funcionalidades
 
 ### 🔐 Autenticação
@@ -155,3 +157,47 @@ O sistema foi organizado em múltiplos arquivos para melhor organização e sepa
 - Nome de usuário é apenas identificador público
 - E-mail deve ser institucional (@ufrpe.br)
 - Projeto voltado para uso acadêmico
+
+## 🚀 Futuras Releases
+
+### 🔄 Release 2
+
+Novas funcionalidades planejadas para expandir o sistema:
+
+#### 👨‍💼 Administração
+- Login de administrador
+- Menu exclusivo para administradores
+
+#### 📚 Materiais de aula
+- Upload de provas e trabalhos
+- Download de materiais compartilhados por outros usuários
+
+#### 📊 Análises acadêmicas
+- Visualização do nível de dificuldade do período
+- Estatísticas de:
+  - Aprovação
+  - Reprovação
+
+---
+
+### 🌟 Release 3
+
+Funcionalidades voltadas para maior interação e análise avançada:
+
+#### 💬 Interação entre usuários
+- Sistema de comentários em avaliações
+
+#### 🏆 Rankings
+- Professor mais difícil
+- Professor mais organizado
+- Outras classificações baseadas nas avaliações
+
+#### 🔎 Filtros avançados
+- Filtrar por:
+  - Nível de dificuldade
+  - Índice de reprovação
+  - Carga de trabalho
+  - Outros critérios
+
+#### 📈 Histórico do usuário
+- Visualizar histórico de avaliações feitas pelo usuário

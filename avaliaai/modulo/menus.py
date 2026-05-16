@@ -1,6 +1,7 @@
 import utils as utils
 import usuarios as usuarios
 import avaliacoes as avaliacoes
+from models.usuario import Usuario
 
 def menuinicial():
     '''Função para exibir o menu inicial do programa, 
@@ -136,7 +137,7 @@ def menueditar(usuariologado):
                 senha_atual = utils.senha_com_asterisco().strip()
                 if senha_atual.strip() == '0':
                     break
-                if senha_atual != usuariologado["senha"]:
+                if senha_atual != usuariologado.senha:
                     print("\033[31mSENHA ATUAL INCORRETA! Tente novamente.\n\033[m")
                     input("Pressione Enter para continuar...")
                     continue
@@ -195,7 +196,7 @@ def menudeletar(usuariologado):
                 if senha_atual == '0':
                     utils.limpar()
                     break
-                if senha_atual != usuariologado["senha"]:
+                if senha_atual != usuariologado.senha:
                     print("\033[31mSENHA ATUAL INCORRETA! Tente novamente.\n\033[m")
                     continue
                 usuarios.deletar_conta(usuariologado)

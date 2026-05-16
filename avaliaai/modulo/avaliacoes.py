@@ -1,37 +1,69 @@
 import json,os
 import usuarios as usuarios
 import utils as utils
+from models.disciplinas import Disciplina
+from models.professores import Professor
+from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
+from models.avaliacoes_professores import Avaliacoes_professores
 
 professoreslist = []
 disciplinaslist = []
 avaliacoes_disciplinas = []
 avaliacoes_professores = []
 
-ARQUIVODISCIPLINAS = os.path.join(os.path.dirname(__file__), 'disciplinas.json')
+ARQUIVODISCIPLINAS = os.path.join(os.path.dirname(__file__),'data', 'disciplinas.json')
 try:
     with open(ARQUIVODISCIPLINAS, 'r', encoding = 'utf-8') as arq:
-        disciplinaslist = json.load(arq)
+        for dados in json.load(arq):
+            disciplinacadastrada = Disciplina(
+                dados['nome'], 
+                dados['codigos'])
+            disciplinaslist.append(disciplinacadastrada)
+        #disciplinaslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     disciplinaslist = []
 
-ARQUIVOPROFESSORES = os.path.join(os.path.dirname(__file__), 'professores.json')
+ARQUIVOPROFESSORES = os.path.join(os.path.dirname(__file__),'data', 'professores.json')
 try:
     with open(ARQUIVOPROFESSORES, 'r', encoding = 'utf-8') as arq:
-        professoreslist = json.load(arq)
+        for dados in json.load(arq):
+            professorcadastrado = Professor(
+                dados['nome'], 
+                dados['codigos'])
+            professoreslist.append(professorcadastrado)
+        #professoreslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     professoreslist = []
 
-ARQUIVOAVALIADISC = os.path.join(os.path.dirname(__file__), 'avaliacoes_disciplinas.json')
+ARQUIVOAVALIADISC = os.path.join(os.path.dirname(__file__),'data', 'avaliacoes_disciplinas.json')
 try:
     with open(ARQUIVOAVALIADISC, 'r', encoding = 'utf-8') as arq:
-        avaliacoes_disciplinas = json.load(arq)
+        for dados in json.load(arq):
+            avaliacaodisciplina = Avaliacoes_disciplinas(
+                dados['disciplina'], 
+                dados['dificuldade'],
+                dados['carga'],
+                dados['utilidade'],
+                dados['usuario'],
+                dados['email'])
+            avaliacoes_disciplinas.append(avaliacaodisciplina)
+        #avaliacoes_disciplinas = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     avaliacoes_disciplinas = []
 
-ARQUIVOAVALIAPROF = os.path.join(os.path.dirname(__file__), 'avaliacoes_professores.json')
+ARQUIVOAVALIAPROF = os.path.join(os.path.dirname(__file__),'data', 'avaliacoes_professores.json')
 try:
     with open(ARQUIVOAVALIAPROF, 'r', encoding = 'utf-8') as arq:
-        avaliacoes_professores = json.load(arq)
+        for dados in json.load(arq):
+            avaliacaoprofessor = Avaliacoes_professores(
+                dados['professor'],
+                dados['dificuldade da avaliação'],
+                dados['didática'],
+                dados['organização'],
+                dados['usuario'],
+                dados['email'])
+            avaliacoes_professores.append(avaliacaoprofessor)
+        #avaliacoes_professores = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     avaliacoes_professores = []
 
@@ -50,10 +82,10 @@ def avaliadisciplina(usuariologado):
         if disciplinaprocurada == '0':
             return
         for disciplina in disciplinaslist:
-            if disciplinaprocurada == "".join(disciplina["nome"].lower().split()) or disciplinaprocurada in disciplina["codigos"]:
+            if disciplinaprocurada == "".join(disciplina.nome.lower().split()) or disciplinaprocurada in disciplina.codigos:
                 disciplinachada = True
                 for avaliacao in avaliacoes_disciplinas:
-                    if avaliacao['email'] == usuariologado['email'] and avaliacao['disciplina'] == disciplina['nome']:
+                    if avaliacao.email == usuariologado.email and avaliacao.disciplina == disciplina.nome:
                         disciplinavaliada = True
                         break
 
@@ -63,7 +95,7 @@ def avaliadisciplina(usuariologado):
                 print('DISCIPLINA ENCONTRADA!\n')
                 while True:
                     try:
-                        print(f'Avaliando disciplina {disciplina["nome"]}:\n')
+                        print(f'Avaliando disciplina {disciplina.nome}:\n')
                         dificuldade = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
                         if dificuldade == 0:break
                         if dificuldade not in [1,2,3,4,5]:
@@ -75,7 +107,7 @@ def avaliadisciplina(usuariologado):
                             utils.tituloavaliardisciplina()
                             while True:
                                 try:
-                                    print(f'Avaliando disciplina {disciplina["nome"]}:\n')
+                                    print(f'Avaliando disciplina {disciplina.nome}:\n')
                                     carga = int(input('Digite um valor de 1 a 5 para avaliar nível de carga de trabalho ou 0 para voltar:\nOBS:5-Muita carga e 1-Pouquíssima carga\n'))
                                     if carga == 0:break
                                     if carga not in [1,2,3,4,5]:
@@ -87,7 +119,7 @@ def avaliadisciplina(usuariologado):
                                         utils.tituloavaliardisciplina()    
                                         while True:
                                             try:
-                                                print(f'Avaliando disciplina {disciplina["nome"]}:\n')
+                                                print(f'Avaliando disciplina {disciplina.nome}:\n')
                                                 utilidade = int(input('Digite um valor de 1 a 5 para avaliar nível de utilidade do conteúdo ou 0 para voltar:\nOBS:5-Muito útil e 1-Pouquíssimo útil\n'))
                                                 if utilidade == 0:break
                                                 if utilidade not in [1,2,3,4,5]:
@@ -97,16 +129,20 @@ def avaliadisciplina(usuariologado):
                                                 else:
                                                     utils.limpar()
                                                     utils.tituloavaliardisciplina()
+                                                    nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.email)
+                                                    avaliacoes_disciplinas.append(nova_avaliacao)
+                                                    '''
                                                     avaliacoes_disciplinas.append({
                                                         'disciplina': disciplina['nome'],
                                                         'dificuldade': dificuldade,
                                                         'carga': carga,
                                                         'utilidade': utilidade,
-                                                        'usuario': usuariologado['nome'],
-                                                        'email': usuariologado['email']
+                                                        'usuario': usuariologado.nome,
+                                                        'email': usuariologado.email
                                                     })
+                                                    '''
                                                     with(open(ARQUIVOAVALIADISC, 'w', encoding = 'utf-8')) as arq:
-                                                        json.dump(avaliacoes_disciplinas, arq, indent = 4, ensure_ascii=False)
+                                                        json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_disciplinas], arq, indent = 4, ensure_ascii=False)
 
                                                     while True:
                                                         try:
@@ -160,10 +196,10 @@ def avaliaprofessor(usuariologado):
         if professorprocurado == '0':
             return
         for professor in professoreslist:
-            if professorprocurado == "".join(professor["nome"].lower().split()) or professorprocurado in professor["codigos"]:
+            if professorprocurado == "".join(professor.nome.lower().split()) or professorprocurado in professor.codigos:
                 professorachado = True
                 for avaliacao in avaliacoes_professores:
-                    if avaliacao['email'] == usuariologado['email'] and avaliacao['professor'] == professor['nome']:
+                    if avaliacao.email == usuariologado.email and avaliacao.professor == professor.nome:
                         professoravaliado = True
                         break
 
@@ -173,7 +209,7 @@ def avaliaprofessor(usuariologado):
                 print('PROFESSOR ENCONTRADO!\n')
                 while True:
                     try:
-                        print(f'Avaliando disciplina {professor["nome"]}:\n')
+                        print(f'Avaliando professor {professor.nome}:\n')
                         dificuldadedaprova = int(input('Digite um valor de 1 a 5 para avaliar nível de dificuldade da avaliação ou 0 para cancelar:\nOBS:5-Muito Difícil e 1-Muito Fácil\n'))
                         if dificuldadedaprova == 0:break
                         if dificuldadedaprova not in [1,2,3,4,5]:
@@ -185,7 +221,7 @@ def avaliaprofessor(usuariologado):
                             utils.tituloavaliarprofessor()
                             while True:
                                 try:
-                                    print(f'Avaliando disciplina {professor["nome"]}:\n')
+                                    print(f'Avaliando professor {professor.nome}:\n')
                                     didatica = int(input('Digite um valor de 1 a 5 para avaliar nível de didática ou 0 para voltar:\nOBS:5-Didática Excelente e 1-Péssima Didática\n'))
                                     if didatica == 0:break
                                     if didatica not in [1,2,3,4,5]:
@@ -197,7 +233,7 @@ def avaliaprofessor(usuariologado):
                                         utils.tituloavaliarprofessor()    
                                         while True:
                                             try:
-                                                print(f'AVA disciplina {professor["nome"]}:\n')
+                                                print(f'Aaliando professor {professor.nome}:\n')
                                                 organizacao = int(input('Digite um valor de 1 a 5 para avaliar nível de organização do conteúdo ou 0 para voltar:\nOBS:5-Muito organizado e 1-Pouquíssimo organizado\n'))
                                                 if organizacao == 0:break
                                                 if organizacao not in [1,2,3,4,5]:
@@ -207,16 +243,20 @@ def avaliaprofessor(usuariologado):
                                                 else:
                                                     utils.limpar()
                                                     utils.tituloavaliarprofessor()
+                                                    nova_avaliacao = Avaliacoes_professores(professor.nome,dificuldadedaprova,didatica,organizacao,usuariologado.nome,usuariologado.email)
+                                                    avaliacoes_professores.append(nova_avaliacao)
+                                                    '''
                                                     avaliacoes_professores.append({
                                                         'professor': professor['nome'],
                                                         'dificuldade da avaliação': dificuldadedaprova,
                                                         'Didática': didatica,
                                                         'Organização': organizacao,
-                                                        'usuario': usuariologado['nome'],
-                                                        'email': usuariologado['email']
+                                                        'usuario': usuariologado.nome,
+                                                        'email': usuariologado.email
                                                     })
+                                                    '''
                                                     with(open(ARQUIVOAVALIAPROF, 'w', encoding = 'utf-8')) as arq:
-                                                        json.dump(avaliacoes_professores, arq, indent = 4, ensure_ascii=False)
+                                                        json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_professores], arq, indent = 4, ensure_ascii=False)
 
                                                     while True:
                                                         try:
@@ -271,7 +311,7 @@ def checardisciplina():
             
         disciplinaencontrada = None
         for disciplina in disciplinaslist:
-            if procurardisciplina == "".join(disciplina["nome"].lower().split()) or procurardisciplina in [c for c in disciplina["codigos"]]:
+            if procurardisciplina == "".join(disciplina.nome.lower().split()) or procurardisciplina in [c for c in disciplina.codigos]:
                 disciplinaencontrada = disciplina
                 break
         if not disciplinaencontrada:
@@ -279,26 +319,26 @@ def checardisciplina():
             input("Pressione Enter para continuar...")
             continue
 
-        avaliacaoencontrada = [av for av in avaliacoes_disciplinas if av.get("disciplina") == disciplinaencontrada["nome"]]
+        avaliacaoencontrada = [av for av in avaliacoes_disciplinas if av.disciplina == disciplinaencontrada.nome]
         if not avaliacaoencontrada:
             utils.limpar()
-            print(f"\033[31mA disciplina {disciplinaencontrada["nome"]} não possui nenhuma avaliação ainda!\033[m")
+            print(f"\033[31mA disciplina {disciplinaencontrada.nome} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
-            dificuldade_media = sum(int(av["dificuldade"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            carga_media = sum(int(av["carga"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            utilidade_media = sum(int(av["utilidade"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            print(f"\nMédia de avaliações da disciplina {disciplinaencontrada['nome']}:\n")
+            dificuldade_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            carga_media = sum(int(av.carga) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            utilidade_media = sum(int(av.utilidade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            print(f"\nMédia de avaliações da disciplina {disciplinaencontrada.nome}:\n")
             print(f"Média de dificuldade: {dificuldade_media:.2f}")
             print(f"Média de carga de trabalho: {carga_media:.2f}")
             print(f"Média de utilidade do conteúdo: {utilidade_media:.2f}\n")
 
-            print(f"\nAvaliações da disciplina {disciplinaencontrada["nome"]}:\n")
+            print(f"\nAvaliações da disciplina {disciplinaencontrada.nome}:\n")
             for av in avaliacaoencontrada:
-                print(f"Usuário: {av.get('usuario')}")
-                print(f"Dificuldade: {av["dificuldade"]}")
-                print(f"Carga de trabalho: {av["carga"]}")
-                print(f"Utilidade do conteúdo: {av["utilidade"]}\n")
+                print(f"Usuário: {av.usuario}")
+                print(f"Dificuldade: {av.dificuldade}")
+                print(f"Carga de trabalho: {av.carga}")
+                print(f"Utilidade do conteúdo: {av.utilidade}\n")
 
         while True:
             try:
@@ -327,7 +367,7 @@ def checarprofessor():
             
         professorencontrado = None
         for professor in professoreslist:
-            if procurarprofessor == "".join(professor["nome"].lower().split()) or procurarprofessor in [c for c in professor["codigos"]]:
+            if procurarprofessor == "".join(professor.nome.lower().split()) or procurarprofessor in [c for c in professor.codigos]:
                 professorencontrado = professor
                 break
         if not professorencontrado:
@@ -335,26 +375,26 @@ def checarprofessor():
             input("Pressione Enter para continuar...")
             continue
 
-        avaliacaoencontrada = [av for av in avaliacoes_professores if av.get("professor") == professorencontrado["nome"]]
+        avaliacaoencontrada = [av for av in avaliacoes_professores if av.professor == professorencontrado.nome]
         if not avaliacaoencontrada:
             utils.limpar()
-            print(f"\033[31mO professor {professorencontrado['nome']} não possui nenhuma avaliação ainda!\033[m")
+            print(f"\033[31mO professor {professorencontrado.nome} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
-            dificuldadeav_media = sum(int(av["dificuldade da avaliação"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            didatica_media = sum(int(av["Didática"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            organizacao_media = sum(int(av["Organização"]) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            print(f"\nMédia de avaliações do professor {professorencontrado['nome']}:\n")
+            dificuldadeav_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            didatica_media = sum(int(av.didatica) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            organizacao_media = sum(int(av.organizacao) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            print(f"\nMédia de avaliações do professor {professorencontrado.nome}:\n")
             print(f"Média de dificuldade da avaliação: {dificuldadeav_media:.2f}")
             print(f"Média de didática: {didatica_media:.2f}")
             print(f"Média de organização: {organizacao_media:.2f}")
             
-            print(f"\nAvaliações do professor {professorencontrado['nome']}:\n")
+            print(f"\nAvaliações do professor {professorencontrado.nome}:\n")
             for av in avaliacaoencontrada:
-                print(f"Usuário: {av.get('usuario')}")
-                print(f"Dificuldade da avaliação: {av.get('dificuldade da avaliação')}")
-                print(f"Didática: {av.get('Didática')}")
-                print(f"Organização: {av.get('Organização')}\n")
+                print(f"Usuário: {av.usuario}")
+                print(f"Dificuldade da avaliação: {av.dificuldade}")
+                print(f"Didática: {av.didatica}")
+                print(f"Organização: {av.organizacao}\n")
 
         while True:
             try:

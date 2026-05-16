@@ -1,9 +1,10 @@
 import utils as utils
 import menus as menus
+from models.usuario import Usuario
 import json
 import os
 
-ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')
+ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__),'data', 'usuarios.json')
 usuarioslist = []
 
 def usuario_login():
@@ -36,7 +37,7 @@ def usuario_login():
             menus.menuinicial()
             return
         for usuario in usuarioslist:
-            if usuario['email'] == email.lower() and usuario['senha'] == senha:
+            if usuario.email == email.lower() and usuario.senha == senha:
                 utils.limpar()
                 print('\033[32mLogin efetuado com sucesso!\n\033[m')
                 return usuario
@@ -106,12 +107,16 @@ def cadastrar_usuario():
                     utils.limpar()
                     menus.menuinicial()
                     return
+            novo_usuario = Usuario(nome.strip(), email.strip().lower(), senha.strip())
+            usuarioslist.append(novo_usuario)
+            '''
             usuarioslist.append({
             'nome': nome.strip(),
             'email': email.strip().lower(),
             'senha': senha.strip(),
             'status': 'ativo'
             })
+            '''
             salvar()
             utils.limpar()
             utils.titulocadastro()
@@ -122,15 +127,17 @@ def cadastrar_usuario():
 def salvar():
     '''Função para salvar os dados dos usuários no arquivo JSON,
     sem parâmetros de entrada e sem retorno.'''
+    #with open(ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
+        #json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
     with open(ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-        json.dump(usuarioslist, arq, indent = 4, ensure_ascii=False)
+        json.dump([usuario.para_dicionario() for usuario in usuarioslist], arq, indent = 4, ensure_ascii=False)
 
 def editar_nome(usuariologado, novo_nome):
     '''Função para editar o nome do usuário,
     recebe o usuário logado e o novo nome como parâmetros de entrada e retorna True (Atualizado) ou False (Não atualizado).'''
     for usuario in usuarioslist:
-        if usuario["email"] == usuariologado["email"]:
-            usuario["nome"] = novo_nome.strip()
+        if usuario.email == usuariologado.email:
+            usuario.nome = novo_nome.strip()
             salvar()
             print("\033[32mNome atualizado com sucesso!\n\033[m")
             input("Pressione Enter para voltar ao menu...")
@@ -141,8 +148,8 @@ def editar_email(usuariologado, novo_email):
     '''Função para editar o email do usuário,
     recebe o usuário logado e o novo email como parâmetros de entrada e retorna True (Atualizado) ou False (Não atualizado).'''
     for usuario in usuarioslist:
-        if usuario["email"] == usuariologado["email"]:
-            usuario["email"] = novo_email.strip().lower()
+        if usuario.email == usuariologado.email:
+            usuario.email = novo_email.strip().lower()
             salvar()
             print("\033[32mEmail atualizado com sucesso!\n\033[m")
             input("Pressione Enter para voltar ao menu...")
@@ -153,8 +160,8 @@ def editar_senha(usuariologado, nova_senha):
     '''Função para editar a senha do usuário,
     recebe o usuário logado e a nova senha como parâmetros de entrada e retorna True (Atualizada) ou False (Não atualizada).'''
     for usuario in usuarioslist:
-        if usuario["email"] == usuariologado["email"]:
-            usuario["senha"] = nova_senha.strip()
+        if usuario.email == usuariologado.email:
+            usuario.senha = nova_senha.strip()
             salvar()
             print("\033[32mSenha atualizada com sucesso!\n\033[m")
             input("Pressione Enter para voltar ao menu...")
@@ -165,7 +172,7 @@ def deletar_conta(usuariologado):
     '''Função para deletar a conta do usuário,
     recebe o usuário logado como parâmetro de entrada e retorna True (Deletada) ou False (Não deletada).'''
     for usuario in usuarioslist:
-        if usuario["email"] == usuariologado["email"]:
+        if usuario.email == usuariologado.email:
             usuarioslist.remove(usuario)
             salvar()
             print("\033[32mCONTA DELETADA COM SUCESSO!\n\033[m")
@@ -177,10 +184,10 @@ def ver_dados(usuariologado):
     recebe o usuário logado como parâmetro de entrada e sem retorno.'''
     utils.limpar()
     print("\033[34mINFORMAÇÕES DO USUÁRIO:\n\033[m")
-    print(f"Nome: {usuariologado['nome']}")
-    print(f"Email: {usuariologado['email']}") 
-    print(f"Senha: {utils.ver_senha_com_asterisco(usuariologado['senha'])}")
-    print(f"Status: {usuariologado['status']}")
+    print(f"Nome: {usuariologado.nome}")
+    print(f"Email: {usuariologado.email}") 
+    print(f"Senha: {utils.ver_senha_com_asterisco(usuariologado.senha)}")
+    print(f"Status: {usuariologado.status}")
     print("\n\033[32mDigite 0 para voltar ao menu.\n\033[m")
     while True:
         opcao = input()

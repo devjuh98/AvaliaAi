@@ -1,13 +1,21 @@
 import utils as utils
 import usuarios as usuarios
 import menus as menus
+from models.usuario import Usuario
 import os, json
 
-ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__), 'usuarios.json')
+ARQUIVOUSUARIOS = os.path.join(os.path.dirname(__file__),'data', 'usuarios.json')
 
 try:
     with open(ARQUIVOUSUARIOS, 'r', encoding = 'utf-8') as arq:
-        usuarios.usuarioslist = json.load(arq)
+        for dados in json.load(arq):
+            usuariocadastrado = Usuario(
+                dados['nome'], 
+                dados['email'], 
+                dados['senha'], 
+                dados['status'])
+            usuarios.usuarioslist.append(usuariocadastrado)
+        #usuarios.usuarioslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     usuarios.usuarioslist = []
 

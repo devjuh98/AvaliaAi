@@ -108,7 +108,8 @@ def cadastrar_usuario():
                     menus.menuinicial()
                     return
             novo_usuario = Usuario(nome.strip(), email.strip().lower(), senha.strip())
-            usuarioslist.append(novo_usuario)
+            novo_usuario.cadastrar
+            #usuarioslist.append(novo_usuario)
             '''
             usuarioslist.append({
             'nome': nome.strip(),
@@ -117,7 +118,7 @@ def cadastrar_usuario():
             'status': 'ativo'
             })
             '''
-            salvar()
+            #salvar()
             utils.limpar()
             utils.titulocadastro()
             print("\033[32mSenha Cadastrada!\n\nCadastro concluído com sucesso!\n\033[m")

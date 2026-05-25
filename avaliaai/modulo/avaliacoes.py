@@ -130,7 +130,8 @@ def avaliadisciplina(usuariologado):
                                                     utils.limpar()
                                                     utils.tituloavaliardisciplina()
                                                     nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.email)
-                                                    avaliacoes_disciplinas.append(nova_avaliacao)
+                                                    nova_avaliacao.avaliar()
+                                                    #avaliacoes_disciplinas.append(nova_avaliacao)
                                                     '''
                                                     avaliacoes_disciplinas.append({
                                                         'disciplina': disciplina['nome'],
@@ -141,8 +142,8 @@ def avaliadisciplina(usuariologado):
                                                         'email': usuariologado.email
                                                     })
                                                     '''
-                                                    with(open(ARQUIVOAVALIADISC, 'w', encoding = 'utf-8')) as arq:
-                                                        json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_disciplinas], arq, indent = 4, ensure_ascii=False)
+                                                    #with(open(ARQUIVOAVALIADISC, 'w', encoding = 'utf-8')) as arq:
+                                                        #json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_disciplinas], arq, indent = 4, ensure_ascii=False)
 
                                                     while True:
                                                         try:
@@ -244,7 +245,8 @@ def avaliaprofessor(usuariologado):
                                                     utils.limpar()
                                                     utils.tituloavaliarprofessor()
                                                     nova_avaliacao = Avaliacoes_professores(professor.nome,dificuldadedaprova,didatica,organizacao,usuariologado.nome,usuariologado.email)
-                                                    avaliacoes_professores.append(nova_avaliacao)
+                                                    nova_avaliacao.avaliar()
+                                                    #avaliacoes_professores.append(nova_avaliacao)
                                                     '''
                                                     avaliacoes_professores.append({
                                                         'professor': professor['nome'],
@@ -255,8 +257,8 @@ def avaliaprofessor(usuariologado):
                                                         'email': usuariologado.email
                                                     })
                                                     '''
-                                                    with(open(ARQUIVOAVALIAPROF, 'w', encoding = 'utf-8')) as arq:
-                                                        json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_professores], arq, indent = 4, ensure_ascii=False)
+                                                    #with(open(ARQUIVOAVALIAPROF, 'w', encoding = 'utf-8')) as arq:
+                                                        #json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_professores], arq, indent = 4, ensure_ascii=False)
 
                                                     while True:
                                                         try:
@@ -325,20 +327,21 @@ def checardisciplina():
             print(f"\033[31mA disciplina {disciplinaencontrada.nome} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
-            dificuldade_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            carga_media = sum(int(av.carga) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            utilidade_media = sum(int(av.utilidade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            print(f"\nMédia de avaliações da disciplina {disciplinaencontrada.nome}:\n")
-            print(f"Média de dificuldade: {dificuldade_media:.2f}")
-            print(f"Média de carga de trabalho: {carga_media:.2f}")
-            print(f"Média de utilidade do conteúdo: {utilidade_media:.2f}\n")
+            avaliacaoencontrada[0].checar(avaliacaoencontrada)        
+            #dificuldade_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            #carga_media = sum(int(av.carga) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            #utilidade_media = sum(int(av.utilidade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            #print(f"\nMédia de avaliações da disciplina {disciplinaencontrada.nome}:\n")
+            #print(f"Média de dificuldade: {dificuldade_media:.2f}")
+            #print(f"Média de carga de trabalho: {carga_media:.2f}")
+            #print(f"Média de utilidade do conteúdo: {utilidade_media:.2f}\n")
 
-            print(f"\nAvaliações da disciplina {disciplinaencontrada.nome}:\n")
-            for av in avaliacaoencontrada:
-                print(f"Usuário: {av.usuario}")
-                print(f"Dificuldade: {av.dificuldade}")
-                print(f"Carga de trabalho: {av.carga}")
-                print(f"Utilidade do conteúdo: {av.utilidade}\n")
+            #print(f"\nAvaliações da disciplina {disciplinaencontrada.nome}:\n")
+            #for av in avaliacaoencontrada:
+                #print(f"Usuário: {av.usuario}")
+                #print(f"Dificuldade: {av.dificuldade}")
+                #print(f"Carga de trabalho: {av.carga}")
+                #print(f"Utilidade do conteúdo: {av.utilidade}\n")
 
         while True:
             try:
@@ -381,20 +384,21 @@ def checarprofessor():
             print(f"\033[31mO professor {professorencontrado.nome} não possui nenhuma avaliação ainda!\033[m")
         else:
             utils.limpar()
-            dificuldadeav_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            didatica_media = sum(int(av.didatica) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            organizacao_media = sum(int(av.organizacao) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            print(f"\nMédia de avaliações do professor {professorencontrado.nome}:\n")
-            print(f"Média de dificuldade da avaliação: {dificuldadeav_media:.2f}")
-            print(f"Média de didática: {didatica_media:.2f}")
-            print(f"Média de organização: {organizacao_media:.2f}")
+            avaliacaoencontrada[0].checar(avaliacaoencontrada)
+            #dificuldadeav_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            #didatica_media = sum(int(av.didatica) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            #organizacao_media = sum(int(av.organizacao) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
+            #print(f"\nMédia de avaliações do professor {professorencontrado.nome}:\n")
+            #print(f"Média de dificuldade da avaliação: {dificuldadeav_media:.2f}")
+            #print(f"Média de didática: {didatica_media:.2f}")
+            #print(f"Média de organização: {organizacao_media:.2f}")
             
-            print(f"\nAvaliações do professor {professorencontrado.nome}:\n")
-            for av in avaliacaoencontrada:
-                print(f"Usuário: {av.usuario}")
-                print(f"Dificuldade da avaliação: {av.dificuldade}")
-                print(f"Didática: {av.didatica}")
-                print(f"Organização: {av.organizacao}\n")
+            #print(f"\nAvaliações do professor {professorencontrado.nome}:\n")
+            #for av in avaliacaoencontrada:
+                #print(f"Usuário: {av.usuario}")
+                #print(f"Dificuldade da avaliação: {av.dificuldade}")
+                #print(f"Didática: {av.didatica}")
+                #print(f"Organização: {av.organizacao}\n")
 
         while True:
             try:

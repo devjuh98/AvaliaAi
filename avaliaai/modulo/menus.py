@@ -2,6 +2,8 @@ import utils as utils
 import usuarios as usuarios
 import avaliacoes as avaliacoes
 from models.usuario import Usuario
+from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
+from models.avaliacoes_professores import Avaliacoes_professores
 
 def menuinicial():
     '''Função para exibir o menu inicial do programa, 
@@ -28,7 +30,7 @@ def menuavaliar(usuariologado):
             if opcao == 1:
                 avaliacoes.avaliadisciplina(usuariologado)
             if opcao == 2:
-                avaliacoes.avaliaprofessor(usuariologado)
+               avaliacoes.avaliaprofessor(usuariologado)
             if opcao == 0:
                 utils.limpar()
                 return
@@ -73,7 +75,8 @@ def menudeescolha(usuariologado):
         elif opcao == 3:
             menueditar(usuariologado)
         elif opcao == 4:
-            usuarios.ver_dados(usuariologado)
+            usuariologado.ver_dados()
+            #usuarios.ver_dados(usuariologado)
         elif opcao == 5:
             menudeletar(usuariologado)
             if usuariologado not in usuarios.usuarioslist:
@@ -111,7 +114,8 @@ def menueditar(usuariologado):
                 if novo_nome.strip() == '0':
                     break
                 if utils.validanome_editar(novo_nome):
-                    usuarios.editar_nome(usuariologado, novo_nome)
+                    usuariologado.editar_nome(novo_nome)
+                   # usuarios.editar_nome(usuariologado, novo_nome)
                     break
                 else:
                     print("\033[31mNOME INVÁLIDO! Tente novamente.\n\033[m")
@@ -124,7 +128,9 @@ def menueditar(usuariologado):
                 if novo_email.strip() == '0':
                     break
                 if utils.validaemail_editar(novo_email):
-                    usuarios.editar_email(usuariologado, novo_email)
+                    
+                    usuariologado.editar_email(novo_email)
+                    #usuarios.editar_email(usuariologado, novo_email)
                     break
                 else:
                     print("\033[31mE-MAIL INVÁLIDO! Tente novamente.\n\033[m")
@@ -158,7 +164,8 @@ def menueditar(usuariologado):
                         input("Pressione Enter para continuar...")
                         continue
                     if utils.validasenha_editar(nova_senha):
-                        usuarios.editar_senha(usuariologado, nova_senha)
+                        usuariologado.editar_senha(nova_senha)
+                        #usuarios.editar_senha(usuariologado, nova_senha)
                         break
                     else:
                         print("\033[31mSENHA INVÁLIDA! Tente novamente.\n\033[m")
@@ -199,7 +206,8 @@ def menudeletar(usuariologado):
                 if senha_atual != usuariologado.senha:
                     print("\033[31mSENHA ATUAL INCORRETA! Tente novamente.\n\033[m")
                     continue
-                usuarios.deletar_conta(usuariologado)
+                usuariologado.deletar_conta()
+                #usuarios.deletar_conta(usuariologado)
                 input("Pressione Enter para voltar ao menu...")
                 utils.limpar()
                 return

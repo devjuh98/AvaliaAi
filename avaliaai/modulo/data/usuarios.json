@@ -66,7 +66,7 @@
         "status": "ativo"
     },
     {
-        "nome": "GuilhermeValois",
+        "nome": "GUiguilindo",
         "email": "guilherme.valois@ufrpe.br",
         "senha": "S@lamence12",
         "status": "ativo"
@@ -81,6 +81,18 @@
         "nome": "lucasr",
         "email": "djsjn.sjsjj@ufrpe.br",
         "senha": "Meio123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "Blastoise",
+        "email": "billy.bruto@ufrpe.br",
+        "senha": "Billy123@",
+        "status": "ativo"
+    },
+    {
+        "nome": "Capitão_Pátria",
+        "email": "pedro.augusto@ufrpe.br",
+        "senha": "Pedro123@",
         "status": "ativo"
     }
 ]

@@ -27,6 +27,38 @@ def tituloavaliarprofessor():
     tituloavalprof = '\033[36mAVALIAR PROFESSOR\033[m'
     print(tituloavalprof.center(50, '='),'\n\n')
 
+def validanome_real(nome_real):
+    '''Valida o nome real do usuário de acordo com os critérios estabelecidos. 
+    Recebe o parâmetro nome_real a e retorna True(válido) ou False (Inválido).'''
+    contador = 0
+    nomerealtrip = nome_real.strip()
+   
+    if not nomerealtrip:
+        limpar()
+        titulocadastro()
+        print("\033[31mNOME REAL NÃO PODE SER VAZIO.\n\033[m")
+        return False
+    if sum(caracter.isalpha() for caracter in nomerealtrip) < 3:
+        limpar()
+        titulocadastro()
+        print("\033[31mNOME REAL DEVE CONTER NO MÍNIMO 3 LETRAS.\n\033[m")
+        return False
+    if not 6 <=len(nomerealtrip) <= 50:
+        limpar()
+        titulocadastro()
+        print("\033[31mNOME REAL DEVE CONTER ENTRE 6 E 50 CARACTERES.\n\033[m")
+        return False
+    if not all(caracter.isalpha() or caracter.isspace() for caracter in nomerealtrip):
+        limpar()
+        titulocadastro()
+        print("\033[31mNOME REAL SÓ DEVE CONTER LETRAS E ESPAÇOS.\n\033[m")
+        return False
+    if '  ' in nomerealtrip:
+        limpar()
+        titulocadastro()
+        print("\033[31mNOME REAL NÃO DEVE CONTER ESPAÇOS DUPLOS.\n\033[m")
+        return False
+    return True
 def validanome(nome):
     '''Valida o nome do usuário de acordo com os critérios estabelecidos. 
     Recebe o parâmetro nome a e retorna True(válido) ou False (Inválido).'''

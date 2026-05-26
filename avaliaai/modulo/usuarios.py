@@ -55,6 +55,25 @@ def cadastrar_usuario():
     utils.titulocadastro()
     while True:
         
+        nome_real = input('Digite o seu nome real ou 0 para cancelar cadastro:\n\n')
+        if nome_real.strip() == '0':
+            utils.limpar()
+            menus.menuinicial()
+            return
+        if utils.validanome_real(nome_real):
+            utils.limpar()
+            utils.titulocadastro()
+            print("\033[32mNome Cadastrado!\n\033[m")
+            contador = 0
+            nome_list = nome_real.split()
+            for usuario in usuarioslist:
+                if usuario.nome_real.lower() == nome_real.strip().lower():
+                    contador = contador + 1
+            for nome in nome_list:
+                nome_real = nome_real.replace(nome, nome.capitalize())
+            break
+    while True:
+        
         nome = input('Digite o nome do usuário ou 0 para cancelar cadastro:\n\n')
         if nome.strip() == '0':
             utils.limpar()
@@ -107,8 +126,8 @@ def cadastrar_usuario():
                     utils.limpar()
                     menus.menuinicial()
                     return
-            novo_usuario = Usuario(nome.strip(), email.strip().lower(), senha.strip())
-            novo_usuario.cadastrar
+            novo_usuario = Usuario(nome_real.strip(), contador, nome.strip(), email.strip().lower(), senha.strip())
+            novo_usuario.cadastrar()
             #usuarioslist.append(novo_usuario)
             '''
             usuarioslist.append({

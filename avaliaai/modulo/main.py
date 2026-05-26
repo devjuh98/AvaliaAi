@@ -10,6 +10,8 @@ try:
     with open(ARQUIVOUSUARIOS, 'r', encoding = 'utf-8') as arq:
         for dados in json.load(arq):
             usuariocadastrado = Usuario(
+                dados['nome_real'],
+                dados['indice_nome'],
                 dados['nome'], 
                 dados['email'], 
                 dados['senha'], 

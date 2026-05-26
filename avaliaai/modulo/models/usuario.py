@@ -4,7 +4,9 @@ import utils
 import json
 
 class Usuario:  
-    def __init__(self, nome, email, senha, status='ativo'):
+    def __init__(self,nome_real,indice_nome, nome, email, senha, status='ativo'):
+        self.nome_real = nome_real
+        self.indice_nome = indice_nome
         self.nome = nome
         self.email = email
         self.senha = senha
@@ -12,6 +14,8 @@ class Usuario:
 
     def para_dicionario(self):
         return{
+            'nome_real': self.nome_real,
+            'indice_nome': self.indice_nome,
             'nome': self.nome,
             'email': self.email,
             'senha': self.senha,
@@ -82,7 +86,11 @@ class Usuario:
         recebe o usuário logado como parâmetro de entrada e sem retorno.'''
         utils.limpar()
         print("\033[34mINFORMAÇÕES DO USUÁRIO:\n\033[m")
-        print(f"Nome: {self.nome}")
+        if self.indice_nome == 0:
+            print(f"Nome Real: {self.nome_real}")
+        else:
+            print(f"Nome Real: {self.nome_real} {self.indice_nome}")
+        print(f"Nome de usuário: {self.nome}")
         print(f"Email: {self.email}") 
         print(f"Senha: {utils.ver_senha_com_asterisco(self.senha)}")
         print(f"Status: {self.status}")

@@ -1,6 +1,5 @@
 import usuarios as usuarios
 import avaliacoes as avaliacoes
-import models.usuario as usuario
 import os
 import msvcrt
 

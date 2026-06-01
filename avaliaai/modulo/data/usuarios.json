@@ -8,7 +8,7 @@
         "status": "ativo"
     },
     {
-        "nome_real": "Gabriel Maurício",
+        "nome_real": "Bruno Silva",
         "indice_nome": 0,
         "nome": "TechJacket09",
         "email": "bruno.silva@ufrpe.br",
@@ -16,7 +16,7 @@
         "status": "ativo"
     },
     {
-        "nome_real": "Guedes Lima",
+        "nome_real": "Gideão Almeida",
         "indice_nome": 0,
         "nome": "GudsonNights7698",
         "email": "gideao.almeida@ufrpe.br",
@@ -24,10 +24,10 @@
         "status": "ativo"
     },
     {
-        "nome_real": "Steve Harryton",
+        "nome_real": "Fabrício Carvalho",
         "indice_nome": 0,
         "nome": "SteveHarryton",
-        "email": "fabrício.carvalho@ufrpe.br",
+        "email": "fabricio.carvalho@ufrpe.br",
         "senha": "Senh@123",
         "status": "ativo"
     },
@@ -40,7 +40,7 @@
         "status": "ativo"
     },
     {
-        "nome_real": "Osglay Izídio",
+        "nome_real": "Guliver Rocha",
         "indice_nome": 0,
         "nome": "gudson",
         "email": "guliver.rocha@ufrpe.br",
@@ -64,7 +64,7 @@
         "status": "ativo"
     },
     {
-        "nome_real": "julia carvalho",
+        "nome_real": "Julia Carvalho",
         "indice_nome": 0,
         "nome": "juliagcarvalho",
         "email": "julia.gcarvalho@ufrpe.br",
@@ -96,7 +96,7 @@
         "status": "ativo"
     },
     {
-        "nome_real": "joao gomes",
+        "nome_real": "Joao Gomes",
         "indice_nome": 0,
         "nome": "jao7654",
         "email": "joao.gomes@ufrpe.br",
@@ -115,7 +115,7 @@
         "nome_real": "Breno Ribeiro",
         "indice_nome": 0,
         "nome": "Blastoise",
-        "email": "billy.bruto@ufrpe.br",
+        "email": "breno.ribeiro@ufrpe.br",
         "senha": "Billy123@",
         "status": "ativo"
     },
@@ -129,7 +129,7 @@
     },
     {
         "nome_real": "Bruno Silva",
-        "indice_nome": 0,
+        "indice_nome": 1,
         "nome": "brunouw",
         "email": "bruno.carvalho@ufrpe.br",
         "senha": "Bolo123@",
@@ -137,7 +137,7 @@
     },
     {
         "nome_real": "Bruno Silva",
-        "indice_nome": 1,
+        "indice_nome": 2,
         "nome": "brubsma",
         "email": "bruno.moraes@ufrpe.br",
         "senha": "Bola123@",
@@ -145,7 +145,7 @@
     },
     {
         "nome_real": "Bruno Silva",
-        "indice_nome": 2,
+        "indice_nome": 3,
         "nome": "brubru",
         "email": "bruno.valoi@ufrpe.br",
         "senha": "Lula123@",
@@ -153,7 +153,7 @@
     },
     {
         "nome_real": "Bruno Silva",
-        "indice_nome": 3,
+        "indice_nome": 4,
         "nome": "brubrou",
         "email": "bruno.jose@ufrpe.br",
         "senha": "Bola123@",

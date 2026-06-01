@@ -5,7 +5,8 @@
         "didática": 4,
         "organização": 4,
         "usuario": "Robertocarlos",
-        "email": "roberto.carlos@ufrpe.br"
+        "avaliador": "Roberto Carlos",
+        "indice_avaliador": 0
     },
     {
         "professor": "Cleyton Vanut Cordeiro de Magalhães",
@@ -13,7 +14,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "LucasRoberto8902",
-        "email": "lucas.roberto@ufrpe.br"
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -21,7 +23,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "jao7654",
-        "email": "joao.gomes@ufrpe.br"
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -29,7 +32,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "LucasRoberto8902",
-        "email": "lucas.roberto@ufrpe.br"
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -37,7 +41,8 @@
         "didática": 3,
         "organização": 5,
         "usuario": "LucasRoberto8902",
-        "email": "lucas.roberto@ufrpe.br"
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
     },
     {
         "professor": "Silvana Bocanegra",
@@ -45,7 +50,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "LucasRoberto8902",
-        "email": "lucas.roberto@ufrpe.br"
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
     },
     {
         "professor": "Cleyton Vanut Cordeiro de Magalhães",
@@ -53,7 +59,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -61,7 +68,8 @@
         "didática": 4,
         "organização": 4,
         "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -69,7 +77,8 @@
         "didática": 3,
         "organização": 3,
         "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "professor": "Silvana Bocanegra",
@@ -77,7 +86,8 @@
         "didática": 4,
         "organização": 5,
         "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "professor": "Cleyton Vanut Cordeiro de Magalhães",
@@ -85,7 +95,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "Always.lily",
-        "email": "lilian.silva@ufrpe.br"
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -93,7 +104,8 @@
         "didática": 3,
         "organização": 5,
         "usuario": "Always.lily",
-        "email": "lilian.silva@ufrpe.br"
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -101,7 +113,8 @@
         "didática": 2,
         "organização": 3,
         "usuario": "Always.lily",
-        "email": "lilian.silva@ufrpe.br"
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0
     },
     {
         "professor": "Cleyton Vanut Cordeiro de Magalhães",
@@ -109,7 +122,8 @@
         "didática": 4,
         "organização": 5,
         "usuario": "JamesBaxter",
-        "email": "james.leandro@ufrpe.br"
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -117,7 +131,8 @@
         "didática": 4,
         "organização": 3,
         "usuario": "JamesBaxter",
-        "email": "james.leandro@ufrpe.br"
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -125,7 +140,8 @@
         "didática": 3,
         "organização": 3,
         "usuario": "JamesBaxter",
-        "email": "james.leandro@ufrpe.br"
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
     },
     {
         "professor": "Silvana Bocanegra",
@@ -133,7 +149,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "JamesBaxter",
-        "email": "james.leandro@ufrpe.br"
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
     },
     {
         "professor": "Cleyton Vanut Cordeiro de Magalhães",
@@ -141,7 +158,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "MarkGrayson",
-        "email": "markus.sebastian@ufrpe.br"
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -149,7 +167,8 @@
         "didática": 5,
         "organização": 3,
         "usuario": "MarkGrayson",
-        "email": "markus.sebastian@ufrpe.br"
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
     },
     {
         "professor": "Silvana Bocanegra",
@@ -157,7 +176,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "MarkGrayson",
-        "email": "markus.sebastian@ufrpe.br"
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -165,7 +185,8 @@
         "didática": 1,
         "organização": 1,
         "usuario": "MarkGrayson",
-        "email": "markus.sebastian@ufrpe.br"
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -173,7 +194,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "gustavo123",
-        "email": "gustavo.silva@ufrpe.br"
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0
     },
     {
         "professor": "Ana Cristina Roiller",
@@ -181,7 +203,8 @@
         "didática": 5,
         "organização": 5,
         "usuario": "LucasRoberto8902",
-        "email": "lucas.roberto@ufrpe.br"
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
     },
     {
         "professor": "Lidiano Oliveira",
@@ -189,7 +212,8 @@
         "didática": 4,
         "organização": 5,
         "usuario": "TechJacket09",
-        "email": "bruno.silva@ufrpe.br"
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0
     },
     {
         "professor": "Marina Barros",
@@ -197,6 +221,7 @@
         "didática": 4,
         "organização": 4,
         "usuario": "TechJacket09",
-        "email": "bruno.silva@ufrpe.br"
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0
     }
 ]

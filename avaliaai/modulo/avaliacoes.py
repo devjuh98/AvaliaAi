@@ -45,7 +45,8 @@ try:
                 dados['carga'],
                 dados['utilidade'],
                 dados['usuario'],
-                dados['email'])
+                dados['avaliador'],
+                dados['indice_avaliador'])
             avaliacoes_disciplinas.append(avaliacaodisciplina)
         #avaliacoes_disciplinas = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
@@ -61,7 +62,8 @@ try:
                 dados['didática'],
                 dados['organização'],
                 dados['usuario'],
-                dados['email'])
+                dados['avaliador'],
+                dados['indice_avaliador'])
             avaliacoes_professores.append(avaliacaoprofessor)
         #avaliacoes_professores = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
@@ -85,7 +87,7 @@ def avaliadisciplina(usuariologado):
             if disciplinaprocurada == "".join(disciplina.nome.lower().split()) or disciplinaprocurada in disciplina.codigos:
                 disciplinachada = True
                 for avaliacao in avaliacoes_disciplinas:
-                    if avaliacao.email == usuariologado.email and avaliacao.disciplina == disciplina.nome:
+                    if avaliacao.avaliador == usuariologado.nome_real and avaliacao.indice_avaliador == usuariologado.indice_nome and avaliacao.disciplina == disciplina.nome:
                         disciplinavaliada = True
                         break
 
@@ -129,7 +131,7 @@ def avaliadisciplina(usuariologado):
                                                 else:
                                                     utils.limpar()
                                                     utils.tituloavaliardisciplina()
-                                                    nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.email)
+                                                    nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.nome_real,usuariologado.indice_nome)
                                                     nova_avaliacao.avaliar()
                                                     #avaliacoes_disciplinas.append(nova_avaliacao)
                                                     '''
@@ -200,7 +202,7 @@ def avaliaprofessor(usuariologado):
             if professorprocurado == "".join(professor.nome.lower().split()) or professorprocurado in professor.codigos:
                 professorachado = True
                 for avaliacao in avaliacoes_professores:
-                    if avaliacao.email == usuariologado.email and avaliacao.professor == professor.nome:
+                    if avaliacao.avaliador == usuariologado.nome_real and usuariologado.indice_nome == avaliacao.indice_avaliador and avaliacao.professor == professor.nome:
                         professoravaliado = True
                         break
 
@@ -244,7 +246,7 @@ def avaliaprofessor(usuariologado):
                                                 else:
                                                     utils.limpar()
                                                     utils.tituloavaliarprofessor()
-                                                    nova_avaliacao = Avaliacoes_professores(professor.nome,dificuldadedaprova,didatica,organizacao,usuariologado.nome,usuariologado.email)
+                                                    nova_avaliacao = Avaliacoes_professores(professor.nome,dificuldadedaprova,didatica,organizacao,usuariologado.nome,usuariologado.nome_real,usuariologado.indice_nome)
                                                     nova_avaliacao.avaliar()
                                                     #avaliacoes_professores.append(nova_avaliacao)
                                                     '''

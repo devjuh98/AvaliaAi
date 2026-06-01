@@ -5,7 +5,8 @@
         "carga": 5,
         "utilidade": 5,
         "usuario": "TechJacket09",
-        "email": "bruno.silva@ufrpe.br"
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 2",
@@ -13,23 +14,26 @@
         "carga": 5,
         "utilidade": 4,
         "usuario": "TechJacket09",
-        "email": "bruno.silva@ufrpe.br"
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
         "dificuldade": 5,
         "carga": 5,
         "utilidade": 5,
-        "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
         "dificuldade": 4,
         "carga": 5,
         "utilidade": 4,
-        "usuario": "GuilhermeValois",
-        "email": "guilherme.valois@ufrpe.br"
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Sustentabilidade em Sistemas de Informação",
@@ -37,7 +41,8 @@
         "carga": 5,
         "utilidade": 4,
         "usuario": "GUiguilindo",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Modelagem de Dados",
@@ -45,7 +50,8 @@
         "carga": 4,
         "utilidade": 2,
         "usuario": "GUiguilindo",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Modelagem de Dados",
@@ -53,7 +59,8 @@
         "carga": 4,
         "utilidade": 2,
         "usuario": "GUiguilindo",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 2",
@@ -61,7 +68,8 @@
         "carga": 5,
         "utilidade": 5,
         "usuario": "GUiguilindo",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
     },
     {
         "disciplina": "Introdução à Administração",
@@ -69,6 +77,16 @@
         "carga": 5,
         "utilidade": 3,
         "usuario": "GUiguilindo",
-        "email": "guilherme.valois@ufrpe.br"
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "Franciscou123",
+        "avaliador": "Francisco Biasoli",
+        "indice_avaliador": 0
     }
 ]

@@ -3,13 +3,14 @@ import json
 
 
 class Avaliacoes_professores:
-    def __init__(self, professor, dificuldade, didatica, organizacao, usuario, email):
+    def __init__(self, professor, dificuldade, didatica, organizacao, usuario, avaliador, indice_avaliador):
         self.professor = professor
         self.dificuldade = dificuldade
         self.didatica = didatica
         self.organizacao = organizacao
         self.usuario = usuario
-        self.email = email
+        self.avaliador = avaliador
+        self.indice_avaliador = indice_avaliador
 
     def para_dicionario(self):
         return{
@@ -18,7 +19,8 @@ class Avaliacoes_professores:
             'didática': self.didatica,
             'organização': self.organizacao,
             'usuario': self.usuario,
-            'email': self.email
+            'avaliador': self.avaliador,
+            'indice_avaliador': self.indice_avaliador
         }
 
     def avaliar(self):
@@ -39,7 +41,7 @@ class Avaliacoes_professores:
 
         print(f"\nAvaliações do professor {self.professor}:\n")
         for av in avaliacoesencontradas:
-            print(f"Usuário: {av.usuario}")
+            print(f"Usuário: {av.usuario} ({av.avaliador})")
             print(f"Dificuldade da avaliação: {av.dificuldade}")
             print(f"Didática: {av.didatica}")
             print(f"Organização: {av.organizacao}\n")

@@ -21,7 +21,7 @@ def usuario_login():
             email = input('\033[31mE-mail não pode ser vazio.\n\033[m\nDigite o e-mail do usuário ou 0 para cancelar:\n\n').strip()
         if email == '0':
             utils.limpar()
-            menus.menuinicial()
+            menus.menu_inicial()
             return
         print('\nDigite a senha para login ou 0 para cancelar:\n')
         senha = utils.senha_com_asterisco().strip()
@@ -34,7 +34,7 @@ def usuario_login():
             print('\nDigite a senha do usuário ou 0 para cancelar:\n\n')
         if senha == '0':
             utils.limpar()
-            menus.menuinicial()
+            menus.menu_inicial()
             return
         for usuario in usuarioslist:
             if usuario.email == email.lower() and usuario.senha == senha:
@@ -58,7 +58,7 @@ def cadastrar_usuario():
         nome_real = input('Digite o seu nome real ou 0 para cancelar cadastro:\n\n')
         if nome_real.strip() == '0':
             utils.limpar()
-            menus.menuinicial()
+            menus.menu_inicial()
             return
         if utils.validanome_real(nome_real):
             utils.limpar()
@@ -77,7 +77,7 @@ def cadastrar_usuario():
         nome = input('Digite o nome do usuário ou 0 para cancelar cadastro:\n\n')
         if nome.strip() == '0':
             utils.limpar()
-            menus.menuinicial()
+            menus.menu_inicial()
             return
         if utils.validanome(nome):
             utils.limpar()
@@ -91,7 +91,7 @@ def cadastrar_usuario():
         utils.limpar() 
         if email.strip() == '0':
             utils.limpar()
-            menus.menuinicial()
+            menus.menu_inicial()
             return
         if utils.validaemail(email):
             utils.limpar()
@@ -106,7 +106,7 @@ def cadastrar_usuario():
         utils.limpar() 
         if senha.strip() == '0':
             utils.limpar()
-            menus.menuinicial()
+            menus.menu_inicial()
             return
         if utils.validasenha(senha):
             utils.limpar()
@@ -115,7 +115,7 @@ def cadastrar_usuario():
             confirmasenha = utils.senha_com_asterisco().strip()
             if confirmasenha == '0':
                 utils.limpar()
-                menus.menuinicial()
+                menus.menu_inicial()
                 return
             while confirmasenha != senha:
                 utils.limpar()
@@ -124,7 +124,7 @@ def cadastrar_usuario():
                 confirmasenha = utils.senha_com_asterisco().strip()
                 if confirmasenha == '0':
                     utils.limpar()
-                    menus.menuinicial()
+                    menus.menu_inicial()
                     return
             novo_usuario = Usuario(nome_real.strip(), contador, nome.strip(), email.strip().lower(), senha.strip())
             novo_usuario.cadastrar()

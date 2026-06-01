@@ -1,3 +1,4 @@
+import funcoes_admin
 import utils as utils
 import usuarios as usuarios
 import avaliacoes as avaliacoes
@@ -310,11 +311,11 @@ def menu_gerenciar_disciplinas():
             if opcao in [0,1,2,3]:
                 utils.limpar()
                 if opcao == 1:
-                    adicionar_disciplina()
+                    funcoes_admin.adicionar_disciplina()
                 if opcao == 2:
-                    remover_disciplina()
+                    funcoes_admin.remover_disciplina()
                 if opcao == 3:
-                    editar_disciplina()
+                    funcoes_admin.editar_disciplina()
                 if opcao == 0:
                     utils.limpar()
                     return
@@ -336,11 +337,11 @@ def menu_gerenciar_professores():
             if opcao in [0,1,2,3]:
                 utils.limpar()
                 if opcao == 1:
-                    adicionar_professor()
+                    funcoes_admin.adicionar_professor()
                 if opcao == 2:
-                    remover_professor()
+                    funcoes_admin.remover_professor()
                 if opcao == 3:
-                    editar_professor()
+                    funcoes_admin.editar_professor()
                 if opcao == 0:
                     utils.limpar()
                     return

@@ -2,6 +2,7 @@ import funcoes_admin
 import utils as utils
 import usuarios as usuarios
 import avaliacoes as avaliacoes
+import materiais as materiais
 from models.usuario import Usuario
 from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
 from models.avaliacoes_professores import Avaliacoes_professores
@@ -352,3 +353,29 @@ def menu_gerenciar_professores():
         except ValueError:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+
+def menu_materiaisaula():
+    '''Função para exibir o menu de materiais de aula'''
+    while True:
+        utils.limpar()
+        titulomateriais = '\033[36mMATERIAIS DE AULA\033[m]]'
+        print(titulomateriais.center(50, '='),'\n\n')
+        print("Selecione uma opção:\n\n[1]-Realizar upload de materiais\n[2]-Realizar download de materiais\n[0]-Voltar")
+        try:
+            opcao = int(input('Digite a opção desejada: '))
+        except ValueError:
+            utils.limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+
+        if opcao == 1:
+            materiais.upload()
+        elif opcao == 2:
+            materiais.download()
+        elif opcao == 0:
+            utils.limpar()
+            return
+        else:
+            utils.limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+
+        

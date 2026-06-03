@@ -48,7 +48,7 @@ def menu_de_escolha_admin(usuariologado):
         tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
         print(tituloescolha.center(50, '='),'\n\n')
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Gerenciar Usuários\n[0]-Voltar")
+        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
@@ -60,7 +60,7 @@ def menu_de_escolha_admin(usuariologado):
                     print(tituloescolha.center(50, '='),'\n\n')
                     print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                     print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Gerenciar Usuários\n[0]-Voltar")
+                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professor\n[0]-Voltar")
             except ValueError:
                 utils.limpar()
                 tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'

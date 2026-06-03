@@ -67,14 +67,20 @@ def editar_disciplina():
     
 def remover_disciplina():
     while True:
+        avaliacoes_feitas = []
         nome_disciplina = input("Digite o nome da disciplina a ser removida ou 0 para voltar: ").strip().lower()
         if nome_disciplina == '0':
             break
         if not nome_disciplina:
             print("\033[31mNome da disciplina não pode ser vazio.\033[m")
+
         for disciplina in avaliacoes.disciplinaslist:
             if disciplina.nome.lower() == nome_disciplina or nome_disciplina in disciplina.codigos:
-                disciplina.remover()
+                disciplina_achada = disciplina.nome.lower()
+                for avaliacao in avaliacoes.avaliacoes_disciplinas:
+                    if avaliacao.disciplina.lower() == disciplina_achada:
+                        avaliacoes_feitas.append(avaliacao)
+                disciplina.remover(avaliacoes_feitas)
                 print("\033[32mDisciplina removida com sucesso!\033[m")
                 break
 
@@ -132,15 +138,25 @@ def adicionar_professor():
 
 def editar_professor():
     print()
+
 def remover_professor():
+     
      while True:
+        avaliacoes_feitas = []
         nome_professor = input("Digite o nome do professor a ser removido ou 0 para voltar: ").strip().lower()
         if nome_professor == '0':
             break
         if not nome_professor:
             print("\033[31mNome do professor não pode ser vazio.\033[m")
+        
         for professor in avaliacoes.professoreslist:
             if professor.nome.lower() == nome_professor or nome_professor in professor.codigos:
-                professor.remover()
+                professor_achado = professor.nome.lower()
+                for avaliacao in avaliacoes.avaliacoes_professores:
+                    if avaliacao.professor.lower() == professor_achado:
+                        avaliacoes_feitas.append(avaliacao)
+                professor.remover(avaliacoes_feitas)
                 print("\033[32mProfessor removido com sucesso!\033[m")
                 break
+        print("\033[31mProfessor não encontrado.\033[m")
+        

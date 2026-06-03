@@ -2,6 +2,7 @@ import funcoes_admin
 import utils as utils
 import usuarios as usuarios
 import avaliacoes as avaliacoes
+import materiais as materiais
 from models.usuario import Usuario
 from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
 from models.avaliacoes_professores import Avaliacoes_professores
@@ -102,11 +103,11 @@ def menu_de_escolha_usuario(usuariologado):
         tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
         print(tituloescolha.center(50, '='),'\n\n')
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
+        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
-                if opcao in [0,1,2,3,4,5]:
+                if opcao in [0,1,2,3,4,5,6]:
                     break
                 else:
                     utils.limpar()
@@ -137,7 +138,9 @@ def menu_de_escolha_usuario(usuariologado):
             if usuariologado not in usuarios.usuarioslist:
                 utils.limpar()
                 menu_inicial()
-                return   
+                return
+        elif opcao == 6:
+            menu_materiaisaula()
         elif opcao == 0:
             utils.limpar()
             menu_inicial()
@@ -352,3 +355,31 @@ def menu_gerenciar_professores():
         except ValueError:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+
+def menu_materiaisaula():
+    '''Função para exibir o menu de materiais de aula'''
+    while True:
+        utils.limpar()
+        titulomateriais = '\033[36mMATERIAIS DE AULA\033[m'
+        print(titulomateriais.center(50, '='),'\n\n')
+        print("Selecione uma opção:\n\n[1]-Realizar upload de materiais\n[2]-Realizar download de materiais\n[3]-Ver Materiais\n[0]-Voltar")
+        try:
+            opcao = int(input('Digite a opção desejada: '))
+        except ValueError:
+            utils.limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+
+        if opcao == 1:
+            materiais.upload()
+        elif opcao == 2:
+            materiais.download()
+        elif opcao == 3:
+            materiais.vermateriais()
+        elif opcao == 0:
+            utils.limpar()
+            return
+        else:
+            utils.limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+
+        

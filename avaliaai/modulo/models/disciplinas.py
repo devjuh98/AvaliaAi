@@ -1,5 +1,6 @@
 import avaliacoes
 import json
+
 class Disciplina:
     def __init__(self,nome,codigos):
         self.nome = nome

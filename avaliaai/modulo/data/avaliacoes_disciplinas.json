@@ -88,14 +88,5 @@
         "usuario": "Franciscou123",
         "avaliador": "Francisco Biasoli",
         "indice_avaliador": 0
-    },
-    {
-        "disciplina": "Banana Split",
-        "dificuldade": 5,
-        "carga": 5,
-        "utilidade": 5,
-        "usuario": "guiadm007",
-        "avaliador": "Guilherme Vasconcellos",
-        "indice_avaliador": 0
     }
 ]

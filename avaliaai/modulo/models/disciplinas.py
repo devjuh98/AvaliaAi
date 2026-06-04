@@ -1,5 +1,6 @@
 import avaliacoes
 import json
+import os
 
 class Disciplina:
     def __init__(self,nome,codigos):
@@ -15,6 +16,7 @@ class Disciplina:
         '''Função para realizar o cadastro da disciplina,
         armazenando os dados em um json e em uma lista
         sem parâmetros de entrada e sem retorno.'''
+        
         avaliacoes.disciplinaslist.append(self)
         with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
             json.dump([disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent = 4, ensure_ascii=False)
@@ -26,6 +28,6 @@ class Disciplina:
         with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
             json.dump([disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent = 4, ensure_ascii=False)
         for avaliacao in avaliacoes_disciplina:
-            avaliacoes.avaliacoes_disciplina.remove(avaliacao)
-        with open(avaliacoes.ARQUIVOAVALIACOESDISCIPLINA, 'w', encoding='utf-8') as arq:
+            avaliacoes.avaliacoes_disciplinas.remove(avaliacao)
+        with open(avaliacoes.ARQUIVOAVALIADISC, 'w', encoding='utf-8') as arq:
             json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes.avaliacoes_disciplinas], arq, indent=4, ensure_ascii=False)

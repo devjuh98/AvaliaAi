@@ -29,5 +29,5 @@ class Professor:
             json.dump([professor.para_dicionario() for professor in avaliacoes.professoreslist], arq, indent = 4, ensure_ascii=False)
         for avaliacao in avaliacao_professor:
             avaliacoes.avaliacoes_professores.remove(avaliacao)
-        with open(avaliacoes.ARQUIVOAVALIACOESPROFESSOR, 'w', encoding='utf-8') as arq:
+        with open(avaliacoes.ARQUIVOAVALIAPROF, 'w', encoding='utf-8') as arq:
             json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes.avaliacoes_professores], arq, indent=4, ensure_ascii=False)

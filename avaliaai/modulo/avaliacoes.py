@@ -80,7 +80,7 @@ def avaliadisciplina(usuariologado):
         disciplinachada = False
         disciplinavaliada = False
 
-        disciplinaprocurada = "".join(input('Digite uma disciplina ou digite 0 para voltar:\n').split())
+        disciplinaprocurada = "".join(input('Digite uma disciplina ou digite 0 para voltar:\n').lower().strip().split())
         if disciplinaprocurada == '0':
             return
         for disciplina in disciplinaslist:

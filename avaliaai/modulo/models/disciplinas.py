@@ -21,6 +21,28 @@ class Disciplina:
         with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
             json.dump([disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent = 4, ensure_ascii=False)
     
+    def editar_nome(self,novo_nome):
+        '''Função para realizar a edição do nome do professor,
+        recebe o nome do professor como parâmetro de entrada e sem retorno.'''
+        for avaliacao in avaliacoes.avaliacoes_disciplinas:
+            if avaliacao.disciplina.lower() == self.nome.lower():
+                avaliacao.disciplina = novo_nome
+        
+        with open(avaliacoes.ARQUIVOAVALIADISC, 'w', encoding='utf-8') as arq:
+            json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes.avaliacoes_disciplinas], arq, indent=4, ensure_ascii=False)
+        
+        self.nome = novo_nome
+        
+        with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
+            json.dump([disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent = 4, ensure_ascii=False)
+    
+    def editar_abreviacoes(self, novas_abreviacoes):
+        '''Função para realizar a edição dos códigos do professor,
+        recebe as abreviações como parâmetro de entrada e sem retorno.'''
+        self.codigos = novas_abreviacoes
+        with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
+            json.dump([disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent = 4, ensure_ascii=False)
+    
     def remover(self,avaliacoes_disciplina):
         '''Função para realizar a remoção da disciplina,
         recebe o nome da disciplina como parâmetro de entrada e sem retorno.'''

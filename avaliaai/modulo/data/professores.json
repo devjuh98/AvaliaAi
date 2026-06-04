@@ -1,110 +1,191 @@
 [
     {
         "nome": "Ana Cristina Roiller",
-        "codigos": ["anacristina", "cristina"]
+        "codigos": [
+            "anacristina",
+            "cristina"
+        ]
     },
     {
         "nome": "Antônio José Ferreira Gomes Junior",
-        "codigos": ["antoniojose", "jose"]
+        "codigos": [
+            "antoniojose",
+            "jose"
+        ]
     },
     {
         "nome": "Brigitte Renata Bezerra Oliveira",
-        "codigos": ["brigitterenata", "renata"]
+        "codigos": [
+            "brigitterenata",
+            "renata"
+        ]
     },
     {
         "nome": "Catarina Rosa e Silva de Albuquerque",
-        "codigos": ["catarinarosa", "rosa"]
+        "codigos": [
+            "catarinarosa",
+            "rosa"
+        ]
     },
     {
         "nome": "Cícero Garrozi",
-        "codigos": ["cicerogarrozi", "garrozi"]
+        "codigos": [
+            "cicerogarrozi",
+            "garrozi"
+        ]
     },
     {
         "nome": "Claúdio Tadeu Cristino",
-        "codigos": ["claudiotadeu", "tadeu"]
+        "codigos": [
+            "claudiotadeu",
+            "tadeu"
+        ]
     },
     {
         "nome": "Cleviton Monteiro",
-        "codigos": ["clevitonmonteiro", "monteiro"]
+        "codigos": [
+            "clevitonmonteiro",
+            "monteiro"
+        ]
     },
     {
         "nome": "Elizabeth Tscha",
-        "codigos": ["elizabethtscha", "tscha"]
+        "codigos": [
+            "elizabethtscha",
+            "tscha"
+        ]
     },
     {
         "nome": "Gabriel Alves",
-        "codigos": ["gabrielalves", "alves"]
+        "codigos": [
+            "gabrielalves",
+            "alves"
+        ]
     },
     {
         "nome": "Glauco Estácio Gonçalves",
-        "codigos": ["glaucoestacio", "estacio"]
+        "codigos": [
+            "glaucoestacio",
+            "estacio"
+        ]
     },
     {
         "nome": "Guilherme Vilar",
-        "codigos": ["guilhermevilar", "vilar"]
+        "codigos": [
+            "guilhermevilar",
+            "vilar"
+        ]
     },
     {
         "nome": "Jader da Silva Jale",
-        "codigos": ["jaderdasilva", "silva"]
+        "codigos": [
+            "jaderdasilva",
+            "silva"
+        ]
     },
     {
         "nome": "Jones Albuquerque",
-        "codigos": ["jonesalbuquerque", "albuquerque"]
+        "codigos": [
+            "jonesalbuquerque",
+            "albuquerque"
+        ]
     },
     {
         "nome": "Marcelo Gama",
-        "codigos": ["marcelogama", "gama"]
+        "codigos": [
+            "marcelogama",
+            "gama"
+        ]
     },
     {
         "nome": "Maria da Conceição Moraes Batista",
-        "codigos": ["mariadaconceição", "Conceição"]
+        "codigos": [
+            "mariadaconceição",
+            "Conceição"
+        ]
     },
     {
         "nome": "Roberta Macêdo Marques Gouveia",
-        "codigos": ["robertamacedo", "macedo"]
+        "codigos": [
+            "robertamacedo",
+            "macedo"
+        ]
     },
     {
         "nome": "Rodrigo Elia Assad",
-        "codigos": ["rodrigoelia", "elia"]
+        "codigos": [
+            "rodrigoelia",
+            "elia"
+        ]
     },
     {
         "nome": "Rodrigo Gabriel Ferreira Soares",
-        "codigos": ["rodrigogabriel", "gabriel"]
+        "codigos": [
+            "rodrigogabriel",
+            "gabriel"
+        ]
     },
     {
         "nome": "Silvana Bocanegra",
-        "codigos": ["silvanabocanegra", "bocanegra"]
+        "codigos": [
+            "silvanabocanegra",
+            "bocanegra"
+        ]
     },
     {
         "nome": "Telma Lima",
-        "codigos": ["telmalima", "lima"]
+        "codigos": [
+            "telmalima",
+            "lima"
+        ]
     },
     {
         "nome": "Teresa Maria de Medeiros Maciel",
-        "codigos": ["teresamaria", "maria"]
+        "codigos": [
+            "teresamaria",
+            "maria"
+        ]
     },
     {
         "nome": "Tiago Alessandro Espinola Ferreira",
-        "codigos": ["tiagoalessandro", "alessandro"]
+        "codigos": [
+            "tiagoalessandro",
+            "alessandro"
+        ]
     },
     {
         "nome": "Victor Wanderley Costa de Medeiros",
-        "codigos": ["victorwanderley", "wanderley"]
+        "codigos": [
+            "victorwanderley",
+            "wanderley"
+        ]
     },
     {
         "nome": "Wilson Rosa de Oliveira",
-        "codigos": ["wilsonrosa", "rosa"]
+        "codigos": [
+            "wilsonrosa",
+            "rosa"
+        ]
     },
     {
         "nome": "Cleyton Vanut Cordeiro de Magalhães",
-        "codigos": ["cleytonvanut", "vanut"]
+        "codigos": [
+            "cleytonvanut",
+            "vanut"
+        ]
     },
     {
         "nome": "Lidiano Oliveira",
-        "codigos": ["lidianooliveira", "oliveira"]
+        "codigos": [
+            "lidianooliveira",
+            "oliveira"
+        ]
     },
     {
         "nome": "Marina Barros",
-        "codigos": ["marinabarros", "barros"]
+        "codigos": [
+            "marinabarros",
+            "barros"
+        ]
     }
 ]

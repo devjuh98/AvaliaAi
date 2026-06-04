@@ -305,8 +305,9 @@ def menuchecaravaliacao():
             input("Pressione Enter para continuar...")
             continue
 def menu_gerenciar_disciplinas():
+    utils.limpar()
     while True:
-        utils.limpar()
+        
         print("Menu de Gerenciamento de Disciplinas:\n\n[1]-Adicionar Disciplina\n[2]-Remover Disciplina\n[3]-Editar Disciplina\n[0]-Voltar")
         try:
             opcao = int(input('Digite a opção desejada: '))
@@ -346,7 +347,6 @@ def menu_gerenciar_professores():
                 if opcao == 0:
                     utils.limpar()
                     return
-                break
             else:
                 utils.limpar()
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")

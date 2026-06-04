@@ -4,9 +4,10 @@ from models.disciplinas import Disciplina
 from models.professores import Professor
 
 def adicionar_disciplina():
+    utils.limpar()
     while True:
-        nome_disciplina = input("Digite o nome da nova disciplina ou 0 para voltar:\n").strip().lower()
-        existe = False
+        nome_disciplina = input("Digite o nome da nova disciplina ou 0 para voltar:\n\n").strip().lower()
+        existe_disciplina = False
         if nome_disciplina == '0':
             utils.limpar()
             break
@@ -16,7 +17,7 @@ def adicionar_disciplina():
             continue
         elif not all(caracter.isalnum() or caracter == '-' or caracter == ' ' for caracter in nome_disciplina):
             utils.limpar()
-            print("\033[31mNome da disciplina deve conter apenas letras, números ou hífens.\033[m\n")
+            print("\033[31mNome da disciplina deve conter apenas letras, números, espaços ou hífens.\033[m\n")
             continue
         elif '--' in nome_disciplina or '  ' in nome_disciplina:
             utils.limpar()
@@ -29,24 +30,39 @@ def adicionar_disciplina():
         for disciplina in avaliacoes.disciplinaslist:
             if disciplina.nome.lower() == nome_disciplina or nome_disciplina in disciplina.codigos:
                 utils.limpar()
-                existe = True
+                existe_disciplina = True
                 print("\033[31mDisciplina já existe.\033[m\n")
                 break
-        if existe == False:
+        if existe_disciplina == False:
             utils.limpar()
+            nome_list = nome_disciplina.split()
+            for nome in nome_list:
+                nome_disciplina = nome_disciplina.replace(nome, nome.capitalize())
             codigos = []
             while True:
                     
-                existente = False
+                codigo_existente = False
+                print(f"Nome da disciplina: {nome_disciplina}\n")
+                print("Abreviações:", end = "")
+                for ver_codigos in codigos:
+                    if ver_codigos == codigos[0]:
+                        print(f" {ver_codigos},", end = "")
+                    elif ver_codigos == codigos[-1]:
+                        print(f" {ver_codigos}", end = "")
+                    else:
+                        print(f" {ver_codigos},", end = "")
+                print("\n")
+
                 codigo = input("Digite as abreviações da nova disciplina:\n"
-                               "Digite 0 quando não tiver mais abreviações para a disciplina\n").strip().lower()
+                               "Digite 0 quando não houver mais abreviações para a disciplina\n\n").strip().lower()
                 if codigo == '0':
+                    utils.limpar()
                     break
                 elif not codigo:
                     utils.limpar()
                     print("\033[31mAbreviação não pode ser vazia.\033[m\n")
                     continue
-                elif not all(caracter.isalnum() or caracter == ' ' for caracter in codigo):
+                elif not all(caracter.isalnum() for caracter in codigo):
                     utils.limpar()
                     print("\033[31mAbreviação deve conter apenas letras e números\033[m\n")
                     continue
@@ -54,27 +70,24 @@ def adicionar_disciplina():
                     utils.limpar()
                     print("\033[31mAbreviação deve conter entre 2 e 7 caracteres.\033[m\n")
                     continue
-                elif '  ' in codigo:
+                elif codigo in codigos:
                     utils.limpar()
-                    print("\033[31mAbreviação não pode conter espaços consecutivos.\033[m\n")
+                    print("\033[31mAbreviação já adicionada para esta disciplina.\033[m\n")
                     continue
-                for codigo_existente in avaliacoes.disciplinaslist:
-                    if codigo in codigo_existente.codigos:
-                        existente = True
+                for disciplina in avaliacoes.disciplinaslist:
+                    if codigo in disciplina.codigos:
+                        codigo_existente = True
                         utils.limpar()
-                        print(f"\033[31mAbreviação já existe para a disciplina {codigo_existente.nome}.\033[m\n")
+                        print(f"\033[31mAbreviação já existe para a disciplina {disciplina.nome}.\033[m\n")
                         break
-                if existente == False:
+                if codigo_existente == False:
                     utils.limpar()
                     codigos.append(codigo)
-            nome_list = nome_disciplina.split()
-            for nome in nome_list:
-                nome_disciplina = nome_disciplina.replace(nome, nome.capitalize())
+            
                 
             nova_disciplina = Disciplina(nome_disciplina,codigos)
             nova_disciplina.cadastrar()
-            print("\033[32mDisciplina cadastrada com sucesso!\033[m\n")
-            utils.limpar()
+            print("\033[32mDisciplina cadastrada com sucesso!\033[m\n") 
             opcao  = input("Deseja cadastrar outra diciplina?\n[1]-Sim\n[2]-Não\n")
             while opcao not in ['1','2']:
                 utils.limpar()
@@ -82,26 +95,137 @@ def adicionar_disciplina():
                 opcao  = input("Deseja cadastrar outra diciplina?\n[1]-Sim\n[2]-Não\n")
             if opcao == '1':
                 utils.limpar()
-                break
+            if opcao == '2':
                 utils.limpar()
                 return
-                
-            break
            
         
 
 def editar_disciplina():
-        print()
+    utils.limpar()
+    while True:
+        disciplina_achada = None
+        nome = input("Digite o nome da disciplina que deseja editar (0 para voltar):\n\n").strip().lower()
+        if nome == '0':
+            utils.limpar()
+            break
+        if not nome:
+            utils.limpar()
+            print("\033[31Nome não pode ser vazio.\033[m")
+        
+        for disciplina in avaliacoes.disciplinaslistlist:
+            if disciplina.nome.lower() == nome:
+                disciplina_achada = disciplina.nome
+        if disciplina_achada == None:
+            utils.limpar()
+            print("\033[31Professor não encontrado.\033[m")
+        else:
+            while True:
+                utils.limpar()
+                opcao = input("O que deseja editar(0 para voltar)?\n[1]-Nome\n[2]-Abreviações\n[0]-Voltar")
+                if opcao == '0':
+                    utils.limpar()
+                    break
+                elif opcao == '1':
+                    while True:
+                        print(f"Nome atual: {disciplina_achada.nome}")
+                        novo_nome = input("Qual o novo nome do  (0 para voltar)?\n\n")
+                        existe = False
+                        if novo_nome == '0':
+                            utils.limpar()
+                            break
+                        elif not novo_nome:
+                            utils.limpar()
+                            print("\033[31mNome da disciplina não pode ser vazio.\033[m\n")
+                            continue
+                        elif not all(caracter.isalnum() or caracter == ' ' or caracter == '-' for caracter in novo_nome):
+                            utils.limpar()
+                            print("\033[31mNome da disciplina só deve conter letras, número, espaços ou hífens.\033[m\n")
+                            continue
+                        elif '  ' in novo_nome or '--' in novo_nome:
+                            utils.limpar()
+                            print("\033[31mNome da disciplina não pode conter hífens ou espaços consecutivos.\033[m\n")
+                        elif len(novo_nome) < 4 or len(novo_nome) > 60:
+                            utils.limpar()
+                            print("\033[31mNome da disciplina deve conter entre 4 e 60 caracteres.\033[m\n")
+                            continue
+                        for professor in avaliacoes.disciplinaslist:
+                            if professor.nome.lower() == novo_nome:
+                                existe = True
+                                utils.limpar()
+                                print("\033[31mProfessor já existe.\033[m\n")
+                                break
+                        if existe == False:
+                            utils.limpar()
+                            nome_list = novo_nome.split()
+                            for nome in nome_list:
+                                novo_nome = novo_nome.replace(nome, nome.capitalize())
+                            disciplina_achada.editar_nome(novo_nome)
+
+
+                elif opcao == '2':
+                    codigos = []
+                    while True:
+                        
+                        codigo_existente = False
+                        print(f"Códigos atuais: do professro {disciplina_achada.nome}: {disciplina_achada.codigos}")
+                        print("Novas Abreviações:", end = "")
+                        for ver_codigos in codigos:
+                            if ver_codigos == codigos[0]:
+                                print(f" {ver_codigos},", end = "")
+                            elif ver_codigos == codigos[-1]:
+                                print(f" {ver_codigos}", end = "")
+                            else:
+                                print(f" {ver_codigos},", end = "")
+                        print("\n")
+
+                        codigo = input("Digite as abreviações da nova disciplina:\n"
+                               "Digite 0 quando não houver mais abreviações para a disciplina\n\n").strip().lower()
+                        if codigo == '0':
+                            utils.limpar()
+                            break
+                        elif not codigo:
+                            utils.limpar()
+                            print("\033[31mAbreviação não pode ser vazia.\033[m\n")
+                            continue
+                        elif not all(caracter.isalnum() for caracter in codigo):
+                            utils.limpar()
+                            print("\033[31mAbreviação deve conter apenas letras e números\033[m\n")
+                            continue
+                        elif len(codigo) < 2 or len(codigo) > 7:
+                            utils.limpar()
+                            print("\033[31mAbreviação deve conter entre 2 e 7 caracteres.\033[m\n")
+                            continue
+                        elif codigo in codigos:
+                            utils.limpar()
+                            print("\033[31mAbreviação já adicionada para esta disciplina.\033[m\n")
+                            continue
+                        for disciplina in avaliacoes.disciplinaslist:
+                            if codigo in disciplina.codigos:
+                                codigo_existente = True
+                                utils.limpar()
+                                print(f"\033[31mAbreviação já existe para a disciplina {disciplina.nome}.\033[m\n")
+                                break
+                        if codigo_existente == False:
+                            utils.limpar()
+                            codigos.append(codigo)        
+                        else:
+                            utils.limpar()
+                            print("\033[31Opção inválida.\033[m")
+                    disciplina_achada.editar_abreviacoes(codigos)
     
 def remover_disciplina():
+    utils.limpar()
     while True:
         avaliacoes_feitas = []
         disciplina_achada = None
-        nome_disciplina = input("Digite o nome da disciplina a ser removida ou 0 para voltar: \n").strip().lower()
+        nome_disciplina = input("Digite o nome da disciplina a ser removida ou 0 para voltar:\n\n").strip().lower()
         if nome_disciplina == '0':
             break
         if not nome_disciplina:
+            utils.limpar()
             print("\033[31mNome da disciplina não pode ser vazio.\033[m")
+            continue
 
         for disciplina in avaliacoes.disciplinaslist:
             if disciplina.nome.lower() == nome_disciplina or nome_disciplina in disciplina.codigos:
@@ -118,69 +242,215 @@ def remover_disciplina():
             print("\033[31mDisciplina não encontrada.\033[m\n")
 
 def adicionar_professor():
-
-     while True:
-        nome_professor = input("Digite o nome do novo professor ou 0 para voltar: \n").strip()
+    utils.limpar()
+    while True:
+        nome_professor = input("Digite o nome completo do novo professor ou 0 para voltar:\n\n").strip().lower()
+        existe = False
         if nome_professor == '0':
+            utils.limpar()
             break
         elif not nome_professor:
             print("\033[31mNome do professor não pode ser vazio.\033[m\n")
             continue
         elif not all(caracter.isalpha() or caracter == ' ' for caracter in nome_professor):
-            print("\033[31mNome do professor não pode conter números.\033[m\n")
+            print("\033[31mNome do professor deve conter apenas letras e espaços\033[m\n")
             continue
         elif len(nome_professor) < 4 or len(nome_professor) > 50:
             print("\033[31mNome do professor deve conter entre 4 e 50 caracteres.\033[m\n")
             continue
         for professor in avaliacoes.professoreslist:
-            if professor.nome.lower() == nome_professor or nome_professor in professor.codigos:
+            if professor.nome.lower() == nome_professor:
+                existe = True
                 print("\033[31mProfessor já existe.\033[m\n")
                 break
-        else:
-            
+        if existe == False:
+            utils.limpar()
             codigos = []
+            nome_list = nome_professor.split()
+            for nome in nome_list:
+                nome_professor = nome_professor.replace(nome, nome.capitalize())
             while True:
-                existente = False
-                codigo = input("Digite as abreviações do novo professor:\n"
-                               "Digite 0 quando não tiver mais abreviações para o professor\n").strip().lower()
+                codigo_existente = False
+                print(f"Nome do professor: {nome_professor}\n")
+                print("Abreviações:", end  = '')
+                for ver_codigos in codigos:
+                    if ver_codigos == codigos[0]:
+                        print(f" {ver_codigos},", end = "")
+                    elif ver_codigos == codigos[-1]:
+                        print(f" {ver_codigos}", end = "")
+                    else:
+                        print(f" {ver_codigos},", end = "")
+                print("\n")
+                
+                codigo = ''.join(input("Digite as abreviações do novo professor:\n"
+                               "Digite 0 quando não tiver mais abreviações para o professor\n\n").strip().lower().split())
                 if codigo == '0':
+                    utils.limpar()
                     break
                 elif not codigo:
+                    utils.limpar()
                     print("\033[31mAbreviação não pode ser vazia.\033[m\n")
                     continue
-                elif not all(caracter.isalpha() or caracter == ' ' for caracter in codigo):
-                    print("\033[31mAbreviação deve conter apenas letras e ou espaços\033[m\n")
+                elif not all(caracter.isalpha() for caracter in codigo):
+                    utils.limpar()
+                    print("\033[31mAbreviação de professor deve conter apenas letras\033[m\n")
                     continue
                 elif len(codigo) < 2 or len(codigo) > 20:
+                    utils.limpar()
                     print("\033[31mAbreviação deve conter entre 2 e 20 caracteres.\033[m\n")
                     continue
-                elif '  ' in codigo:
-                    print("\033[31mAbreviação não pode conter espaços consecutivos.\033[m\n")
+                elif codigo in codigos:
+                    utils.limpar()
+                    print("\033[31mAbreviação já adicionada para este professor.\033[m\n")
                     continue
-                for codigo_existente in avaliacoes.professoreslist:
-                    if codigo in codigo_existente.codigos:
-                        existente = True
-                        print(f"\033[31mAbreviação já existe para o professor {codigo_existente.nome}.\033[m\n")
+                for professor in avaliacoes.professoreslist:
+                    if codigo in professor.codigos:
+                        codigo_existente = True
+                        utils.limpar()
+                        print(f"\033[31mAbreviação já existe para o professor {professor.nome}.\033[m\n")
                         break
-                if existente == False:
+                if codigo_existente == False:
+                    utils.limpar()
                     codigos.append(codigo)
+            
             novo_professor = Professor(nome_professor,codigos)
             novo_professor.cadastrar()
-            break
+            print("\033[32mProfessor cadastrado com sucesso!\033[m\n")
+            opcao  = input("Deseja cadastrar outro professor?\n[1]-Sim\n[2]-Não\n")
+            while opcao not in ['1','2']:
+                utils.limpar()
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+                opcao  = input("Deseja cadastrar outro professor?\n[1]-Sim\n[2]-Não\n")
+            if opcao == '1':
+                utils.limpar()
+            else:
+                utils.limpar()
+                return
            
 
 def editar_professor():
-    print()
+    utils.limpar()
+    while True:
+        professor_achado = None
+        nome = input("Digite o nome do professor que deseja editar (0 para voltar):\n\n").strip().lower()
+        if nome == '0':
+            utils.limpar()
+            break
+        if not nome:
+            utils.limpar()
+            print("\033[31Nome não pode ser vazio.\033[m")
+        
+        for professor in avaliacoes.professoreslist:
+            if professor.nome.lower() == nome:
+                professor_achado = professor.nome
+        if professor_achado == None:
+            utils.limpar()
+            print("\033[31Professor não encontrado.\033[m")
+        else:
+            while True:
+                utils.limpar()
+                opcao = input("O que deseja editar(0 para voltar)?\n[1]-Nome\n[2]-Abreviações\n[0]-Voltar")
+                if opcao == '0':
+                    utils.limpar()
+                    break
+                elif opcao == '1':
+                    while True:
+                        print(f"Nome atual: {professor_achado.nome}")
+                        novo_nome = input("Qual o novo nome do  (0 para voltar)?\n\n")
+                        existe = False
+                        if novo_nome == '0':
+                            utils.limpar()
+                            break
+                        elif not novo_nome:
+                            print("\033[31mNome do professor não pode ser vazio.\033[m\n")
+                            continue
+                        elif not all(caracter.isalpha() or caracter == ' ' for caracter in novo_nome):
+                            print("\033[31mNome do professor não pode conter números.\033[m\n")
+                            continue
+                        elif len(novo_nome) < 4 or len(novo_nome) > 50:
+                            print("\033[31mNome do professor deve conter entre 4 e 50 caracteres.\033[m\n")
+                            continue
+                        for professor in avaliacoes.professoreslist:
+                            if professor.nome.lower() == novo_nome:
+                                existe = True
+                                print("\033[31mProfessor já existe.\033[m\n")
+                                break
+                        if existe == False:
+                            utils.limpar()
+                            nome_list = novo_nome.split()
+                            for nome in nome_list:
+                                novo_nome = novo_nome.replace(nome, nome.capitalize())
+                            professor_achado.editar_nome(novo_nome)
+
+
+                elif opcao == '2':
+                    codigos = []
+                    while True:
+                        
+                        codigo_existente = False
+                        print(f"Códigos atuais: do professro {professor_achado.nome}: {professor_achado.codigos}")
+                        print("Novas Abreviações:", end = "")
+                        for ver_codigos in codigos:
+                            if ver_codigos == codigos[0]:
+                                print(f" {ver_codigos},", end = "")
+                            elif ver_codigos == codigos[-1]:
+                                print(f" {ver_codigos}", end = "")
+                            else:
+                                print(f" {ver_codigos},", end = "")
+                        print("\n")
+
+                        codigo = input("Digite as abreviações da nova disciplina:\n"
+                               "Digite 0 quando não houver mais abreviações para a disciplina\n\n").strip().lower()
+                        if codigo == '0':
+                            utils.limpar()
+                            break
+                        elif not codigo:
+                            utils.limpar()
+                            print("\033[31mAbreviação não pode ser vazia.\033[m\n")
+                            continue
+                        elif not all(caracter.isalnum() for caracter in codigo):
+                            utils.limpar()
+                            print("\033[31mAbreviação de professor deve conter apenas letras\033[m\n")
+                            continue
+                        elif len(codigo) < 2 or len(codigo) > 20:
+                            utils.limpar()
+                            print("\033[31mAbreviação deve conter entre 2 e 20 caracteres.\033[m\n")
+                            continue
+                        elif codigo in codigos:
+                            utils.limpar()
+                            print("\033[31mAbreviação já adicionada para este professor.\033[m\n")
+                            continue
+                        for professor in avaliacoes.professoreslist:
+                            if codigo in professor.codigos:
+                                codigo_existente = True
+                                utils.limpar()
+                                print(f"\033[31mAbreviação já existe para o professor {professor.nome}.\033[m\n")
+                                break
+                        if codigo_existente == False:
+                            utils.limpar()
+                            codigos.append(codigo)        
+                        else:
+                            utils.limpar()
+                            print("\033[31Opção inválida.\033[m")
+                    professor_achado.editar_abreviacoes(codigos)
+                 
+
+            
+            
+           
 
 def remover_professor():
-     
-     while True:
+    utils.limpar()
+    while True:
         avaliacoes_feitas = []
+        professor_achado = None
         nome_professor = input("Digite o nome do professor a ser removido ou 0 para voltar: \n").strip().lower()
         if nome_professor == '0':
             break
         if not nome_professor:
+            utils.limpar()
             print("\033[31mNome do professor não pode ser vazio.\033[m\n")
+            continue
         
         for professor in avaliacoes.professoreslist:
             if professor.nome.lower() == nome_professor or nome_professor in professor.codigos:
@@ -189,7 +459,10 @@ def remover_professor():
                     if avaliacao.professor.lower() == professor_achado:
                         avaliacoes_feitas.append(avaliacao)
                 professor.remover(avaliacoes_feitas)
+                utils.limpar()
                 print("\033[32mProfessor removido com sucesso!\033[m\n")
                 break
-        print("\033[31mProfessor não encontrado.\033[m\n")
+        if professor_achado == None:
+            utils.limpar()
+            print("\033[31mProfessor não encontrado.\033[m\n")
         

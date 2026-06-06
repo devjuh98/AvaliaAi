@@ -2,7 +2,7 @@ import avaliacoes
 import json
 
 class Avaliacoes_disciplinas:
-    def __init__(self, disciplina, dificuldade, carga, utilidade, usuario, avaliador, indice_avaliador):
+    def __init__(self, disciplina, dificuldade, carga, utilidade, usuario, avaliador, indice_avaliador,situacao_academica):
         self.disciplina = disciplina
         self.dificuldade = dificuldade
         self.carga = carga
@@ -10,6 +10,7 @@ class Avaliacoes_disciplinas:
         self.usuario = usuario
         self.avaliador = avaliador
         self.indice_avaliador = indice_avaliador
+        self.situacao_academica = situacao_academica
 
     def para_dicionario(self):
         return{
@@ -19,7 +20,8 @@ class Avaliacoes_disciplinas:
             'utilidade': self.utilidade,
             'usuario': self.usuario,
             'avaliador': self.avaliador,
-            'indice_avaliador': self.indice_avaliador
+            'indice_avaliador': self.indice_avaliador,
+            'situacao_academica': self.situacao_academica
         }
     
     def avaliar(self):

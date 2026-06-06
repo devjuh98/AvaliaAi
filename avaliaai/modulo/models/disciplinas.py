@@ -1,6 +1,6 @@
 import avaliacoes
 import json
-import os
+from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
 
 class Disciplina:
     def __init__(self,nome,codigos):
@@ -53,3 +53,17 @@ class Disciplina:
             avaliacoes.avaliacoes_disciplinas.remove(avaliacao)
         with open(avaliacoes.ARQUIVOAVALIADISC, 'w', encoding='utf-8') as arq:
             json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes.avaliacoes_disciplinas], arq, indent=4, ensure_ascii=False)
+
+    def mostrar_taxas(self,avaliacoes):
+        reprovacao = 0
+        aprovacao = 0
+        for avaliacao in avaliacoes:
+            if avaliacao.situacao_academica == 'Reprovado':
+                reprovacao += 1
+            elif avaliacao.situacao_academica == 'Aprovado':
+                aprovacao += 1
+        reprovacao_taxa = reprovacao/len(avaliacoes)
+        aprovacao_taxa = aprovacao/len(avaliacoes)
+        print(f"Disciplina: {self.nome}\n\n")
+        print(f"Índice de reprovação: {reprovacao_taxa*100}%")
+        print(f"Índice de aprovação: {aprovacao_taxa*100}%\n")

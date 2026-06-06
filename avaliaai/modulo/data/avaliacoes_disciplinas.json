@@ -6,7 +6,8 @@
         "utilidade": 5,
         "usuario": "TechJacket09",
         "avaliador": "Bruno Silva",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 2",
@@ -15,7 +16,8 @@
         "utilidade": 4,
         "usuario": "TechJacket09",
         "avaliador": "Bruno Silva",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
@@ -24,7 +26,8 @@
         "utilidade": 5,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
     },
     {
         "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
@@ -33,7 +36,8 @@
         "utilidade": 4,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
     },
     {
         "disciplina": "Sustentabilidade em Sistemas de Informação",
@@ -42,7 +46,8 @@
         "utilidade": 4,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Modelagem de Dados",
@@ -51,7 +56,8 @@
         "utilidade": 2,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Modelagem de Dados",
@@ -60,7 +66,8 @@
         "utilidade": 2,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 2",
@@ -69,7 +76,8 @@
         "utilidade": 5,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Introdução à Administração",
@@ -78,7 +86,8 @@
         "utilidade": 3,
         "usuario": "GUiguilindo",
         "avaliador": "Guilherme Valois",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
     },
     {
         "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
@@ -87,6 +96,17 @@
         "utilidade": 5,
         "usuario": "Franciscou123",
         "avaliador": "Francisco Biasoli",
-        "indice_avaliador": 0
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "guiadm007",
+        "avaliador": "Guilherme Vasconcellos",
+        "indice_avaliador": 0,
+        "situacao_academica": "Cursando"
     }
 ]

@@ -58,6 +58,10 @@ def tituloeditarprofessor():
     tituloeditaprof = '\033[36mEDITAR PROFESSOR\033[m'
     print(tituloeditaprof.center(50, '='),'\n\n')
 
+def titulotaxas():
+    titulotaxas = '\033[36mTAXAS DE REPROVAÇÂO E REPROVAÇÂO\033[m'
+    print(titulotaxas.center(50, '='),'\n\n')
+
 def validanome_real(nome_real):
     '''Valida o nome real do usuário de acordo com os critérios estabelecidos. 
     Recebe o parâmetro nome_real a e retorna True(válido) ou False (Inválido).'''

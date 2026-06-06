@@ -1,6 +1,7 @@
 import avaliacoes
 import json
 from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
+import matplotlib.pyplot as plt
 
 class Disciplina:
     def __init__(self,nome,codigos):
@@ -57,13 +58,28 @@ class Disciplina:
     def mostrar_taxas(self,avaliacoes):
         reprovacao = 0
         aprovacao = 0
+        if len(avaliacoes) == 0:
+            print("Não há avaliações suficientes para geras taxas de reprovação ou aprovação\n")
+            return
         for avaliacao in avaliacoes:
             if avaliacao.situacao_academica == 'Reprovado':
                 reprovacao += 1
             elif avaliacao.situacao_academica == 'Aprovado':
                 aprovacao += 1
-        reprovacao_taxa = reprovacao/len(avaliacoes)
-        aprovacao_taxa = aprovacao/len(avaliacoes)
+        reprovacao_taxa = reprovacao/(reprovacao+aprovacao)
+        aprovacao_taxa = aprovacao/(reprovacao+aprovacao)
         print(f"Disciplina: {self.nome}\n\n")
         print(f"Índice de reprovação: {reprovacao_taxa*100}%")
         print(f"Índice de aprovação: {aprovacao_taxa*100}%\n")
+        if reprovacao + aprovacao == 0:
+            print("Não há avaliações concluídas para gerar gráfico")
+        else:
+            plt.pie(
+            [aprovacao, reprovacao],
+            labels=['Aprovados', 'Reprovados'],
+            autopct='%1.1f%%',
+            colors=['green', 'red']
+            )
+            plt.title(f"Índices de aprovação e reprovação\n{self.nome}")
+            plt.show() 
+

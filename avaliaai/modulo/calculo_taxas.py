@@ -30,12 +30,12 @@ def indices():
         utils.limpar()
         utils.titulotaxas()
         disciplina_achada.mostrar_taxas(lista_avaliacoes)
-        opcao = input("Deseja ver as taxas de outra disciplina?\n[1]-Sim\n[2]-Não")
+        opcao = input("Deseja ver as taxas de outra disciplina?\n[1]-Sim\n[2]-Não\n\n")
         while opcao not in ['1','2']:
             utils.limpar()
             utils.titulotaxas()
             disciplina_achada.mostrar_taxas(lista_avaliacoes)
-            opcao = input("Deseja ver as taxas de outra disciplina?\n[1]-Sim\n[2]-Não")
+            opcao = input("Deseja ver as taxas de outra disciplina?\n[1]-Sim\n[2]-Não\n\n")
         if opcao == '1':
             utils.limpar()
         else:

@@ -26,6 +26,38 @@ def tituloavaliarprofessor():
     tituloavalprof = '\033[36mAVALIAR PROFESSOR\033[m'
     print(tituloavalprof.center(50, '='),'\n\n')
 
+def titulogerenciardisciplina():
+    titulogerenciadisc = '\033[36mGERENCIAR DISCIPLINA\033[m'
+    print(titulogerenciadisc.center(50, '='),'\n\n')
+
+def titulogerenciarprofessor():
+    titulogerenciaprof = '\033[36mGERENCIAR PROFESSOR\033[m'
+    print(titulogerenciaprof.center(50, '='),'\n\n')
+
+def tituloadicionardisciplina():
+    tituloadicionadisc = '\033[36mADICIONAR DISCIPLINA\033[m'
+    print(tituloadicionadisc.center(50, '='),'\n\n')
+
+def tituloadicionarprofessor():
+    tituloadicionaprof = '\033[36mADICIONARAR PROFESSOR\033[m'
+    print(tituloadicionaprof.center(50, '='),'\n\n')
+
+def tituloremoverdisciplina():
+    tituloremovedisc = '\033[36mREMOVER DISCIPLINA\033[m'
+    print(tituloremovedisc.center(50, '='),'\n\n')
+
+def tituloremoverprofessor():
+    tituloremoveprof = '\033[36mREMOVER PROFESSOR\033[m'
+    print(tituloremoveprof.center(50, '='),'\n\n')
+
+def tituloeditardisciplina():
+    tituloeditadisc = '\033[36mEDITAR DISCIPLINA\033[m'
+    print(tituloeditadisc.center(50, '='),'\n\n')
+
+def tituloeditarprofessor():
+    tituloeditaprof = '\033[36mEDITAR PROFESSOR\033[m'
+    print(tituloeditaprof.center(50, '='),'\n\n')
+
 def validanome_real(nome_real):
     '''Valida o nome real do usuário de acordo com os critérios estabelecidos. 
     Recebe o parâmetro nome_real a e retorna True(válido) ou False (Inválido).'''

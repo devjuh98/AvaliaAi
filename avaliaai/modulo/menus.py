@@ -306,53 +306,68 @@ def menuchecaravaliacao():
             continue
 def menu_gerenciar_disciplinas():
     utils.limpar()
+    utils.titulogerenciardisciplina()
     while True:
         
-        print("Menu de Gerenciamento de Disciplinas:\n\n[1]-Adicionar Disciplina\n[2]-Remover Disciplina\n[3]-Editar Disciplina\n[0]-Voltar")
+        print("[1]-Adicionar Disciplina\n[2]-Remover Disciplina\n[3]-Editar Disciplina\n[0]-Voltar")
         try:
             opcao = int(input('Digite a opção desejada: '))
             if opcao in [0,1,2,3]:
                 utils.limpar()
                 if opcao == 1:
                     funcoes_admin.adicionar_disciplina()
+                    utils.titulogerenciardisciplina()
                 if opcao == 2:
                     funcoes_admin.remover_disciplina()
+                    utils.titulogerenciardisciplina()
                 if opcao == 3:
                     funcoes_admin.editar_disciplina()
+                    utils.titulogerenciardisciplina()
                 if opcao == 0:
                     utils.limpar()
                     return
             else:
                 utils.limpar()
-                print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+                utils.titulogerenciardisciplina()
+                print("Digite um número do menu:\n")
         except ValueError:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+            utils.titulogerenciardisciplina()
+            print("Digite um número do menu:\n")
 
 def menu_gerenciar_professores():
     utils.limpar()
+    utils.titulogerenciarprofessor()
     while True:
-        
-        print("Menu de Gerenciamento de Professores:\n\n[1]-Adicionar Professor\n[2]-Remover Professor\n[3]-Editar Professor\n[0]-Voltar")
+        print("\n\n[1]-Adicionar Professor\n[2]-Remover Professor\n[3]-Editar Professor\n[0]-Voltar")
         try:
             opcao = int(input('Digite a opção desejada: '))
             if opcao in [0,1,2,3]:
                 utils.limpar()
                 if opcao == 1:
                     funcoes_admin.adicionar_professor()
+                    utils.titulogerenciarprofessor()
                 if opcao == 2:
                     funcoes_admin.remover_professor()
+                    utils.titulogerenciarprofessor()
                 if opcao == 3:
                     funcoes_admin.editar_professor()
+                    utils.titulogerenciarprofessor()
                 if opcao == 0:
                     utils.limpar()
                     return
             else:
                 utils.limpar()
-                print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+                utils.titulogerenciarprofessor()
+                print("Digite um número do menu:\n")
         except ValueError:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+            utils.titulogerenciarprofessor()
+            print("Digite um número do menu:\n")
 
 def menu_materiaisaula():
     '''Função para exibir o menu de materiais de aula'''

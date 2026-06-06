@@ -187,9 +187,26 @@
         "nome": "Dragon Ball Z",
         "codigos": [
             "dbs",
-            "db",
-            "dragon",
-            "ball"
+            "dragon"
+        ]
+    },
+    {
+        "nome": "Brawl Stars",
+        "codigos": [
+            "bs",
+            "brawl"
+        ]
+    },
+    {
+        "nome": "Clash Royal",
+        "codigos": [
+            "cr"
+        ]
+    },
+    {
+        "nome": "Teste De Disciplina",
+        "codigos": [
+            "td"
         ]
     }
 ]

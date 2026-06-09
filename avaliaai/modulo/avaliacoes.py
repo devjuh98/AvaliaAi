@@ -46,7 +46,8 @@ try:
                 dados['utilidade'],
                 dados['usuario'],
                 dados['avaliador'],
-                dados['indice_avaliador'])
+                dados['indice_avaliador'],
+                dados['situacao_academica'])
             avaliacoes_disciplinas.append(avaliacaodisciplina)
         #avaliacoes_disciplinas = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
@@ -80,7 +81,7 @@ def avaliadisciplina(usuariologado):
         disciplinachada = False
         disciplinavaliada = False
 
-        disciplinaprocurada = "".join(input('Digite uma disciplina ou digite 0 para voltar:\n').split())
+        disciplinaprocurada = "".join(input('Digite uma disciplina ou digite 0 para voltar:\n').lower().strip().split())
         if disciplinaprocurada == '0':
             return
         for disciplina in disciplinaslist:
@@ -129,9 +130,28 @@ def avaliadisciplina(usuariologado):
                                                     utils.tituloavaliardisciplina()
                                                     print('\033[31mVALOR INVÁLIDO\033[m\n') 
                                                 else:
+                                                    situacao_academica = None
                                                     utils.limpar()
                                                     utils.tituloavaliardisciplina()
-                                                    nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.nome_real,usuariologado.indice_nome)
+                                                    situacao = input("Qual a sua situação em relação a disciplina?:"
+                                                                     "\n[1]-Reprovado\n[2]-Aprovado\n[3]-Cursando\n\n")
+                                                    while situacao not in ['1','2','3']:
+                                                        utils.limpar()
+                                                        utils.tituloavaliardisciplina()
+                                                        print('\033[31mOPÇÃO INVÁLIDA\033[m\n')
+                                                        situacao = input("Qual a sua situação em relação a disciplina?:"
+                                                                     "\n[1]-Reprovado\n[2]-Aprovado\n[3]-Cursando\n\n")
+                                                    if situacao == 1:
+                                                        utils.limpar() 
+                                                        situacao_academica = 'Reprovado'
+                                                    elif situacao == 2:
+                                                        utils.limpar()  
+                                                        situacao_academica = 'Approvado'
+                                                    else:
+                                                        utils.limpar()  
+                                                        situacao_academica = 'Cursando'
+
+                                                    nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.nome_real,usuariologado.indice_nome,situacao_academica)
                                                     nova_avaliacao.avaliar()
                                                     #avaliacoes_disciplinas.append(nova_avaliacao)
                                                     '''

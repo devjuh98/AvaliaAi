@@ -3,6 +3,7 @@ import utils as utils
 import usuarios as usuarios
 import avaliacoes as avaliacoes
 import materiais as materiais
+import calculo_taxas
 from models.usuario import Usuario
 from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
 from models.avaliacoes_professores import Avaliacoes_professores
@@ -48,11 +49,11 @@ def menu_de_escolha_admin(usuariologado):
         tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
         print(tituloescolha.center(50, '='),'\n\n')
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Gerenciar Usuários\n[0]-Voltar")
+        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[7]-Índice de Reprovação e Aprovação\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
-                if opcao in [0,1,2,3,4,5,9,10]:
+                if opcao in [0,1,2,3,4,5,7,9,10]:
                     break
                 else:
                     utils.limpar()
@@ -60,14 +61,14 @@ def menu_de_escolha_admin(usuariologado):
                     print(tituloescolha.center(50, '='),'\n\n')
                     print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                     print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Gerenciar Usuários\n[0]-Voltar")
+                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[7]-Índice de Reprovação e Aprovação\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professor\n[0]-Voltar")
             except ValueError:
                 utils.limpar()
                 tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
                 print(tituloescolha.center(50, '='),'\n\n')
                 print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                 print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
+                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[7]-Índice de Reprovação e Aprovação\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
 
         if opcao == 1:
             menuchecaravaliacao()
@@ -84,6 +85,8 @@ def menu_de_escolha_admin(usuariologado):
                 utils.limpar()
                 menu_inicial()
                 return
+        elif opcao == 7:
+            calculo_taxas.indices()
         elif opcao == 9:
             menu_gerenciar_disciplinas()
         elif opcao == 10:
@@ -103,11 +106,11 @@ def menu_de_escolha_usuario(usuariologado):
         tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
         print(tituloescolha.center(50, '='),'\n\n')
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[0]-Voltar")
+        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
-                if opcao in [0,1,2,3,4,5,6]:
+                if opcao in [0,1,2,3,4,5,6,7]:
                     break
                 else:
                     utils.limpar()
@@ -115,14 +118,14 @@ def menu_de_escolha_usuario(usuariologado):
                     print(tituloescolha.center(50, '='),'\n\n')
                     print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                     print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
+                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[0]-Voltar")
             except ValueError:
                 utils.limpar()
                 tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
                 print(tituloescolha.center(50, '='),'\n\n')
                 print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                 print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[0]-Voltar")
+                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[0]-Voltar")
 
         if opcao == 1:
             menuchecaravaliacao()
@@ -141,6 +144,8 @@ def menu_de_escolha_usuario(usuariologado):
                 return
         elif opcao == 6:
             menu_materiaisaula()
+        elif opcao == 7:
+            calculo_taxas.indices()
         elif opcao == 0:
             utils.limpar()
             menu_inicial()
@@ -306,55 +311,68 @@ def menuchecaravaliacao():
             continue
 def menu_gerenciar_disciplinas():
     utils.limpar()
+    utils.titulogerenciardisciplina()
     while True:
         
-        print("Menu de Gerenciamento de Disciplinas:\n\n[1]-Adicionar Disciplina\n[2]-Remover Disciplina\n[3]-Editar Disciplina\n[0]-Voltar")
+        print("[1]-Adicionar Disciplina\n[2]-Remover Disciplina\n[3]-Editar Disciplina\n[0]-Voltar")
         try:
             opcao = int(input('Digite a opção desejada: '))
             if opcao in [0,1,2,3]:
                 utils.limpar()
                 if opcao == 1:
                     funcoes_admin.adicionar_disciplina()
+                    utils.titulogerenciardisciplina()
                 if opcao == 2:
                     funcoes_admin.remover_disciplina()
+                    utils.titulogerenciardisciplina()
                 if opcao == 3:
                     funcoes_admin.editar_disciplina()
+                    utils.titulogerenciardisciplina()
                 if opcao == 0:
                     utils.limpar()
                     return
-                break
             else:
                 utils.limpar()
-                print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+                utils.titulogerenciardisciplina()
+                print("Digite um número do menu:\n")
         except ValueError:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+            utils.titulogerenciardisciplina()
+            print("Digite um número do menu:\n")
 
 def menu_gerenciar_professores():
     utils.limpar()
+    utils.titulogerenciarprofessor()
     while True:
-        
-        print("Menu de Gerenciamento de Professores:\n\n[1]-Adicionar Professor\n[2]-Remover Professor\n[3]-Editar Professor\n[0]-Voltar")
+        print("\n\n[1]-Adicionar Professor\n[2]-Remover Professor\n[3]-Editar Professor\n[0]-Voltar")
         try:
             opcao = int(input('Digite a opção desejada: '))
             if opcao in [0,1,2,3]:
                 utils.limpar()
                 if opcao == 1:
                     funcoes_admin.adicionar_professor()
+                    utils.titulogerenciarprofessor()
                 if opcao == 2:
                     funcoes_admin.remover_professor()
+                    utils.titulogerenciarprofessor()
                 if opcao == 3:
                     funcoes_admin.editar_professor()
+                    utils.titulogerenciarprofessor()
                 if opcao == 0:
                     utils.limpar()
                     return
-                break
             else:
                 utils.limpar()
-                print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+                utils.titulogerenciarprofessor()
+                print("Digite um número do menu:\n")
         except ValueError:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+            utils.titulogerenciarprofessor()
+            print("Digite um número do menu:\n")
 
 def menu_materiaisaula():
     '''Função para exibir o menu de materiais de aula'''

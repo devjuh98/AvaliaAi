@@ -370,16 +370,15 @@ def menu_materiaisaula():
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
 
         if opcao == 1:
-            materiais.upload()
+            materiais.Materiais.upload()
         elif opcao == 2:
-            materiais.download()
+            materiais.Materiais.download()
         elif opcao == 3:
-            materiais.vermateriais()
+            materiais.Materiais.vermateriais()
         elif opcao == 0:
             utils.limpar()
             return
         else:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
-
-        
+    

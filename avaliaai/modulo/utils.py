@@ -59,7 +59,7 @@ def tituloeditarprofessor():
     print(tituloeditaprof.center(50, '='),'\n\n')
 
 def titulotaxas():
-    titulotaxas = '\033[36mTAXAS DE REPROVAÇÂO E REPROVAÇÂO\033[m'
+    titulotaxas = '\033[36mTAXAS DE REPROVAÇÂO E APROVAÇÂO\033[m'
     print(titulotaxas.center(50, '='),'\n\n')
 
 def validanome_real(nome_real):

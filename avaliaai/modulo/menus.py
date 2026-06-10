@@ -49,9 +49,7 @@ def menu_de_escolha_admin(usuariologado):
         tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
         print(tituloescolha.center(50, '='),'\n\n')
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n"
-        "[7]-Índice de Reprovação e Aprovação\n[8]-Dificuldade por Período\n"
-        "[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
+        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[8]-Nível de dificuldade do período\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
@@ -63,18 +61,14 @@ def menu_de_escolha_admin(usuariologado):
                     print(tituloescolha.center(50, '='),'\n\n')
                     print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                     print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n"
-                    "[7]-Índice de Reprovação e Aprovação\n[8]-Dificuldade por Período\n"
-                    "[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professor\n[0]-Voltar")
+                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[8]-Nível de dificuldade do período\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professor\n[0]-Voltar")
             except ValueError:
                 utils.limpar()
                 tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
                 print(tituloescolha.center(50, '='),'\n\n')
                 print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                 print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n"
-                "[7]-Índice de Reprovação e Aprovação\n[8]-Dificuldade por Período\n"
-                "[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
+                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[8]-Nível de dificuldade do período\n[9]-Gerenciar Disciplinas\n[10]-Gerenciar Professores\n[0]-Voltar")
 
         if opcao == 1:
             menuchecaravaliacao()
@@ -96,7 +90,7 @@ def menu_de_escolha_admin(usuariologado):
         elif opcao == 7:
             calculo_taxas.indices()
         elif opcao == 8:
-             menu_dificuldade_periodo()
+            menu_dificuldade_periodo()
         elif opcao == 9:
             menu_gerenciar_disciplinas()
         elif opcao == 10:

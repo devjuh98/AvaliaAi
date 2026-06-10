@@ -20,7 +20,6 @@ try:
                 dados['nome'], 
                 dados['codigos'])
             disciplinaslist.append(disciplinacadastrada)
-        #disciplinaslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     disciplinaslist = []
 
@@ -32,7 +31,6 @@ try:
                 dados['nome'], 
                 dados['codigos'])
             professoreslist.append(professorcadastrado)
-        #professoreslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     professoreslist = []
 
@@ -50,7 +48,6 @@ try:
                 dados['indice_avaliador'],
                 dados['situacao_academica'])
             avaliacoes_disciplinas.append(avaliacaodisciplina)
-        #avaliacoes_disciplinas = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     avaliacoes_disciplinas = []
 
@@ -67,7 +64,6 @@ try:
                 dados['avaliador'],
                 dados['indice_avaliador'])
             avaliacoes_professores.append(avaliacaoprofessor)
-        #avaliacoes_professores = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
     avaliacoes_professores = []
 
@@ -154,7 +150,6 @@ def avaliadisciplina(usuariologado):
 
                                                     nova_avaliacao = Avaliacoes_disciplinas(disciplina.nome,dificuldade,carga,utilidade,usuariologado.nome,usuariologado.nome_real,usuariologado.indice_nome,situacao_academica)
                                                     nova_avaliacao.avaliar()
-                                                    #avaliacoes_disciplinas.append(nova_avaliacao)
                                                     '''
                                                     avaliacoes_disciplinas.append({
                                                         'disciplina': disciplina['nome'],
@@ -165,8 +160,6 @@ def avaliadisciplina(usuariologado):
                                                         'email': usuariologado.email
                                                     })
                                                     '''
-                                                    #with(open(ARQUIVOAVALIADISC, 'w', encoding = 'utf-8')) as arq:
-                                                        #json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_disciplinas], arq, indent = 4, ensure_ascii=False)
 
                                                     while True:
                                                         try:
@@ -280,8 +273,6 @@ def avaliaprofessor(usuariologado):
                                                         'email': usuariologado.email
                                                     })
                                                     '''
-                                                    #with(open(ARQUIVOAVALIAPROF, 'w', encoding = 'utf-8')) as arq:
-                                                        #json.dump([avaliacao.para_dicionario() for avaliacao in avaliacoes_professores], arq, indent = 4, ensure_ascii=False)
 
                                                     while True:
                                                         try:
@@ -351,20 +342,6 @@ def checardisciplina():
         else:
             utils.limpar()
             avaliacaoencontrada[0].checar(avaliacaoencontrada)        
-            #dificuldade_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            #carga_media = sum(int(av.carga) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            #utilidade_media = sum(int(av.utilidade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            #print(f"\nMédia de avaliações da disciplina {disciplinaencontrada.nome}:\n")
-            #print(f"Média de dificuldade: {dificuldade_media:.2f}")
-            #print(f"Média de carga de trabalho: {carga_media:.2f}")
-            #print(f"Média de utilidade do conteúdo: {utilidade_media:.2f}\n")
-
-            #print(f"\nAvaliações da disciplina {disciplinaencontrada.nome}:\n")
-            #for av in avaliacaoencontrada:
-                #print(f"Usuário: {av.usuario}")
-                #print(f"Dificuldade: {av.dificuldade}")
-                #print(f"Carga de trabalho: {av.carga}")
-                #print(f"Utilidade do conteúdo: {av.utilidade}\n")
 
         while True:
             try:
@@ -408,20 +385,6 @@ def checarprofessor():
         else:
             utils.limpar()
             avaliacaoencontrada[0].checar(avaliacaoencontrada)
-            #dificuldadeav_media = sum(int(av.dificuldade) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            #didatica_media = sum(int(av.didatica) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            #organizacao_media = sum(int(av.organizacao) for av in avaliacaoencontrada) / len(avaliacaoencontrada)
-            #print(f"\nMédia de avaliações do professor {professorencontrado.nome}:\n")
-            #print(f"Média de dificuldade da avaliação: {dificuldadeav_media:.2f}")
-            #print(f"Média de didática: {didatica_media:.2f}")
-            #print(f"Média de organização: {organizacao_media:.2f}")
-            
-            #print(f"\nAvaliações do professor {professorencontrado.nome}:\n")
-            #for av in avaliacaoencontrada:
-                #print(f"Usuário: {av.usuario}")
-                #print(f"Dificuldade da avaliação: {av.dificuldade}")
-                #print(f"Didática: {av.didatica}")
-                #print(f"Organização: {av.organizacao}\n")
 
         while True:
             try:
@@ -524,6 +487,7 @@ class DificuldadePeriodo:
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
 
     def adicionardisciplina():
+        
         utils.limpar()
         titulodificuldade = '\033[36mADICIONAR DISCIPLINA\033[m'
         print(titulodificuldade.center(50, '='),'\n\n')

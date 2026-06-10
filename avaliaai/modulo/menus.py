@@ -106,11 +106,11 @@ def menu_de_escolha_usuario(usuariologado):
         tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
         print(tituloescolha.center(50, '='),'\n\n')
         print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[0]-Voltar")
+        "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[8]-Nível de Dificuldade do Período\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
-                if opcao in [0,1,2,3,4,5,6,7]:
+                if opcao in [0,1,2,3,4,5,6,7,8]:
                     break
                 else:
                     utils.limpar()
@@ -118,14 +118,14 @@ def menu_de_escolha_usuario(usuariologado):
                     print(tituloescolha.center(50, '='),'\n\n')
                     print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                     print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[0]-Voltar")
+                    "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[8]-Dificuldade por Período\n[0]-Voltar")
             except ValueError:
                 utils.limpar()
                 tituloescolha = '\033[36mMENU DE ESCOLHA\033[m'
                 print(tituloescolha.center(50, '='),'\n\n')
                 print('\033[31mOPÇÃO INVÁLIDA!\033[m\n\nDIGITE UM NÙMERO DO MENU:')
                 print("Menu de Escolha:\n\n[1]-Checar Avaliações\n[2]-Fazer Avaliações\n"
-                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[0]-Voltar")
+                "[3]-Editar Dados\n[4]-Ver Dados\n[5]-Deletar Conta\n[6]-Materiais de Aula\n[7]-Índice de Reprovação e Aprovação\n[8]-Dificuldade por Período\n[0]-Voltar")
 
         if opcao == 1:
             menuchecaravaliacao()
@@ -146,6 +146,8 @@ def menu_de_escolha_usuario(usuariologado):
             menu_materiaisaula()
         elif opcao == 7:
             calculo_taxas.indices()
+        elif opcao == 8:
+            menu_dificuldade_periodo()
         elif opcao == 0:
             utils.limpar()
             menu_inicial()
@@ -399,4 +401,28 @@ def menu_materiaisaula():
         else:
             utils.limpar()
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
-    
+
+def menu_dificuldade_periodo():
+    '''Função para exibir o menu de nível dedificuldade do período'''
+    while True:
+        utils.limpar()
+        titulodificuldade = '\033[36mNÍVEL DE DIFICULDADE DO PERÍODO\033[m'
+        print(titulodificuldade.center(50, '='),'\n\n')
+        print("Selecione uma opção:\n\n[1]-Ver dificuldade do período\n[2]-Adicionar disciplina\n[0]-Voltar")
+        try:
+            opcao = int(input('Digite a opção desejada: '))
+        except ValueError:
+            utils.limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+            continue
+
+        if opcao == 1:
+            avaliacoes.dificuldadeperiodo()
+        elif opcao == 2:
+            avaliacoes.adicionar_disciplina()
+        elif opcao == 0:
+            utils.limpar()
+            return
+        else:
+            utils.limpar()
+            print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")

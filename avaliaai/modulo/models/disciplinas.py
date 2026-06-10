@@ -4,14 +4,16 @@ from models.avaliacoes_disciplinas import Avaliacoes_disciplinas
 import matplotlib.pyplot as plt
 
 class Disciplina:
-    def __init__(self,nome,codigos):
+    def __init__(self,nome,codigos,periodo = None):
         self.nome = nome
         self.codigos = codigos
+        self.periodo = periodo
     
     def para_dicionario(self):
         return{
             'nome': self.nome,
-            'codigos': self.codigos
+            'codigos': self.codigos,
+            'periodo': self.periodo
         }
     def cadastrar(self):
         '''Função para realizar o cadastro da disciplina,
@@ -43,6 +45,12 @@ class Disciplina:
         self.codigos = novas_abreviacoes
         with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
             json.dump([disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent = 4, ensure_ascii=False)
+    
+    def editar_periodo(self, novo_periodo):
+        '''Função para realizar a edição do número do período, recebe o número do período como parâmetro e sem retorno.'''
+        self.periodo = novo_periodo
+        with open(avaliacoes.ARQUIVODISCIPLINAS, 'w', encoding='utf-8') as arq:
+            json.dump([Disciplina.para_dicionario() for disciplina in avaliacoes.disciplinaslist], arq, indent=4, ensure_ascii=False)
     
     def remover(self,avaliacoes_disciplina):
         '''Função para realizar a remoção da disciplina,

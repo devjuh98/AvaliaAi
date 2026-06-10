@@ -4,204 +4,214 @@
         "codigos": [
             "pisi1",
             "pisii"
-        ]
+        ],
+        "periodo": 1
     },
     {
         "nome": "Projeto Interdisciplinar para Sistemas de Informação 2",
         "codigos": [
             "pisi2",
             "pisiii"
-        ]
+        ],
+        "periodo": 2
     },
     {
         "nome": "Projeto Interdisciplinar para Sistemas de Informação 3",
         "codigos": [
             "pisi3",
             "pisiiii"
-        ]
+        ],
+        "periodo": 3
     },
     {
         "nome": "Projeto Interdisciplinar para Sistemas de Informação 4",
         "codigos": [
             "pisi4",
             "pisiiv"
-        ]
+        ],
+        "periodo": 4
     },
     {
         "nome": "Projeto de Desenvolvimento Tecnológico para o Mundo 1",
         "codigos": [
             "pdtm1"
-        ]
+        ],
+        "periodo": 5
     },
     {
         "nome": "Projeto de Desenvolvimento Tecnológico para o Mundo 2",
         "codigos": [
             "pdtm2"
-        ]
+        ],
+        "periodo": 6
     },
     {
         "nome": "Fundamentos Matemáticos para Sistemas de Informação 1",
         "codigos": [
             "fmsi1"
-        ]
+        ],
+        "periodo": 1
     },
     {
         "nome": "Fundamentos Matemáticos para Sistemas de Informação 2",
         "codigos": [
             "fmsi2"
-        ]
+        ],
+        "periodo": 2
     },
     {
         "nome": "Desenvolvimento de Sistemas de Informação",
         "codigos": [
             "dsi"
-        ]
+        ],
+        "periodo": 3
     },
     {
         "nome": "Princípios de Software Básico",
         "codigos": [
             "psb"
-        ]
+        ],
+        "periodo": 4
     },
     {
         "nome": "Segurança e Auditoria de Sistemas",
         "codigos": [
             "sas"
-        ]
+        ],
+        "periodo": 5
     },
     {
         "nome": "Cálculo N1",
         "codigos": [
             "calculo1"
-        ]
+        ],
+        "periodo": 6
     },
     {
         "nome": "Princípios da Teoria da Computação",
         "codigos": [
             "ptc"
-        ]
+        ],
+        "periodo": 7
     },
     {
         "nome": "Gestão do Conhecimento",
         "codigos": [
             "gc"
-        ]
+        ],
+        "periodo": 8
     },
     {
         "nome": "Princípios de Programação",
         "codigos": [
             "pp"
-        ]
+        ],
+        "periodo": 1
     },
     {
         "nome": "Fundamentos de Problemas Computacionais 1",
         "codigos": [
             "fpc1"
-        ]
+        ],
+        "periodo": 2
     },
     {
         "nome": "Fundamentos de Problemas Computacionais 2",
         "codigos": [
             "fpc2"
-        ]
+        ],
+        "periodo": 4
     },
     {
         "nome": "Engenharia para Sistemas de Informação 1",
         "codigos": [
             "esi1"
-        ]
+        ],
+        "periodo": 3
     },
     {
         "nome": "Engenharia para Sistemas de Informação 2",
         "codigos": [
             "esi2"
-        ]
+        ],
+        "periodo": 5
     },
     {
         "nome": "Engenharia para Sistemas de Informação 3",
         "codigos": [
             "esi3"
-        ]
+        ],
+        "periodo": 6
     },
     {
         "nome": "Estatística Aplicada à Análise de Dados",
         "codigos": [
             "estatistica"
-        ]
+        ],
+        "periodo": 7
     },
     {
         "nome": "Fundamentos de Estratégia Competitiva",
         "codigos": [
             "fec"
-        ]
+        ],
+        "periodo": 8
     },
     {
         "nome": "Sustentabilidade em Sistemas de Informação",
         "codigos": [
             "ssi"
-        ]
+        ],
+        "periodo": 1
     },
     {
         "nome": "Elementos de Sistemas Computacionais",
         "codigos": [
             "esc"
-        ]
+        ],
+        "periodo": 2
     },
     {
         "nome": "Introdução ao Armazenamento e Análise de Dados",
         "codigos": [
             "iad"
-        ]
+        ],
+        "periodo": 3
     },
     {
         "nome": "Sistemas de Informação na Internet",
         "codigos": [
             "sii"
-        ]
+        ],
+        "periodo": 4
     },
     {
         "nome": "Empreendedorismo e Inovação",
         "codigos": [
             "ei"
-        ]
+        ],
+        "periodo": 5
     },
     {
         "nome": "Modelagem de Dados",
         "codigos": [
             "md"
-        ]
+        ],
+        "periodo": 6
     },
     {
         "nome": "Introdução à Administração",
         "codigos": [
             "adm"
-        ]
+        ],
+        "periodo": 1
     },
     {
         "nome": "Fundamentos de Sistemas de Informação",
         "codigos": [
             "fsi"
-        ]
-    },
-    {
-        "nome": "Dragon Ball Z",
-        "codigos": [
-            "dbs",
-            "dragon"
-        ]
-    },
-    {
-        "nome": "Brawl Stars",
-        "codigos": [
-            "bs",
-            "brawl"
-        ]
-    },
-    {
-        "nome": "Clash Royal",
-        "codigos": [
-            "cr"
-        ]
+        ],
+        "periodo": 2
     },
     {
         "nome": "Teste De Disciplina",

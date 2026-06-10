@@ -16,5 +16,23 @@
         "disciplina": "pisi1",
         "professor": "Não informado",
         "arquivo": "C:\\Users\\julia\\Downloads\\Lista de exercício 1 - Fluxogramas - PISI 1.pdf"
+    },
+    {
+        "tipo": "Lista de exercícios",
+        "disciplina": "pisi1",
+        "professor": "Não informado",
+        "arquivo": "C:\\Users\\guilh\\Downloads\\Fluxograma AvaliaAí.drawio (11).pdf"
+    },
+    {
+        "tipo": "Lista de exercícios",
+        "disciplina": "adm",
+        "professor": "Não informado",
+        "arquivo": "C:\\Users\\guilh\\Downloads\\QUESTOESLISTA5.pdf"
+    },
+    {
+        "tipo": "Lista de exercícios",
+        "disciplina": "fmsi1",
+        "professor": "Não informado",
+        "arquivo": "C:\\Users\\guilh\\Downloads\\QUESTOESLISTA5.pdf"
     }
 ]

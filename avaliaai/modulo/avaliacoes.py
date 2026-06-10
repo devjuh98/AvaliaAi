@@ -510,7 +510,3 @@ class DificuldadePeriodo:
             except ValueError:
                 utils.limpar()
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
-                
-
-        
-        

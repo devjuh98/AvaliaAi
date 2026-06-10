@@ -400,10 +400,10 @@ https://drive.google.com/drive/folders/1vs4vysRpAu1jHy6zEYa825FsklT6P2o7?usp=sha
 ### 🎥 Vídeos explicativos RELEASE 2
 
 - 🎬 Vídeo geral do projeto (Guilherme Vasconcellos Valois):
-  [Assistir vídeo](https://youtu.be/-62mFNtz07E)
+  [Assistir vídeo](https://youtu.be/NjiN7mETmbg)
 
 - 🎬 Vídeo geral do projeto (Julia Galindo de Carvalho Cardoso):
-  [Assistir vídeo](https://youtu.be/Cv8_vHOg6wU?si=IhqB3ZmCY3UzSWX_)
+  [Assistir vídeo](https://youtu.be/MDyAZ-iRIWQ)
 
 ---
 

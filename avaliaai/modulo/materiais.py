@@ -30,7 +30,7 @@ class Materiais:
     print("Gravou com sucesso!")
     print("DOWNLOADS:", DOWNLOADS)
     print("Gravou com sucesso!")
-
+    
     def abrirexplorador():
         root = tk.Tk()
         root.withdraw()

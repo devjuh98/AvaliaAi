@@ -101,7 +101,7 @@ class Materiais:
     def upload():
         tituloupload = '\033[36mUPLOAD DE MATERIAIS\033[m'
         print(tituloupload.center(50, '='),'\n\n')
-        opcao = print("Selecione o tipo de material que deseja fazer upload:\n\n[1]-Prova\n[2]-Lista de exercícios\n[3]-Trabalho")
+        opcao = print("Selecione o tipo de material que deseja fazer upload:\n\n[1]-Prova\n[2]-Lista de exercícios\n[3]-Trabalho\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input("\nDigite a opção desejada: "))
@@ -133,6 +133,7 @@ class Materiais:
                         professor = "Não informado"        
 
                     Materiais.upload_arquivo(tipo, disciplina, professor)
+                    break
 
             elif opcao == 0:
                 utils.limpar()
@@ -152,7 +153,7 @@ class Materiais:
             print("\033[31mNenhum material disponível para download!\033[m\n")
             return
         
-        opcao = print("Selecione o tipo de material que deseja fazer download:\n\n[1]-Prova\n[2]-Lista de exercícios\n[3]-Trabalho")
+        opcao = print("Selecione o tipo de material que deseja fazer download:\n\n[1]-Prova\n[2]-Lista de exercícios\n[3]-Trabalho\n[0]-Voltar")
         while True:
             try:
                 opcao = int(input("\nDigite a opção desejada: "))

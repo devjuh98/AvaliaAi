@@ -53,7 +53,7 @@ def menu_de_escolha_admin(usuariologado):
         while True:
             try:
                 opcao = int(input('Digite a opção desejada: '))
-                if opcao in [0,1,2,3,4,5,7,9,10]:
+                if opcao in [0,1,2,3,4,5,6,7,9,10]:
                     break
                 else:
                     utils.limpar()

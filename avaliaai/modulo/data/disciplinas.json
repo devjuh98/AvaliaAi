@@ -182,31 +182,5 @@
         "codigos": [
             "fsi"
         ]
-    },
-    {
-        "nome": "Dragon Ball Z",
-        "codigos": [
-            "dbs",
-            "dragon"
-        ]
-    },
-    {
-        "nome": "Brawl Stars",
-        "codigos": [
-            "bs",
-            "brawl"
-        ]
-    },
-    {
-        "nome": "Clash Royal",
-        "codigos": [
-            "cr"
-        ]
-    },
-    {
-        "nome": "Teste De Disciplina",
-        "codigos": [
-            "td"
-        ]
     }
 ]

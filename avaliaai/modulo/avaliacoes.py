@@ -439,17 +439,11 @@ def checarprofessor():
 class DificuldadePeriodo:
     
     def calcular_dificuldade_media_disciplina():
-        utils.limpar()
         dificuldades = defaultdict(list)
         for av in avaliacoes_disciplinas:
-            dificuldades[av.disciplina].append(int[av.dificuldade])
+            dificuldades[av.disciplina].append(int(av.dificuldade))
         
         medias = {disc: sum(vals)/len(vals) for disc, vals in dificuldades.items()}
-
-        print("\nMédias de dificuldade por disciplina: ")
-        for disciplina, media in medias.items():
-            print(f"{disciplina}: {media:.2f}")
-
         return medias
     
     def calcular_dificuldade_periodo(numero_periodo):
@@ -457,20 +451,54 @@ class DificuldadePeriodo:
         with open(ARQUIVODISCIPLINAS, 'r', encoding='utf-8') as arq:
             disciplinas = json.load(arq)
         
-        filtradas = [d for d in disciplinas if d.get("periodo") == numero_periodo]
+        filtradas = [d for d in disciplinas if int(d.get("periodo", 0)) == numero_periodo]
 
         dificuldades = []
         for d in filtradas:
             if d['nome'] in medias:
                 dificuldades.append(medias[d['nome']])
+                print(f"{d['nome']}: {medias[d['nome']]:.2f}")
         
         if not dificuldades:
-            print("\033Nenhuma avaliação encontrada para este período!\033[m")
+            print("\033[31mNenhuma avaliação encontrada para este período!\033[m")
             return
         
         media_periodo = sum(dificuldades) / len(dificuldades)
         nivel = round(media_periodo)
-        print(f"\n\033[36mNível médio de dificuldade do período {numero_periodo}: {media_periodo:.2f}\033[m\n")
+        print(f"\n\033[36mNível médio de dificuldade do período {numero_periodo}: {nivel} (1=Muito Fácil, 2=Fácil, 3=Regular, 4=Difícil, 5=Muito Difícil)\033[m\n")
+    
+    def calcular_dificuldade_extra(numero_periodo, disciplina_extra):
+        medias = DificuldadePeriodo.calcular_dificuldade_media_disciplina()
+        with open(ARQUIVODISCIPLINAS, 'r', encoding='utf-8') as arq:
+            disciplinas = json.load(arq)
+        
+        filtradas = [d for d in disciplinas if int(d.get("periodo", 0)) == numero_periodo]
+
+        dificuldades = []
+        nomes_disciplinas = [d['nome'] for d in filtradas]
+
+        for d in filtradas:
+            if d['nome'] in medias:
+                dificuldades.append(medias[d['nome']])
+                print(f"{d['nome']}: {medias[d['nome']]:.2f}")
+        
+        disciplina_encontrada = next((d for d in disciplinas if d['nome'].lower() == disciplina_extra.lower()), None)
+        if disciplina_encontrada:
+            if disciplina_encontrada['nome'] in medias:
+                dificuldades.append(medias[disciplina_encontrada['nome']])
+                print(f"\nDisciplina extra adicionada: {disciplina_encontrada['nome']} - {medias[disciplina_encontrada['nome']]:.2f}")
+            else:
+                print("\033[31mA disciplina extra não possui avaliações registradas!\033[m")
+        else:
+            print("\033[31mDisciplina extra não encontrada!\033[m")
+        
+        if not dificuldades:
+            print("\033[31mNenhuma avaliação encontrada para este período!\033[m")
+            return
+        
+        media_periodo = sum(dificuldades) / len(dificuldades)
+        nivel = round(media_periodo)
+        print(f"\n\033[36mNível médio de dificuldade do período {numero_periodo} com disciplina extra: {nivel} (1=Muito Fácil, 2=Fácil, 3=Regular, 4=Difícil, 5=Muito Difícil)\033[m\n")
 
     def dificuldadeperiodo():
         '''Função para exibir o nível de dificuldade do período,
@@ -495,4 +523,30 @@ class DificuldadePeriodo:
                 utils.limpar()
                 print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
 
-    def adicionar_disciplina():
+    def adicionardisciplina():
+        utils.limpar()
+        titulodificuldade = '\033[36mADICIONAR DISCIPLINA\033[m'
+        print(titulodificuldade.center(50, '='),'\n\n')
+        opcao = print("Digite o número do período que deseja adicionar disciplina ou digite 0 para voltar:\n\n[1]-1º Período\n[2]-2º Período\n[3]-3º Período\n[4]-4º Período\n[5]-5º Período\n[6]-6º Período\n[7]-7º Período\n[8]-8º Período\n[9]-9º Período\n")
+        while True:
+            try:
+                opcao = int(input("Digite a opção desejada:\n"))
+                if opcao == 0:
+                    return
+                if opcao not in range(1, 10):
+                    print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+                    continue
+
+                disciplina_extra = input("Digite a disciplina que queira adicionar ao período:\n").strip()
+                if not disciplina_extra:
+                    print(("\033[31mNenhuma disciplina informada!\033[m\n"))
+                    return
+                
+                DificuldadePeriodo.calcular_dificuldade_extra(opcao, disciplina_extra)
+            except ValueError:
+                utils.limpar()
+                print("\033[31mOPÇÃO INVÁLIDA!\033[m\n")
+                
+
+        
+        

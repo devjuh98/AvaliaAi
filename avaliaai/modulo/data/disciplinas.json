@@ -210,7 +210,6 @@
         "nome": "Fundamentos de Sistemas de Informação",
         "codigos": [
             "fsi"
-<<<<<<< HEAD
         ],
         "periodo": 2
     },
@@ -218,8 +217,7 @@
         "nome": "Teste De Disciplina",
         "codigos": [
             "td"
-=======
->>>>>>> d906507e4c76c6185c119339433bcdf3e53de18c
-        ]
+        ],
+        "periodo": 9
     }
 ]

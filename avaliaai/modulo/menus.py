@@ -419,9 +419,9 @@ def menu_dificuldade_periodo():
             continue
 
         if opcao == 1:
-            avaliacoes.dificuldadeperiodo()
+            avaliacoes.DificuldadePeriodo.dificuldadeperiodo()
         elif opcao == 2:
-            avaliacoes.adicionar_disciplina()
+            avaliacoes.DificuldadePeriodo.adicionardisciplina()
         elif opcao == 0:
             utils.limpar()
             return

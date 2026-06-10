@@ -265,6 +265,7 @@ Bibliotecas padrão utilizadas:
 - json → utilizado como banco de dados (usuários, professores, disciplinas e avaliações)
 - os → utilizado para limpar o terminal
 - msvcrt → utilizado para ocultar a senha digitada (exibindo asteriscos)
+- tkinter → utilizado para criar GUIs 
 
 Biblioteca externa:
 - matplotlib → utilizada para geração de gráficos estatísticos de aprovação e reprovação das disciplinas
@@ -321,7 +322,7 @@ avaliai/
   Reúne as funcionalidades relacionadas ao cadastro, autenticação e gerenciamento das contas dos usuários.
 
 - **avaliacoes.py**  
-  Implementa as funções responsáveis pela realização e consulta das avaliações de professores e disciplinas.
+  Implementa as funções responsáveis pela realização e consulta das avaliações de professores e disciplinas e pela consulta de dificuldade do período.
 
 - **materiais.py**  
   Gerencia o compartilhamento e acesso aos materiais acadêmicos disponibilizados pelos usuários.

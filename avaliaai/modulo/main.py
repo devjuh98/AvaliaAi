@@ -1,5 +1,5 @@
 import utils as utils
-import usuarios as usuarios
+import gerenciar_usuarios as gerenciar_usuarios
 import menus as menus
 from models.usuario import Usuario
 from models.admin import Admin
@@ -17,14 +17,14 @@ try:
                 dados['email'], 
                 dados['senha'], 
                 dados['status'])
-            usuarios.usuarioslist.append(usuariocadastrado)
+            gerenciar_usuarios.usuarioslist.append(usuariocadastrado)
         #usuarios.usuarioslist = json.load(arq)
 except(FileNotFoundError, json.JSONDecodeError):
-    usuarios.usuarioslist = []
+    gerenciar_usuarios.usuarioslist = []
 administrador1 = Admin('Guilherme Vasconcellos',0,'guiadm007','guilherme.vasconcellos@ufrpe.br','Adm123@','ativo')
 administrador2 = Admin('Julia Galindo',0,'juliaadm007','julia.galindo@ufrpe.br','Adm123@','ativo')
-usuarios.usuarioslist.append(administrador1)
-usuarios.usuarioslist.append(administrador2)
+gerenciar_usuarios.usuarioslist.append(administrador1)
+gerenciar_usuarios.usuarioslist.append(administrador2)
 usuariologado = None
 utils.limpar()
 menus.menu_inicial()
@@ -39,11 +39,11 @@ while True:
             print("\033[31mOPÇÃO INVÁLIDA!\033[m\nDigite um número do menu:\n")
             opcao = int(input(""))
         if opcao == 1:
-            cadastrou = usuarios.cadastrar_usuario()
+            cadastrou = gerenciar_usuarios.cadastrar_usuario()
             if cadastrou:
                 opcao = 2
         if opcao == 2:
-            usuariologado=usuarios.usuario_login()
+            usuariologado=gerenciar_usuarios.usuario_login()
             if usuariologado is not None:
                 if isinstance(usuariologado, Admin):
                     menus.menu_de_escolha_admin(usuariologado)

@@ -63,7 +63,7 @@ def cadastrar_usuario():
         if utils.validanome_real(nome_real):
             utils.limpar()
             utils.titulocadastro()
-            print("\033[32mNome Cadastrado!\n\033[m")
+            print("\033[32mNome Real Cadastrado!\n\033[m")
             contador = 0
             nome_list = nome_real.split()
             for usuario in usuarioslist:
@@ -82,7 +82,7 @@ def cadastrar_usuario():
         if utils.validanome(nome):
             utils.limpar()
             utils.titulocadastro()
-            print("\033[32mNome Cadastrado!\n\033[m")
+            print("\033[32mNome de Usuário Cadastrado!\n\033[m")
             break
         
     while True:

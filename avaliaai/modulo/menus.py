@@ -1,6 +1,6 @@
 import funcoes_admin
 import utils as utils
-import usuarios as usuarios
+import gerenciar_usuarios as gerenciar_usuarios
 import avaliacoes as avaliacoes
 import materiais as materiais
 import calculo_taxas
@@ -81,7 +81,7 @@ def menu_de_escolha_admin(usuariologado):
             #usuarios.ver_dados(usuariologado)
         elif opcao == 5:
             menudeletar(usuariologado)
-            if usuariologado not in usuarios.usuarioslist:
+            if usuariologado not in gerenciar_usuarios.usuarioslist:
                 utils.limpar()
                 menu_inicial()
                 return
@@ -145,7 +145,7 @@ def menu_de_escolha_usuario(usuariologado):
             #usuarios.ver_dados(usuariologado)
         elif opcao == 5:
             menudeletar(usuariologado)
-            if usuariologado not in usuarios.usuarioslist:
+            if usuariologado not in gerenciar_usuarios.usuarioslist:
                 utils.limpar()
                 menu_inicial()
                 return

@@ -1,5 +1,5 @@
 import json,os
-import usuarios as usuarios
+import gerenciar_usuarios as gerenciar_usuarios
 import utils as utils
 from models.disciplinas import Disciplina
 from models.professores import Professor

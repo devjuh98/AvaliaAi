@@ -1,5 +1,5 @@
 
-import usuarios 
+import gerenciar_usuarios as gerenciar_usuarios 
 import utils
 import json
 
@@ -26,18 +26,18 @@ class Usuario:
         '''Função para realizar o cadastro do usuário,
         armazenando os dados em um json e em uma lista
         sem parâmetros de entrada e sem retorno.'''
-        usuarios.usuarioslist.append(self)
-        with open(usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-            json.dump([usuario.para_dicionario() for usuario in usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
+        gerenciar_usuarios.usuarioslist.append(self)
+        with open(gerenciar_usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
+            json.dump([usuario.para_dicionario() for usuario in gerenciar_usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
         
     def editar_nome(self, novo_nome):
         '''Função para editar o nome do usuário,
         recebe o usuário logado e o novo nome como parâmetros de entrada e retorna True (Atualizado) ou False (Não atualizado).'''
-        for usuario in usuarios.usuarioslist:
+        for usuario in gerenciar_usuarios.usuarioslist:
             if usuario.email == self.email:
                 usuario.nome = novo_nome.strip()
-                with open(usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-                    json.dump([usuario.para_dicionario() for usuario in usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
+                with open(gerenciar_usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
+                    json.dump([usuario.para_dicionario() for usuario in gerenciar_usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
                 print("\033[32mNome atualizado com sucesso!\n\033[m")
                 input("Pressione Enter para voltar ao menu...")
                 return True
@@ -46,11 +46,11 @@ class Usuario:
     def editar_email(self, novo_email):
         '''Função para editar o email do usuário,
         recebe o usuário logado e o novo email como parâmetros de entrada e retorna True (Atualizado) ou False (Não atualizado).'''
-        for usuario in usuarios.usuarioslist:
+        for usuario in gerenciar_usuarios.usuarioslist:
             if usuario.email == self.email:
                 usuario.email = novo_email.strip().lower()
-                with open(usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-                    json.dump([usuario.para_dicionario() for usuario in usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
+                with open(gerenciar_usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
+                    json.dump([usuario.para_dicionario() for usuario in gerenciar_usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
                 print("\033[32mEmail atualizado com sucesso!\n\033[m")
                 input("Pressione Enter para voltar ao menu...")
                 return True
@@ -59,11 +59,11 @@ class Usuario:
     def editar_senha(self, nova_senha):
         '''Função para editar a senha do usuário,
         recebe o usuário logado e a nova senha como parâmetros de entrada e retorna True (Atualizada) ou False (Não atualizada).'''
-        for usuario in usuarios.usuarioslist:
+        for usuario in gerenciar_usuarios.usuarioslist:
             if usuario.email == self.email:
                 usuario.senha = nova_senha.strip()
-                with open(usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-                    json.dump([usuario.para_dicionario() for usuario in usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
+                with open(gerenciar_usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
+                    json.dump([usuario.para_dicionario() for usuario in gerenciar_usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
                 print("\033[32mSenha atualizada com sucesso!\n\033[m")
                 input("Pressione Enter para voltar ao menu...")
                 return True
@@ -72,11 +72,11 @@ class Usuario:
     def deletar_conta(self):
         '''Função para deletar a conta do usuário,
         recebe o usuário logado como parâmetro de entrada e retorna True (Deletada) ou False (Não deletada).'''
-        for usuario in usuarios.usuarioslist:
+        for usuario in gerenciar_usuarios.usuarioslist:
             if usuario.email == self.email:
-                usuarios.usuarioslist.remove(usuario)
-                with open(usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
-                    json.dump([usuario.para_dicionario() for usuario in usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
+                gerenciar_usuarios.usuarioslist.remove(usuario)
+                with open(gerenciar_usuarios.ARQUIVOUSUARIOS, 'w', encoding='utf-8') as arq:
+                    json.dump([usuario.para_dicionario() for usuario in gerenciar_usuarios.usuarioslist], arq, indent = 4, ensure_ascii=False)
                 print("\033[32mCONTA DELETADA COM SUCESSO!\n\033[m")
                 return True
         return False

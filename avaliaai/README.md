@@ -406,7 +406,11 @@ https://drive.google.com/drive/folders/1vs4vysRpAu1jHy6zEYa825FsklT6P2o7?usp=sha
   [Assistir vídeo](https://youtu.be/MDyAZ-iRIWQ)
 
 ---
+#### 📚 Artigo do Projeto no Overleaf
 
+https://www.overleaf.com/read/nmshtvhhcrgc#c96b43
+
+---
 ## 🚀 Futuras Releases
 
 ### 🔄 Release 2

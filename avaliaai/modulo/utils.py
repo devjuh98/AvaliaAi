@@ -1,4 +1,4 @@
-import usuarios as usuarios
+import gerenciar_usuarios as gerenciar_usuarios
 import avaliacoes as avaliacoes
 import os
 import msvcrt
@@ -206,7 +206,7 @@ def validaemail(email):
         titulocadastro()
         print("\033[31mE-MAIL DEVE CONTER PELO MENOS 2 LETRAS ANTES E DEPOIS DO '.'.\n\033[m")
         return False
-    for usuario in usuarios.usuarioslist:
+    for usuario in gerenciar_usuarios.usuarioslist:
         if usuario.email == email:
             limpar()
             titulocadastro()
@@ -390,7 +390,7 @@ def validaemail_editar(novo_email):
         print(tituloeditar.center(50, '='),'\n\n')
         print("\033[31mE-MAIL DEVE CONTER PELO MENOS 2 LETRAS ANTES E DEPOIS DO '.'.\n\033[m")
         return False
-    for usuario in usuarios.usuarioslist:
+    for usuario in gerenciar_usuarios.usuarioslist:
         if usuario.email == novo_email:
             limpar()
             tituloeditar = '\033[36mEDITAR EMAIL\033[m'

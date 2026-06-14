@@ -1,0 +1,1042 @@
+[
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 3",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 2",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Modelagem de Dados",
+        "dificuldade": 3,
+        "carga": 4,
+        "utilidade": 2,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 2",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "Franciscou123",
+        "avaliador": "Francisco Biasoli",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "GudsonNights7698",
+        "avaliador": "Gideão Almeida",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "SteveHarryton",
+        "avaliador": "Fabrício Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "gutavobilar",
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "gudson",
+        "avaliador": "Guliver Rocha",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "juliagcarvalho",
+        "avaliador": "Julia Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "jao7654",
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 3,
+        "usuario": "lucaomaneiro",
+        "avaliador": "lucas rodrigues",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Blastoise",
+        "avaliador": "Breno Ribeiro",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "Pedrinloko",
+        "avaliador": "Pedro Daher",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "brunouw",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 1,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "brubsma",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 2,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "brubru",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 3,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Projeto Interdisciplinar para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "brubrou",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 4,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "Franciscou123",
+        "avaliador": "Francisco Biasoli",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "GudsonNights7698",
+        "avaliador": "Gideão Almeida",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "SteveHarryton",
+        "avaliador": "Fabrício Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "gutavobilar",
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "gudson",
+        "avaliador": "Guliver Rocha",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "juliagcarvalho",
+        "avaliador": "Julia Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "jao7654",
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 3,
+        "usuario": "lucaomaneiro",
+        "avaliador": "lucas rodrigues",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 3,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Blastoise",
+        "avaliador": "Breno Ribeiro",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "Pedrinloko",
+        "avaliador": "Pedro Daher",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "brunouw",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 1,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "brubsma",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 2,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "brubru",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 3,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Fundamentos Matemáticos para Sistemas de Informação 1",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "brubrou",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 4,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Franciscou123",
+        "avaliador": "Francisco Biasoli",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 3,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "GudsonNights7698",
+        "avaliador": "Gideão Almeida",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "SteveHarryton",
+        "avaliador": "Fabrício Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 3,
+        "usuario": "gutavobilar",
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "gudson",
+        "avaliador": "Guliver Rocha",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 1,
+        "carga": 1,
+        "utilidade": 3,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "juliagcarvalho",
+        "avaliador": "Julia Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 3,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "jao7654",
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 3,
+        "carga": 2,
+        "utilidade": 3,
+        "usuario": "lucaomaneiro",
+        "avaliador": "lucas rodrigues",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Blastoise",
+        "avaliador": "Breno Ribeiro",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "Pedrinloko",
+        "avaliador": "Pedro Daher",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 3,
+        "usuario": "brunouw",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 1,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "brubsma",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 2,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "brubru",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 3,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Sustentabilidade em Sistemas de Informação",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "brubrou",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 4,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Franciscou123",
+        "avaliador": "Francisco Biasoli",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "GudsonNights7698",
+        "avaliador": "Gideão Almeida",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "SteveHarryton",
+        "avaliador": "Fabrício Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "gutavobilar",
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 3,
+        "usuario": "gudson",
+        "avaliador": "Guliver Rocha",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "juliagcarvalho",
+        "avaliador": "Julia Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 3,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "jao7654",
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "lucaomaneiro",
+        "avaliador": "lucas rodrigues",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 1,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "Blastoise",
+        "avaliador": "Breno Ribeiro",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "Pedrinloko",
+        "avaliador": "Pedro Daher",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "brunouw",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 1,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 4,
+        "usuario": "brubsma",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 2,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "brubru",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 3,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Introdução à Administração",
+        "dificuldade": 2,
+        "carga": 2,
+        "utilidade": 5,
+        "usuario": "brubrou",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 4,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "Franciscou123",
+        "avaliador": "Francisco Biasoli",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "GudsonNights7698",
+        "avaliador": "Gideão Almeida",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "SteveHarryton",
+        "avaliador": "Fabrício Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "gutavobilar",
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "gudson",
+        "avaliador": "Guliver Rocha",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 5,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "juliagcarvalho",
+        "avaliador": "Julia Carvalho",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 4,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "GUiguilindo",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 4,
+        "usuario": "jao7654",
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "lucaomaneiro",
+        "avaliador": "lucas rodrigues",
+        "indice_avaliador": 0,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 3,
+        "carga": 3,
+        "utilidade": 4,
+        "usuario": "Blastoise",
+        "avaliador": "Breno Ribeiro",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "Pedrinloko",
+        "avaliador": "Pedro Daher",
+        "indice_avaliador": 0,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "brunouw",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 1,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "brubsma",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 2,
+        "situacao_academica": "Aprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 5,
+        "carga": 5,
+        "utilidade": 5,
+        "usuario": "brubru",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 3,
+        "situacao_academica": "Reprovado"
+    },
+    {
+        "disciplina": "Princípios de Programação",
+        "dificuldade": 4,
+        "carga": 4,
+        "utilidade": 5,
+        "usuario": "brubrou",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 4,
+        "situacao_academica": "Aprovado"
+    }
+]

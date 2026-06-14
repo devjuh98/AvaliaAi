@@ -1,0 +1,227 @@
+[
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "didática": 4,
+        "organização": 4,
+        "usuario": "Robertocarlos",
+        "avaliador": "Roberto Carlos",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 3,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 5,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "jao7654",
+        "avaliador": "Joao Gomes",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 5,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 4,
+        "didática": 3,
+        "organização": 5,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 4,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 1,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "GuilhermeValois",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 2,
+        "didática": 4,
+        "organização": 4,
+        "usuario": "GuilhermeValois",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 3,
+        "didática": 3,
+        "organização": 3,
+        "usuario": "GuilhermeValois",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 1,
+        "didática": 4,
+        "organização": 5,
+        "usuario": "GuilhermeValois",
+        "avaliador": "Guilherme Valois",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 1,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "didática": 3,
+        "organização": 5,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 3,
+        "didática": 2,
+        "organização": 3,
+        "usuario": "Always.lily",
+        "avaliador": "Lilian Silva",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 2,
+        "didática": 4,
+        "organização": 5,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "didática": 4,
+        "organização": 3,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 3,
+        "didática": 3,
+        "organização": 3,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 2,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "JamesBaxter",
+        "avaliador": "James Baxter",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Cleyton Vanut Cordeiro de Magalhães",
+        "dificuldade da avaliação": 1,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "didática": 5,
+        "organização": 3,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Silvana Bocanegra",
+        "dificuldade da avaliação": 1,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 1,
+        "didática": 1,
+        "organização": 1,
+        "usuario": "MarkGrayson",
+        "avaliador": "Markus Sebastian",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 3,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "gustavo123",
+        "avaliador": "Gustavo Bilar",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Ana Cristina Roiller",
+        "dificuldade da avaliação": 1,
+        "didática": 5,
+        "organização": 5,
+        "usuario": "LucasRoberto8902",
+        "avaliador": "Lucas Roberto",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Lidiano Oliveira",
+        "dificuldade da avaliação": 1,
+        "didática": 4,
+        "organização": 5,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0
+    },
+    {
+        "professor": "Marina Barros",
+        "dificuldade da avaliação": 4,
+        "didática": 4,
+        "organização": 4,
+        "usuario": "TechJacket09",
+        "avaliador": "Bruno Silva",
+        "indice_avaliador": 0
+    }
+]
